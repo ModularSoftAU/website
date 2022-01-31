@@ -1,0 +1,46 @@
+{
+  "pages": {
+    "alert/create": {
+      "method": "POST",
+      "privileged": true,
+      "description": "Create an alert on Network platforms.",
+      "properties": {
+        "alertSlug": {
+          "type": "string",
+          "info": "Unique Identifier.",
+          "optional": false
+        },
+        "body": {
+          "type": "string",
+          "info": "The text or message you would like to send in the format you specified.",
+          "optional": false
+        },
+        "motd": {
+          "type": "boolean",
+          "info": "Is the alert meant for the message of the day?",
+          "optional": false
+        },
+        "tips": {
+          "type": "boolean",
+          "info": "Is this an alert to rotate in game?",
+          "optional": false
+        },
+        "web": {
+          "type": "boolean",
+          "info": "Is this a website banner alert to display globally?",
+          "optional": false
+        },
+        "link": {
+          "type": "string",
+          "info": "If tips or web is selected, when clicked, where should it redirect the user?",
+          "optional": true
+        },
+        "motdFormat": {
+          "type": "string",
+          "info": "If motd is selected, what is the & colour specific format?",
+          "optional": true
+        }
+      }
+    }
+  }
+}
