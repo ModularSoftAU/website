@@ -1,19 +1,144 @@
-- Alerts
+- Alert
 
-  - [Create a new alert](alert/create.md)
+  - [Create an alert](alert/create.md)
   - [Edit an alert](alert/edit.md)
-  - [Custom navbar](custom-navbar.md)
-  - [Cover page](cover.md)
+  - [Delete an alert](alert/delete.md)
 
-- Customization
+- Anticheat
 
-  - [Configuration](configuration.md)
-  - [Themes](themes.md)
-  - [List of Plugins](plugins.md)
-  - [Write a Plugin](write-a-plugin.md)
-  - [Markdown configuration](markdown.md)
-  - [Language highlighting](language-highlight.md)
+  - [Flag a user](anticheat/flag.md)
 
-- Guide
+- Appeal
 
-  - [Privileged Endpoints](privileged.md)
+  - [Appeal a punishment](appeal/create.md)
+  - [Get appeal comments](appeal/$punishmentId/get.md)
+  - [Add comment to appeal](appeal/comment.md)
+  - [Accept appeal](appeal/accept.md)
+  - [Deny appeal](appeal/deny.md)
+  - [Escalate appeal](appeal/escalate.md)
+  - [De-escalate appeal](appeal/deescalate.md)
+
+- Application
+
+  - [Get all applications](application/get.md)
+  - [Generate an application form](application/create.md)
+  - [Edit an application form](application/edit.md)
+  - [Delete an existing application](application/delete.md)
+
+- Communitycreation
+
+  - [Get all community creations](communitycreation/get.md)
+  - [Submit a creation](communitycreation/submit.md)
+  - [Approve a creation submission](communitycreation/approve.md)
+  - [Delete a submitted creation](communitycreation/delete.md)
+
+- Discord
+
+  - [Log user's server switch](discord/switch.md)
+  - [Log user's public chat](discord/chat.md)
+  - [Log user joining network](discord/join.md)
+  - [Log user leaving network](discord/leave.md)
+  - [Log user's direct message](discord/directMessage.md)
+
+- Event
+
+  - [Get all current events](event/get.md)
+  - [Create an event](event/create.md)
+  - [Edit an event](event/edit.md)
+  - [Delete an event](event/delete.md)
+  - [Publish an event](event/publish.md)
+
+- Friend
+
+  - [Send a friend request](friend/request.md)
+  - [Accept a friend request](friend/accept.md)
+  - [Deny a friend request](friend/deny.md)
+  - [Remove a friend](friend/remove.md)
+  - [Block a user](friend/block.md)
+
+- Knowledgebase
+
+  - [Create a knowledgebase section](knowledgebase/section/create.md)
+  - [Update a knowledgebase section](knowledgebase/section/update.md)
+  - [Delete a knowledgebase section](knowledgebase/section/delete.md)
+  - [Get all knowledgebase sections](knowledgebase/section/get.md)
+  - [Get all knowledgebase articles](knowledgebase/article/get.md)
+  - [Create a knowledgebase article](knowledgebase/article/create.md)
+  - [Update a knowledgebase article](knowledgebase/article/update.md)
+  - [Delete a knowledgebase article](knowledgebase/article/delete.md)
+
+- Punishment
+
+  - [Issue a punishment](punishment/issue.md)
+  - [Delete a punishment](punishment/delete.md)
+  - [Get a user's punishments](punishment/user.md)
+  - [Get the latest punishments](punishment/latest.md)
+
+- Rank
+
+  - [Get all current ranks](rank/get.md)
+  - [Get applied ranks information](rank/user.md)
+  - [Create a rank](rank/create.md)
+  - [Edit a rank](rank/edit.md)
+  - [Delete a rank](rank/delete.md)
+  - [Assign user a rank](rank/assign.md)
+  - [Unassign user a rank](rank/unassign.md)
+
+- Report
+
+  - [Get all reports](report/get.md)
+  - [Get all reports from user](report/get/$username.md)
+  - [Report a player](report/create.md)
+  - [Close a report](report/close.md)
+
+- Server
+
+  - [Get server list](server/get.md)
+  - [Create a server](server/create.md)
+  - [Edit a server](server/edit.md)
+  - [Delete a server](server/delete.md)
+
+- Session
+
+  - [Create a session](session/create.md)
+  - [Destroy a session](session/destroy.md)
+  - [Update session for server switch](session/switch.md)
+
+- Shoppingdistrictdirectory
+
+  - [Get all shops](shoppingdistrictdirectory/get.md)
+  - [Create a shop](shoppingdistrictdirectory/create.md)
+  - [Edit a shop](shoppingdistrictdirectory/edit.md)
+  - [Delete a shop](shoppingdistrictdirectory/delete.md)
+  - [Add an item to a shop](shoppingdistrictdirectory/$shopId/create/item.md)
+  - [Edit an item in a shop](shoppingdistrictdirectory/$shopId/edit/item.md)
+  - [Edit an item in a shop](shoppingdistrictdirectory/$shopId/delete/item.md)
+
+- User
+
+  - [Create a new user](user/create.md)
+  - [Update user's cover art](user/profile/$username/about/coverArt.md)
+  - [Update user's about page](user/profile/$username/about/update.md)
+  - [Link with Twitter](user/profile/$username/authenticate/twitter.md)
+  - [Link with Twitch](user/profile/$username/authenticate/twitch.md)
+  - [Link with Youtube](user/profile/$username/authenticate/youtube.md)
+  - [Link with Instagram](user/profile/$username/authenticate/instagram.md)
+  - [Link with Steam](user/profile/$username/authenticate/steam.md)
+  - [Link with GitHub](user/profile/$username/authenticate/github.md)
+  - [Link with Spotify](user/profile/$username/authenticate/spotify.md)
+  - [Link with Discord](user/profile/$username/authenticate/discord.md)
+  - [Create an alert for a user](user/alert/create.md)
+  - [Delete an alert for a user](user/alert/delete.md)
+
+- Vote
+
+  - [Cast a vote](vote/cast.md)
+  - [Get monthly votes](vote/get.md)
+
+- Web
+
+  - [Website user login](web/login.md)
+  - [Register a new user](web/register/create.md)
+  - [Verify a registration](web/register/verify.md)
+  - [User forgot their password](web/forgot.md)
+

@@ -1,8 +1,8 @@
-# <span class="badge badge-light">POST</span> <span class="badge badge-light">alert/create</span>
+# <span class="badge badge-light">POST</span> <span class="badge badge-light">alert/edit</span>
 
 !> Privileged endpoint ([?](privileged.md))
 
-Create an alert on Network platforms.
+Edit an exsiting alert on Network platforms.
 
 ## Properties
 
@@ -27,27 +27,3 @@ If tips or web is selected, when clicked, where should it redirect the user?
 `motdFormat` **optional** *string*  
 If motd is selected, what is the & colour specific format?
 
-## Response
-
-*TODO*
-
----
-
-## Usage
-
-```text
-POST alert/create
-{
-    "alertSlug": "joinCommunityDiscord",
-    "body": "Join our community Discord",
-    "motd": "false",
-    "tips": "true",
-    "web": "false",
-    "link": "https://craftingforchrist.net/discord",
-    "motdFormat": "&aJoin our community Discord"
-}
-```
-
-```text
-TODO
-```

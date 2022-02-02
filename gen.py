@@ -21,9 +21,18 @@ def load_docs(json_file):
 
 def generate_pages(docs):
     pages = docs["pages"]
+    sidebar = {}
     for route, page_data in pages.items():
         doc_file = route + ".md"
         method = page_data["method"]
+
+        # Sidebar
+        short = page_data["short"]
+        section = route.split("/")[0].capitalize()
+        if section not in sidebar:
+            sidebar[section] = []
+        sidebar[section].append((short, doc_file))
+
         privileged = page_data["privileged"]
         description = page_data["description"]
 
@@ -48,8 +57,18 @@ def generate_pages(docs):
                     f.write("{}\n".format(p_info))
                     f.write("\n".format(p_info))
             
-            with open("footers/" + doc_file, "r") as foot:
-                f.write(foot.read())
+            try:
+                with open("footers/" + doc_file, "r") as foot:
+                    f.write(foot.read())
+            except FileNotFoundError:
+                pass
+        
+        with open("docs/_sidebar.md", "w") as f:
+            for title, content in sidebar.items():
+                f.write("- {}\n\n".format(title))
+                for page in content:
+                    f.write("  - [{}]({})\n".format(*page))
+                f.write("\n")
 
 def main():
     try:
