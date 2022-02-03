@@ -15,3 +15,11 @@ The user that the requestee wants to remove.
 `action` *string*  
 The action to process for the request. Note: I believe this is not required
 
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

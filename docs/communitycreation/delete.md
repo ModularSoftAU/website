@@ -9,3 +9,11 @@ Delete a submitted community creation.
 `id` *integer*  
 The ID of the creation to delete.
 
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

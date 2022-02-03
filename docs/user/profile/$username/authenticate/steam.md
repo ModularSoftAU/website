@@ -9,3 +9,11 @@ Link user's Steam account to profile.
 `username` *string*  
 User IGN.
 
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

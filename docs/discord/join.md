@@ -9,3 +9,11 @@ Log a message to a Discord channel when user joins the Network.
 `username` *string*  
 User IGN.
 
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

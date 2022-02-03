@@ -9,3 +9,11 @@ Delete an existing event.
 `eventId` *integer*  
 The ID of the event to delete
 
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

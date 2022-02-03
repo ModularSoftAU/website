@@ -21,3 +21,11 @@ For the user to link any video evidence or screenshots.
 `server` *string*  
 Server that user is being reported from.
 
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

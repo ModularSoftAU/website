@@ -15,3 +15,11 @@ Email of the requested user.
 `password` *string*  
 Password that user has inserted.
 
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

@@ -4,3 +4,12 @@
 
 Get all applications.
 
+
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

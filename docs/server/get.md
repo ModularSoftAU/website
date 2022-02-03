@@ -4,3 +4,12 @@
 
 Get a list of all Servers.
 
+
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

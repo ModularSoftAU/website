@@ -2,10 +2,18 @@
 
 !> Privileged endpoint ([?](privileged.md))
 
-Delete an exsiting alert on Network platforms.
+Delete an existing alert on Network platforms.
 
 ## Properties
 
 `alertSlug` *string*  
 Unique Identifier.
 
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

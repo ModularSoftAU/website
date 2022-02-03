@@ -12,3 +12,11 @@ Unique Identifier.
 `username` *string*  
 User IGN to assign to.
 
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

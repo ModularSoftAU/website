@@ -21,3 +21,11 @@ Which section should the article belong to.
 `position` *integer*  
 Where on the page it should it be displayed.
 
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

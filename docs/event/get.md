@@ -4,3 +4,12 @@
 
 Get a list of all current events.
 
+
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

@@ -18,3 +18,11 @@ The price for the item.
 `shopBuyQuantity` *integer*  
 The quantity of the item you buy with the price.
 
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

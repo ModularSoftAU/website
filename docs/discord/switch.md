@@ -12,3 +12,11 @@ User IGN.
 `server` *string*  
 Server display name.
 
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

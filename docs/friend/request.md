@@ -12,3 +12,11 @@ The user that has requested to be friends.
 `requestedUser` *string*  
 The user that the requestee has requested to be friends with.
 
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

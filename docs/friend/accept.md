@@ -15,3 +15,11 @@ The user that the requestee has requested to be friends with.
 `action` *string*  
 The action to process for the request. Note: I believe this is not required
 
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

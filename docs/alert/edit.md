@@ -2,7 +2,7 @@
 
 !> Privileged endpoint ([?](privileged.md))
 
-Edit an exsiting alert on Network platforms.
+Edit an existing alert on Network platforms.
 
 ## Properties
 
@@ -27,3 +27,11 @@ If tips or web is selected, when clicked, where should it redirect the user?
 `motdFormat` **optional** *string*  
 If motd is selected, what is the & colour specific format?
 
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

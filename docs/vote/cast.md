@@ -15,3 +15,11 @@ The date and time for the vote.
 `service` *string*  
 The website that the user cast the vote on.
 
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

@@ -15,3 +15,11 @@ The IP address of the user.
 `server` *string*  
 The server the user has logged into.
 
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

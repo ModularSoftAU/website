@@ -9,3 +9,11 @@ Update a user's profile about page information.
 `username` *string*  
 User IGN.
 
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

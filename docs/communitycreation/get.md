@@ -4,3 +4,12 @@
 
 Get all community creation submissions.
 
+
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

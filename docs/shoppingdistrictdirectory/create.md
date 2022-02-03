@@ -15,3 +15,11 @@ A description of the shop.
 `shopCreatorId` *integer*  
 The ID of the user that has created the listing.
 
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

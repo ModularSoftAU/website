@@ -4,3 +4,12 @@
 
 List all current votes for the month so far.
 
+
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

@@ -1,4 +1,4 @@
-- Alert
+- Alerts
 
   - [Create an alert](alert/create.md)
   - [Edit an alert](alert/edit.md)
@@ -8,7 +8,7 @@
 
   - [Flag a user](anticheat/flag.md)
 
-- Appeal
+- Appeals
 
   - [Appeal a punishment](appeal/create.md)
   - [Get appeal comments](appeal/$punishmentId/get.md)
@@ -18,14 +18,14 @@
   - [Escalate appeal](appeal/escalate.md)
   - [De-escalate appeal](appeal/deescalate.md)
 
-- Application
+- Applications
 
   - [Get all applications](application/get.md)
   - [Generate an application form](application/create.md)
   - [Edit an application form](application/edit.md)
   - [Delete an existing application](application/delete.md)
 
-- Communitycreation
+- Community Creations
 
   - [Get all community creations](communitycreation/get.md)
   - [Submit a creation](communitycreation/submit.md)
@@ -40,7 +40,7 @@
   - [Log user leaving network](discord/leave.md)
   - [Log user's direct message](discord/directMessage.md)
 
-- Event
+- Events
 
   - [Get all current events](event/get.md)
   - [Create an event](event/create.md)
@@ -48,7 +48,7 @@
   - [Delete an event](event/delete.md)
   - [Publish an event](event/publish.md)
 
-- Friend
+- Friends
 
   - [Send a friend request](friend/request.md)
   - [Accept a friend request](friend/accept.md)
@@ -56,7 +56,7 @@
   - [Remove a friend](friend/remove.md)
   - [Block a user](friend/block.md)
 
-- Knowledgebase
+- Knowledge Base
 
   - [Create a knowledgebase section](knowledgebase/section/create.md)
   - [Update a knowledgebase section](knowledgebase/section/update.md)
@@ -67,14 +67,14 @@
   - [Update a knowledgebase article](knowledgebase/article/update.md)
   - [Delete a knowledgebase article](knowledgebase/article/delete.md)
 
-- Punishment
+- Punishments
 
   - [Issue a punishment](punishment/issue.md)
   - [Delete a punishment](punishment/delete.md)
   - [Get a user's punishments](punishment/user.md)
   - [Get the latest punishments](punishment/latest.md)
 
-- Rank
+- Ranks
 
   - [Get all current ranks](rank/get.md)
   - [Get applied ranks information](rank/user.md)
@@ -84,27 +84,27 @@
   - [Assign user a rank](rank/assign.md)
   - [Unassign user a rank](rank/unassign.md)
 
-- Report
+- User Reports
 
   - [Get all reports](report/get.md)
   - [Get all reports from user](report/get/$username.md)
   - [Report a player](report/create.md)
   - [Close a report](report/close.md)
 
-- Server
+- Minecraft Servers
 
   - [Get server list](server/get.md)
   - [Create a server](server/create.md)
   - [Edit a server](server/edit.md)
   - [Delete a server](server/delete.md)
 
-- Session
+- Sessions
 
   - [Create a session](session/create.md)
   - [Destroy a session](session/destroy.md)
   - [Update session for server switch](session/switch.md)
 
-- Shoppingdistrictdirectory
+- Shopping District Directory
 
   - [Get all shops](shoppingdistrictdirectory/get.md)
   - [Create a shop](shoppingdistrictdirectory/create.md)
@@ -114,7 +114,7 @@
   - [Edit an item in a shop](shoppingdistrictdirectory/$shopId/edit/item.md)
   - [Edit an item in a shop](shoppingdistrictdirectory/$shopId/delete/item.md)
 
-- User
+- Users
 
   - [Create a new user](user/create.md)
   - [Update user's cover art](user/profile/$username/about/coverArt.md)
@@ -130,12 +130,12 @@
   - [Create an alert for a user](user/alert/create.md)
   - [Delete an alert for a user](user/alert/delete.md)
 
-- Vote
+- Voting
 
   - [Cast a vote](vote/cast.md)
   - [Get monthly votes](vote/get.md)
 
-- Web
+- Website
 
   - [Website user login](web/login.md)
   - [Register a new user](web/register/create.md)

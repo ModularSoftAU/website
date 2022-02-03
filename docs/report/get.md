@@ -4,3 +4,12 @@
 
 Get a list of all current Network reports.
 
+
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

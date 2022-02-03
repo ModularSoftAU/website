@@ -9,3 +9,11 @@ Publish an event.
 `eventId` *integer*  
 The ID of the event to publish
 
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

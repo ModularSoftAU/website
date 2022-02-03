@@ -18,3 +18,11 @@ Server display name.
 `content` *string*  
 Chat content.
 
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

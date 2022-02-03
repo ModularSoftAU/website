@@ -24,3 +24,11 @@ The length of the punishment (if applicable).
 `reason` *string*  
 Reason for the punishement.
 
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

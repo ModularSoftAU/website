@@ -12,3 +12,11 @@ The UUID for the Minecraft user.
 `username` *string*  
 The username for the user.
 
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

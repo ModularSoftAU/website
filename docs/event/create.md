@@ -21,3 +21,11 @@ The id of the server where the event will be hosted.
 `information` *string*  
 Information about the event.
 
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

@@ -9,3 +9,11 @@ Delete an existing article from the knowledgebase.
 `articleSlug` *string*  
 The unique identifier for the article.
 
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

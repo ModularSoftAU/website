@@ -9,3 +9,11 @@ Delete an existing section from the knowledgebase.
 `sectionSlug` *string*  
 The unique identifier for the section.
 
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

@@ -30,3 +30,11 @@ Boolean for if the rank is Staff, to appear on Staff page.
 `isDonator` *boolean*  
 Boolean for if the rank is a donation rank to appear on ranks page.
 
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

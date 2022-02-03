@@ -9,3 +9,11 @@ Close an existing report on a player.
 `reportId` *integer*  
 The ID for the player report.
 
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

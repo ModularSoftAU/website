@@ -9,3 +9,11 @@ Delete an alert for the user that has marked as read.
 `username` *string*  
 User IGN.
 
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

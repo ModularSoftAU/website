@@ -9,3 +9,11 @@ Approve a community creation submission.
 `id` *integer*  
 The ID of the creation submission to approve.
 
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

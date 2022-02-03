@@ -4,3 +4,16 @@
 
 Get all comments on the selected appeal.
 
+## Properties
+
+`punishmentId` *integer*  
+The punishment ID to view all comments on.
+
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

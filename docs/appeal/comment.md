@@ -15,3 +15,11 @@ The id of the Staff member providing comment.
 `content` *string*  
 The content of the appeal comment.
 
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

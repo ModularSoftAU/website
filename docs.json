@@ -1,5 +1,5 @@
 {
-  "pages": {
+  "Alerts": {
     "alert/create": {
       "method": "POST",
       "privileged": true,
@@ -47,7 +47,7 @@
       "method": "POST",
       "privileged": true,
       "short": "Edit an alert",
-      "description": "Edit an exsiting alert on Network platforms.",
+      "description": "Edit an existing alert on Network platforms.",
       "properties": {
         "alertSlug": {
           "type": "string",
@@ -90,7 +90,7 @@
       "method": "POST",
       "privileged": true,
       "short": "Delete an alert",
-      "description": "Delete an exsiting alert on Network platforms.",
+      "description": "Delete an existing alert on Network platforms.",
       "properties": {
         "alertSlug": {
           "type": "string",
@@ -98,7 +98,9 @@
           "optional": false
         }
       }
-    },
+    }
+  },
+  "Anticheat": {
     "anticheat/flag": {
       "method": "POST",
       "privileged": true,
@@ -121,7 +123,9 @@
           "optional": false
         }
       }
-    },
+    }
+  },
+  "Appeals": {
     "appeal/create": {
       "method": "POST",
       "privileged": true,
@@ -282,7 +286,9 @@
           "optional": false
         }
       }
-    },
+    }
+  },
+  "Applications": {
     "application/get": {
       "method": "GET",
       "privileged": true,
@@ -382,7 +388,9 @@
           "optional": false
         }
       }
-    },
+    }
+  },
+  "Community Creations": {
     "communitycreation/get": {
       "method": "GET",
       "privileged": true,
@@ -442,7 +450,9 @@
           "optional": false
         }
       }
-    },
+    }
+  },
+  "Discord": {
     "discord/switch": {
       "method": "POST",
       "privileged": true,
@@ -537,7 +547,9 @@
           "optional": false
         }
       }
-    },
+    }
+  },
+  "Events": {
     "event/get": {
       "method": "GET",
       "privileged": true,
@@ -635,7 +647,9 @@
           "optional": false
         }
       }
-    },
+    }
+  },
+  "Friends": {
     "friend/request": {
       "method": "POST",
       "privileged": true,
@@ -745,7 +759,9 @@
           "optional": false
         }
       }
-    },
+    }
+  },
+  "Knowledge Base": {
     "knowledgebase/section/create": {
       "method": "POST",
       "privileged": true,
@@ -915,7 +931,9 @@
           "optional": false
         }
       }
-    },
+    }
+  },
+  "Punishments": {
     "punishment/issue": {
       "method": "POST",
       "privileged": true,
@@ -985,7 +1003,9 @@
       "privileged": true,
       "short": "Get the latest punishments",
       "description": "Get the latest punishments issued."
-    },
+    }
+  },
+  "Ranks": {
     "rank/get": {
       "method": "GET",
       "privileged": true,
@@ -1154,7 +1174,9 @@
           "optional": false
         }
       }
-    },
+    }
+  },
+  "User Reports": {
     "report/get": {
       "method": "GET",
       "privileged": true,
@@ -1219,7 +1241,9 @@
           "optional": false
         }
       }
-    },
+    }
+  },
+  "Minecraft Servers": {
     "server/get": {
       "method": "GET",
       "privileged": true,
@@ -1309,7 +1333,9 @@
           "optional": false
         }
       }
-    },
+    }
+  },
+  "Sessions": {
     "session/create": {
       "method": "POST",
       "privileged": true,
@@ -1358,7 +1384,9 @@
           "optional": false
         }
       }
-    },
+    }
+  },
+  "Shopping District Directory": {
     "shoppingdistrictdirectory/get": {
       "method": "GET",
       "privileged": true,
@@ -1507,7 +1535,9 @@
           "optional": false
         }
       }
-    },
+    }
+  },
+  "Users": {
     "user/create": {
       "method": "POST",
       "privileged": true,
@@ -1661,6 +1691,44 @@
         }
       }
     },
+    "user/alert/create": {
+      "method": "POST",
+      "privileged": true,
+      "short": "Create an alert for a user",
+      "description": "Create an alert for the user to be notified.",
+      "properties": {
+        "username": {
+          "type": "string",
+          "info": "User IGN.",
+          "optional": false
+        },
+        "body": {
+          "type": "string",
+          "info": "The text or message you would like to notify.",
+          "optional": false
+        },
+        "link": {
+          "type": "string",
+          "info": "Where should it direct the user to.",
+          "optional": false
+        }
+      }
+    },
+    "user/alert/delete": {
+      "method": "POST",
+      "privileged": true,
+      "short": "Delete an alert for a user",
+      "description": "Delete an alert for the user that has marked as read.",
+      "properties": {
+        "username": {
+          "type": "string",
+          "info": "User IGN.",
+          "optional": false
+        }
+      }
+    }
+  },
+  "Voting": {
     "vote/cast": {
       "method": "POST",
       "privileged": true,
@@ -1689,7 +1757,9 @@
       "privileged": true,
       "short": "Get monthly votes",
       "description": "List all current votes for the month so far."
-    },
+    }
+  },
+  "Website": {
     "web/login": {
       "method": "POST",
       "privileged": true,
@@ -1759,42 +1829,6 @@
       "privileged": true,
       "short": "User forgot their password",
       "description": "Execute a forgot password for the user.",
-      "properties": {
-        "username": {
-          "type": "string",
-          "info": "User IGN.",
-          "optional": false
-        }
-      }
-    },
-    "user/alert/create": {
-      "method": "POST",
-      "privileged": true,
-      "short": "Create an alert for a user",
-      "description": "Create an alert for the user to be notified.",
-      "properties": {
-        "username": {
-          "type": "string",
-          "info": "User IGN.",
-          "optional": false
-        },
-        "body": {
-          "type": "string",
-          "info": "The text or message you would like to notify.",
-          "optional": false
-        },
-        "link": {
-          "type": "string",
-          "info": "Where should it direct the user to.",
-          "optional": false
-        }
-      }
-    },
-    "user/alert/delete": {
-      "method": "POST",
-      "privileged": true,
-      "short": "Delete an alert for a user",
-      "description": "Delete an alert for the user that has marked as read.",
       "properties": {
         "username": {
           "type": "string",

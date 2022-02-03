@@ -4,3 +4,12 @@
 
 Get a list of all current ranks.
 
+
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

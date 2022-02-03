@@ -15,3 +15,11 @@ The text or message you would like to notify.
 `link` *string*  
 Where should it direct the user to.
 
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

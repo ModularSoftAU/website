@@ -12,3 +12,11 @@ User IGN.
 `coverArtId` *integer*  
 Cover art id. TODO: What does this mean?
 
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

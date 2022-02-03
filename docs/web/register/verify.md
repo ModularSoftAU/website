@@ -12,3 +12,11 @@ User IGN.
 `verificationToken` *string*  
 Token of the registering user, to be obtained via email.
 
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

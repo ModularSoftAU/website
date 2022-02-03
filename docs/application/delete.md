@@ -9,3 +9,11 @@ Delete an existing application.
 `applicationId` *integer*  
 The id of the application to delete.
 
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

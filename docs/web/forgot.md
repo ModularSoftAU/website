@@ -9,3 +9,11 @@ Execute a forgot password for the user.
 `username` *string*  
 User IGN.
 
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

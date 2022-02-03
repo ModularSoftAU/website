@@ -9,3 +9,11 @@ Delete an existing rank.
 `rankSlug` *string*  
 Unique Identifier.
 
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

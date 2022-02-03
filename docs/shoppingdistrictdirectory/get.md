@@ -4,3 +4,12 @@
 
 List all shops in the district.
 
+
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

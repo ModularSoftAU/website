@@ -21,3 +21,11 @@ The Font Awesome icon to use on the section
 `position` *integer*  
 Where on the page it should it be displayed
 
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

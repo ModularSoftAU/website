@@ -4,3 +4,12 @@
 
 Get a list of all the knowledgebase articles.
 
+
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

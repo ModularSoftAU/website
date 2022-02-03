@@ -9,3 +9,11 @@ Delete an existing punishment.
 `punishmentId` *integer*  
 The ID of the punishment to delete.
 
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

@@ -12,3 +12,11 @@ Unique Identifier.
 `username` *string*  
 User IGN to unassign from.
 
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

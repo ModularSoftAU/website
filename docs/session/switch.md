@@ -9,3 +9,11 @@ Update session record to indicate change of server.
 `uuid` *string*  
 The UUID for the Minecraft user.
 
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

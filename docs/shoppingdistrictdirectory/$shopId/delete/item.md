@@ -12,3 +12,11 @@ The ID of the shop containing the item.
 `shopItemId` *integer*  
 The ID of the item to delete.
 
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

@@ -4,3 +4,12 @@
 
 Get the latest punishments issued.
 
+
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

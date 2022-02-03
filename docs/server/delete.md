@@ -9,3 +9,11 @@ Delete an existing server.
 `serverId` *integer*  
 The ID of the server to delete.
 
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

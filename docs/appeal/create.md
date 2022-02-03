@@ -9,3 +9,11 @@ Create an appeal to remove a punishment.
 `punishmentId` *integer*  
 The punishment ID the user is appealing.
 
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

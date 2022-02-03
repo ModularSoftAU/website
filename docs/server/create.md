@@ -21,3 +21,11 @@ Whether it should be displayed on the /play page
 `position` *integer*  
 The display position the server should be on for the /play page
 
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

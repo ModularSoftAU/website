@@ -4,3 +4,16 @@
 
 Get a list of all current Network reports from requested user.
 
+## Properties
+
+`username` *string*  
+User IGN.
+
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

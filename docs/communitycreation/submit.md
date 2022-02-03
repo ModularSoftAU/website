@@ -18,3 +18,11 @@ The description for the creation.
 `creationLink` *string*  
 The link to the raw image.
 
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

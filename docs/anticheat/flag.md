@@ -15,3 +15,11 @@ The date and time for the flag.
 `type` *string*  
 The type of hack that the player has been flagged for.
 
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

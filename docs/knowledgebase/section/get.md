@@ -4,3 +4,12 @@
 
 Get a list of all the knowledgebase sections.
 
+
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

@@ -9,3 +9,11 @@ Delete an existing shop listing in the directory.
 `shopId` *integer*  
 The ID of the shop to delete.
 
+
+## Response
+
+(RESPONSE)
+
+## Examples
+
+(EXAMPLES)

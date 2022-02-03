@@ -27,27 +27,11 @@ If tips or web is selected, when clicked, where should it redirect the user?
 `motdFormat` **optional** *string*  
 If motd is selected, what is the & colour specific format?
 
+
 ## Response
 
-*TODO*
+(RESPONSE)
 
----
+## Examples
 
-## Usage
-
-```text
-POST alert/create
-{
-    "alertSlug": "joinCommunityDiscord",
-    "body": "Join our community Discord",
-    "motd": "false",
-    "tips": "true",
-    "web": "false",
-    "link": "https://craftingforchrist.net/discord",
-    "motdFormat": "&aJoin our community Discord"
-}
-```
-
-```text
-TODO
-```
+(EXAMPLES)
