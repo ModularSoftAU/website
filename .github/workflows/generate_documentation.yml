@@ -4,9 +4,9 @@ name: Generate documentation
 
 on:
   push:
-    branches: [ main, docs ]
+    branches: [ main ]
   pull_request:
-    branches: [ main, docs ]
+    branches: [ main ]
   
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -23,3 +23,8 @@ jobs:
         python-version: "3.10"
     - name: Runs gen.py
       run: python gen.py
+    - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4.2.3
+        with:
+          branch: main # The branch the action should deploy to.
+          folder: docs # The folder the action should deploy.
