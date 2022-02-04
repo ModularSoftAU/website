@@ -1,6 +1,6 @@
 import json
 import os
-import sys
+import shutil
 
 
 PRIVILEGED = '!> Privileged endpoint ([?](privileged.md))'
@@ -21,7 +21,7 @@ class Property:
 
 class Endpoint:
     def __init__(self, section, route, method, privileged,
-                 short, description, properties):
+                 short, description, properties, footer):
         self.section = section
         self.route = route
         self.method = method
@@ -29,12 +29,14 @@ class Endpoint:
         self.short = short
         self.description = description
         self.properties = properties
+        self.footer = footer
     
     def as_file(self):
         return self.route + ".md"
     
     def as_section(self):
         return "  - [{}]({})".format(self.short, self.as_file())
+
 
     
 def safe_open_w(path):
@@ -44,9 +46,12 @@ def safe_open_w(path):
     return open(path, 'w')
 
 
-def parse_documentation_json(json_file):
-    with open(json_file) as f:
-        sections = json.loads(f.read())
+def parse_docs_json(docs_json, footers_directory, must_have_footer=False):
+    try:
+        with open(docs_json) as f:
+            sections = json.loads(f.read())
+    except FileNotFoundError:
+        return None
     
     endpoints = []
     for section, pages in sections.items():
@@ -64,19 +69,32 @@ def parse_documentation_json(json_file):
                     properties.append(Property(name, p_type, info, optional))
             except KeyError:
                 pass
-
-            endpoints.append(Endpoint(section, route, method, privileged,
-                                      short, description, properties))
+            
+            footer_file = footers_directory + "/" + route + ".md"
+            footer = None
+            try:
+                with open(footer_file) as f:
+                    footer = f.read()
+            except FileNotFoundError:
+                if must_have_footer:
+                    continue
+                
+            endpoints.append(Endpoint(section, route, method, privileged, short,
+                                      description, properties, footer))
     return endpoints
+
+
+def reset_docs_directory(docs_directory, docs_copy_directory):
+    if os.path.isdir(docs_directory):
+        shutil.rmtree(docs_directory)
+    shutil.copytree(docs_copy_directory, docs_directory)
 
 
 def replace_variable(template, variable, value):
     return template.replace("({})".format(variable), value)
 
 
-def generate_pages(endpoints, template):
-    
-    
+def generate_pages(endpoints, template, docs_directory):
     for endpoint in endpoints:
         endpoint: Endpoint
         page = template
@@ -95,47 +113,55 @@ def generate_pages(endpoints, template):
 
         page = replace_variable(page, "DESCRIPTION", endpoint.description)
 
-        with safe_open_w("docs/" + endpoint.as_file()) as f:
+        if endpoint.footer is not None:
+            page = replace_variable(page, "FOOTER", endpoint.footer)
+
+        with safe_open_w(docs_directory + "/" + endpoint.as_file()) as f:
             f.write(page)
 
 
-def generate_sidebar(endpoints):
+def generate_sidebar(endpoints, docs_directory):
     endpoint_sections = {}
-
     for endpoint in endpoints:
         endpoint: Endpoint
         if endpoint.section not in endpoint_sections:
             endpoint_sections[endpoint.section] = []
         endpoint_sections[endpoint.section].append(endpoint)
     
-    with safe_open_w("docs/_sidebar.md") as f:
+    with safe_open_w(docs_directory + "/_sidebar.md") as f:
         for section, pages in endpoint_sections.items():
             f.write("- {}\n\n{}\n\n".format(
                 section, "\n".join([p.as_section() for p in pages])))
 
 
 def main():
-    try:
-        endpoints = parse_documentation_json("docs.json")
-    except FileNotFoundError:
-        print("Failed to read docs.json")
+    docs_directory = "docs"
+    docs_copy_directory = "docs_copy"
+    docs_json = "docs.json"
+    template_filename = "template.md"
+    footers_directory = "footers"
+
+    if not (endpoints := parse_docs_json(docs_json, footers_directory)):
+        print("Failed to read {}".format(docs_json))
         return
     
+    reset_docs_directory(docs_directory, docs_copy_directory)
+
     try:
-        with open("template.md", "r") as f:
+        with open(template_filename, "r") as f:
             template = f.read()
     except FileNotFoundError:
-        print("Failed to read template.md")
+        print("Failed to read {}".format(template_filename))
         return
     
     try:
-        generate_pages(endpoints, template)
+        generate_pages(endpoints, template, docs_directory)
     except IOError:
         print("Failed to write to one of the documentation pages")
         return
     
     try:
-        generate_sidebar(endpoints)
+        generate_sidebar(endpoints, docs_directory)
     except IOError:
         print("Failed to write the sidebar")
         return

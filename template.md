@@ -6,10 +6,4 @@
 
 (PROPERTIES)
 
-## Response
-
-(RESPONSE)
-
-## Examples
-
-(EXAMPLES)
+(FOOTER)
