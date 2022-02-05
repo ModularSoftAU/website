@@ -1,0 +1,8 @@
+{
+    "api_json": "docs.json",
+    "api_template_file": "template.md",
+    "api_template_directory": "api",
+    "template_directory": "template",
+    "build_directory": "build",
+    "api_build_directory": "api"
+}
