@@ -1,144 +1,160 @@
-- Alerts
+- [Home](/README)
 
-  - [Create an alert](alert/create.md)
-  - [Edit an alert](alert/edit.md)
-  - [Delete an alert](alert/delete.md)
+- [Contributing](/contributing.md)
 
-- Anticheat
+- Proxy
 
-  - [Flag a user](anticheat/flag.md)
+  - [Installation](/proxy/installation.md)
+  - [Configuration](/proxy/configuration.md)
 
-- Appeals
+- Website Suite
 
-  - [Appeal a punishment](appeal/create.md)
-  - [Get appeal comments](appeal/$punishmentId/get.md)
-  - [Add comment to appeal](appeal/comment.md)
-  - [Accept appeal](appeal/accept.md)
-  - [Deny appeal](appeal/deny.md)
-  - [Escalate appeal](appeal/escalate.md)
-  - [De-escalate appeal](appeal/deescalate.md)
+  - [Installation](/websiteSuite/installation.md)
+  - [Configuration](/websiteSuite/configuration.md)
 
-- Applications
+- API Endpoints
 
-  - [Get all applications](application/get.md)
-  - [Generate an application form](application/create.md)
-  - [Edit an application form](application/edit.md)
-  - [Delete an existing application](application/delete.md)
+  - Alerts
 
-- Community Creations
+    - [Create an alert](api/alert/create)
+    - [Edit an alert](api/alert/edit)
+    - [Delete an alert](api/alert/delete)
 
-  - [Get all community creations](communitycreation/get.md)
-  - [Submit a creation](communitycreation/submit.md)
-  - [Approve a creation submission](communitycreation/approve.md)
-  - [Delete a submitted creation](communitycreation/delete.md)
+  - Anticheat
 
-- Discord
+    - [Flag a user](api/anticheat/flag)
 
-  - [Log user's server switch](discord/switch.md)
-  - [Log user's public chat](discord/chat.md)
-  - [Log user joining network](discord/join.md)
-  - [Log user leaving network](discord/leave.md)
-  - [Log user's direct message](discord/directMessage.md)
+  - Appeals
 
-- Events
+    - [Appeal a punishment](api/appeal/create)
+    - [Get appeal comments](api/appeal/$punishmentId/get)
+    - [Add comment to appeal](api/appeal/comment)
+    - [Accept appeal](api/appeal/accept)
+    - [Deny appeal](api/appeal/deny)
+    - [Escalate appeal](api/appeal/escalate)
+    - [De-escalate appeal](api/appeal/deescalate)
 
-  - [Get all current events](event/get.md)
-  - [Create an event](event/create.md)
-  - [Edit an event](event/edit.md)
-  - [Delete an event](event/delete.md)
-  - [Publish an event](event/publish.md)
+  - Applications
 
-- Friends
+    - [Get all applications](api/application/get)
+    - [Generate an application form](api/application/create)
+    - [Edit an application form](api/application/edit)
+    - [Delete an existing application](api/application/delete)
 
-  - [Send a friend request](friend/request.md)
-  - [Accept a friend request](friend/accept.md)
-  - [Deny a friend request](friend/deny.md)
-  - [Remove a friend](friend/remove.md)
-  - [Block a user](friend/block.md)
+  - Community Creations
 
-- Knowledge Base
+    - [Get all community creations](api/communitycreation/get)
+    - [Submit a creation](api/communitycreation/submit)
+    - [Approve a creation submission](api/communitycreation/approve)
+    - [Delete a submitted creation](api/communitycreation/delete)
 
-  - [Create a knowledgebase section](knowledgebase/section/create.md)
-  - [Update a knowledgebase section](knowledgebase/section/update.md)
-  - [Delete a knowledgebase section](knowledgebase/section/delete.md)
-  - [Get all knowledgebase sections](knowledgebase/section/get.md)
-  - [Get all knowledgebase articles](knowledgebase/article/get.md)
-  - [Create a knowledgebase article](knowledgebase/article/create.md)
-  - [Update a knowledgebase article](knowledgebase/article/update.md)
-  - [Delete a knowledgebase article](knowledgebase/article/delete.md)
+  - Discord
 
-- Punishments
+    - [Log user's server switch](api/discord/switch)
+    - [Log user's public chat](api/discord/chat)
+    - [Log user joining network](api/discord/join)
+    - [Log user leaving network](api/discord/leave)
+    - [Log user's direct message](api/discord/directMessage)
 
-  - [Issue a punishment](punishment/issue.md)
-  - [Delete a punishment](punishment/delete.md)
-  - [Get a user's punishments](punishment/user.md)
-  - [Get the latest punishments](punishment/latest.md)
+  - Events
 
-- Ranks
+    - [Get all current events](api/event/get)
+    - [Create an event](api/event/create)
+    - [Edit an event](api/event/edit)
+    - [Delete an event](api/event/delete)
+    - [Publish an event](api/event/publish)
 
-  - [Get all current ranks](rank/get.md)
-  - [Get applied ranks information](rank/user.md)
-  - [Create a rank](rank/create.md)
-  - [Edit a rank](rank/edit.md)
-  - [Delete a rank](rank/delete.md)
-  - [Assign user a rank](rank/assign.md)
-  - [Unassign user a rank](rank/unassign.md)
+  - Friends
 
-- User Reports
+    - [Send a friend request](api/friend/request)
+    - [Accept a friend request](api/friend/accept)
+    - [Deny a friend request](api/friend/deny)
+    - [Remove a friend](api/friend/remove)
+    - [Block a user](api/friend/block)
 
-  - [Get all reports](report/get.md)
-  - [Get all reports from user](report/get/$username.md)
-  - [Report a player](report/create.md)
-  - [Close a report](report/close.md)
+  - Knowledge Base
 
-- Minecraft Servers
+    - [Create a knowledgebase section](api/knowledgebase/section/create)
+    - [Update a knowledgebase section](api/knowledgebase/section/update)
+    - [Delete a knowledgebase section](api/knowledgebase/section/delete)
+    - [Get all knowledgebase sections](api/knowledgebase/section/get)
+    - [Get all knowledgebase articles](api/knowledgebase/article/get)
+    - [Create a knowledgebase article](api/knowledgebase/article/create)
+    - [Update a knowledgebase article](api/knowledgebase/article/update)
+    - [Delete a knowledgebase article](api/knowledgebase/article/delete)
 
-  - [Get server list](server/get.md)
-  - [Create a server](server/create.md)
-  - [Edit a server](server/edit.md)
-  - [Delete a server](server/delete.md)
+  - Punishments
 
-- Sessions
+    - [Issue a punishment](api/punishment/issue)
+    - [Delete a punishment](api/punishment/delete)
+    - [Get a user's punishments](api/punishment/user)
+    - [Get the latest punishments](api/punishment/latest)
 
-  - [Create a session](session/create.md)
-  - [Destroy a session](session/destroy.md)
-  - [Update session for server switch](session/switch.md)
+  - Ranks
 
-- Shopping District Directory
+    - [Get all current ranks](api/rank/get)
+    - [Get applied ranks information](api/rank/user)
+    - [Create a rank](api/rank/create)
+    - [Edit a rank](api/rank/edit)
+    - [Delete a rank](api/rank/delete)
+    - [Assign user a rank](api/rank/assign)
+    - [Unassign user a rank](api/rank/unassign)
 
-  - [Get all shops](shoppingdistrictdirectory/get.md)
-  - [Create a shop](shoppingdistrictdirectory/create.md)
-  - [Edit a shop](shoppingdistrictdirectory/edit.md)
-  - [Delete a shop](shoppingdistrictdirectory/delete.md)
-  - [Add an item to a shop](shoppingdistrictdirectory/$shopId/create/item.md)
-  - [Edit an item in a shop](shoppingdistrictdirectory/$shopId/edit/item.md)
-  - [Edit an item in a shop](shoppingdistrictdirectory/$shopId/delete/item.md)
+  - User Reports
 
-- Users
+    - [Get all reports](api/report/get)
+    - [Get all reports from user](api/report/get/$username)
+    - [Report a player](api/report/create)
+    - [Close a report](api/report/close)
 
-  - [Create a new user](user/create.md)
-  - [Update user's cover art](user/profile/$username/about/coverArt.md)
-  - [Update user's about page](user/profile/$username/about/update.md)
-  - [Link with Twitter](user/profile/$username/authenticate/twitter.md)
-  - [Link with Twitch](user/profile/$username/authenticate/twitch.md)
-  - [Link with Youtube](user/profile/$username/authenticate/youtube.md)
-  - [Link with Instagram](user/profile/$username/authenticate/instagram.md)
-  - [Link with Steam](user/profile/$username/authenticate/steam.md)
-  - [Link with GitHub](user/profile/$username/authenticate/github.md)
-  - [Link with Spotify](user/profile/$username/authenticate/spotify.md)
-  - [Link with Discord](user/profile/$username/authenticate/discord.md)
-  - [Create an alert for a user](user/alert/create.md)
-  - [Delete an alert for a user](user/alert/delete.md)
+  - Minecraft Servers
 
-- Voting
+    - [Get server list](api/server/get)
+    - [Create a server](api/server/create)
+    - [Edit a server](api/server/edit)
+    - [Delete a server](api/server/delete)
 
-  - [Cast a vote](vote/cast.md)
-  - [Get monthly votes](vote/get.md)
+  - Sessions
 
-- Website
+    - [Create a session](api/session/create)
+    - [Destroy a session](api/session/destroy)
+    - [Update session for server switch](api/session/switch)
 
-  - [Website user login](web/login.md)
-  - [Register a new user](web/register/create.md)
-  - [Verify a registration](web/register/verify.md)
-  - [User forgot their password](web/forgot.md)
+  - Shopping District Directory
+
+    - [Get all shops](api/shoppingdistrictdirectory/get)
+    - [Create a shop](api/shoppingdistrictdirectory/create)
+    - [Edit a shop](api/shoppingdistrictdirectory/edit)
+    - [Delete a shop](api/shoppingdistrictdirectory/delete)
+    - [Add an item to a shop](api/shoppingdistrictdirectory/$shopId/create/item)
+    - [Edit an item in a shop](api/shoppingdistrictdirectory/$shopId/edit/item)
+    - [Edit an item in a shop](api/shoppingdistrictdirectory/$shopId/delete/item)
+
+  - Users
+
+    - [Create a new user](api/user/create)
+    - [Update user's cover art](api/user/profile/$username/about/coverArt)
+    - [Update user's about page](api/user/profile/$username/about/update)
+    - [Link with Twitter](api/user/profile/$username/authenticate/twitter)
+    - [Link with Twitch](api/user/profile/$username/authenticate/twitch)
+    - [Link with Youtube](api/user/profile/$username/authenticate/youtube)
+    - [Link with Instagram](api/user/profile/$username/authenticate/instagram)
+    - [Link with Steam](api/user/profile/$username/authenticate/steam)
+    - [Link with GitHub](api/user/profile/$username/authenticate/github)
+    - [Link with Spotify](api/user/profile/$username/authenticate/spotify)
+    - [Link with Discord](api/user/profile/$username/authenticate/discord)
+    - [Create an alert for a user](api/user/alert/create)
+    - [Delete an alert for a user](api/user/alert/delete)
+
+  - Voting
+
+    - [Cast a vote](api/vote/cast)
+    - [Get monthly votes](api/vote/get)
+
+  - Website
+
+    - [Website user login](api/web/login)
+    - [Register a new user](api/web/register/create)
+    - [Verify a registration](api/web/register/verify)
+    - [User forgot their password](api/web/forgot)
 
