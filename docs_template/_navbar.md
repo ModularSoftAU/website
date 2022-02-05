@@ -9,5 +9,5 @@
 
 * Website Suite
   * [Installation](/websiteSuite/installation.md)
-    * [Configuration](/websiteSuite/configuration.md)
-    * [API Endpoints](/apiEndpoints.md)
+  * [Configuration](/websiteSuite/configuration.md)
+  * [API Endpoints](/apiEndpoints.md)
