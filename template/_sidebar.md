@@ -12,6 +12,6 @@
   - [Installation](/websiteSuite/installation.md)
   - [Configuration](/websiteSuite/configuration.md)
 
-- API Endpoints
+- [API Endpoints](/api/)
 (API_ENDPOINTS)
 

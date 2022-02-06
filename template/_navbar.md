@@ -1,14 +1,15 @@
-* [Home](README.md)
+- [Home](README.md)
 
-* [Contributing](/contributing.md)
+- [Contributing](/contributing.md)
 
-* Proxy
+- Proxy
 
-  * [Installation](/proxy/installation.md)
-  * [Configuration](/proxy/configuration.md)
+  - [Installation](/proxy/installation.md)
+  - [Configuration](/proxy/configuration.md)
 
-* Website Suite
+- Website Suite
 
-  * [Installation](/websiteSuite/installation.md)
-  * [Configuration](/websiteSuite/configuration.md)
-  * [API Endpoints](/apiEndpoints.md)
+  - [Installation](/websiteSuite/installation.md)
+  - [Configuration](/websiteSuite/configuration.md)
+
+- [API](/api/)

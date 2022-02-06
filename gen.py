@@ -1,9 +1,10 @@
 import json
 import os
 import shutil
+import sys
 
 
-class Property:
+class Parameter:
     def __init__(self, name, p_type, info, optional):
         self.name = name
         self.p_type = p_type
@@ -17,14 +18,14 @@ class Property:
 
 class Endpoint:
     def __init__(self, section, route, method, privileged,
-                 short, description, properties, footer):
+                 short, description, parameters, footer):
         self.section = section
         self.route = route
         self.method = method
         self.privileged = privileged
         self.short = short
         self.description = description
-        self.properties = properties
+        self.parameters = parameters
         self.footer = footer
 
 class PageTemplate:
@@ -68,15 +69,15 @@ def parse_api_json(api_json, api_template_directory, must_have_footer=True):
             privileged = page_data["privileged"]
             short = page_data["short"]
             description = page_data["description"]
-            # Only some pages have a properties section. If they don't, we'll
+            # Only some pages have a parameters section. If they don't, we'll
             # just assign an empty list so nothing can be rendered.
-            properties = []
-            if "properties" in page_data:
-                for name, property_data in page_data["properties"].items():
-                    p_type = property_data["type"]
-                    info = property_data["info"]
-                    optional = property_data["optional"]
-                    properties.append(Property(name, p_type, info, optional))
+            parameters = []
+            if "parameters" in page_data:
+                for name, Parameter_data in page_data["parameters"].items():
+                    p_type = Parameter_data["type"]
+                    info = Parameter_data["info"]
+                    optional = Parameter_data["optional"]
+                    parameters.append(Parameter(name, p_type, info, optional))
             
             # Load the footer.
             footer_file = "{}/{}.md".format(api_template_directory, route)
@@ -93,7 +94,7 @@ def parse_api_json(api_json, api_template_directory, must_have_footer=True):
                     continue
                 
             endpoints.append(Endpoint(section, route, method, privileged, short,
-                                      description, properties, footer))
+                                      description, parameters, footer))
     return endpoints
 
 def are_valid_endpoints(endpoints):
@@ -107,15 +108,14 @@ def are_valid_endpoints(endpoints):
                 endpoint.method, valid_methods))
             return False
 
-        for parameter in endpoint.properties:
+        for parameter in endpoint.parameters:
             if parameter.p_type not in valid_types:
                 print("'{}' is not one of types {}".format(
                     parameter.p_type, valid_types))
                 return False
     return True
 
-def compile_api_endpoints(api_json, template_directory, api_template_file,
-                          api_template_directory):
+def compile_api_endpoints(api_json, api_template_directory):
     try:
         endpoints = parse_api_json(api_json, api_template_directory)
     except FileNotFoundError:
@@ -150,12 +150,12 @@ def compile_api_pages(endpoints, api_template_file):
         # If the endpoint is not privileged, don't print anything extra
         template.remove_line_with_if("PRIVILEGED", not endpoint.privileged)
         
-        # If the endpoint has no input properties, don't print anything extra
-        if len(endpoint.properties) > 0:
-            properties_text = "\n".join([str(p) for p in endpoint.properties])
-            template.replace("PROPERTIES", "## Properties\n\n{}".format(properties_text))
+        # If the endpoint has no input parameters, don't print anything extra
+        if len(endpoint.parameters) > 0:
+            parameters_text = "\n".join([str(p) for p in endpoint.parameters])
+            template.replace("PARAMETERS", "## Parameters\n\n{}".format(parameters_text))
         else:
-            template.replace("PROPERTIES", "")
+            template.replace("PARAMETERS", "")
 
         template.replace("DESCRIPTION", endpoint.description)
 
@@ -239,8 +239,15 @@ def main():
     build_directory        = config["build_directory"]
     api_build_directory    = config["api_build_directory"]
 
-    endpoints = compile_api_endpoints(api_json, template_directory,
-                                      api_template_file, api_template_directory)
+    if "--clean" in sys.argv:
+        try:
+            shutil.rmtree(build_directory)
+        except FileNotFoundError:
+            pass
+        print("Cleaned '{}'".format(build_directory))
+        return
+
+    endpoints = compile_api_endpoints(api_json, api_template_directory)
     if len(endpoints) == 0:
         return
     
