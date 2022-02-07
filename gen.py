@@ -17,9 +17,10 @@ class Parameter:
             self.name, extra, self.p_type, self.info)
 
 class Endpoint:
-    def __init__(self, section, route, method, privileged,
-                 short, description, parameters, footer):
+    def __init__(self, section, section_slug, route, method, privileged,
+                 short, description, parameters, footer, filepath):
         self.section = section
+        self.section_slug = section_slug
         self.route = route
         self.method = method
         self.privileged = privileged
@@ -27,6 +28,7 @@ class Endpoint:
         self.description = description
         self.parameters = parameters
         self.footer = footer
+        self.filepath = filepath
 
 class PageTemplate:
     def __init__(self, content):
@@ -36,16 +38,31 @@ class PageTemplate:
         self.content = self.content.replace("(" + variable + ")", value)
     
     def remove_line_with_if(self, variable, condition):
-        line_match = "(?{})".format(variable)
-        keep_lines = []
-        for line in self.content.split("\n"):
-            if line_match in line:
-                line = line.replace(line_match, "")
-                if condition:
-                    keep_lines.append(line)
-            else:
-                keep_lines.append(line)
-        self.content = "\n".join(keep_lines)
+        match_start = "({})".format(variable)
+        match_end = "(/{})".format(variable)
+        matched_start_index = []
+        matched_end_index = []
+        for i, line in enumerate(self.content.split("\n")):
+            if match_start in line:
+                matched_start_index.append(i)
+            
+            if match_end in line:
+                matched_end_index.append(i)
+        
+        if len(matched_start_index) != len(matched_end_index):
+            print("Not same length")
+            return
+        
+        content_lines = self.content.split("\n")
+        if condition:
+            for start, end in zip(matched_start_index, matched_end_index):
+                del content_lines[start:end+1]
+        else:
+            line_indices_to_remove = matched_start_index + matched_end_index
+            # From https://stackoverflow.com/a/11303234
+            for index in sorted(line_indices_to_remove, reverse=True):
+                del content_lines[index]
+        self.content = "\n".join(content_lines)
 
     def __str__(self):
         return self.content
@@ -69,6 +86,9 @@ def parse_api_json(api_json, api_template_directory, must_have_footer=True):
             privileged = page_data["privileged"]
             short = page_data["short"]
             description = page_data["description"]
+            section_slug = route.split("/")[0]
+            filename = "-".join(route.split("/")[1:]) + ".mdx"
+            filepath = "{}/{}".format(section_slug, filename)
             # Only some pages have a parameters section. If they don't, we'll
             # just assign an empty list so nothing can be rendered.
             parameters = []
@@ -93,11 +113,14 @@ def parse_api_json(api_json, api_template_directory, must_have_footer=True):
                     # matching footer.
                     continue
                 
-            endpoints.append(Endpoint(section, route, method, privileged, short,
-                                      description, parameters, footer))
+            endpoints.append(Endpoint(section, section_slug, route, method, privileged, short,
+                                      description, parameters, footer, filepath))
     return endpoints
 
 def are_valid_endpoints(endpoints):
+    """Performs type checking on the endpoints to ensure they have been given
+    reasonable values.
+    """
     valid_methods = ["GET", "POST"]
     valid_types = ["string", "boolean", "integer"]
 
@@ -130,7 +153,7 @@ def compile_api_endpoints(api_json, api_template_directory):
     
     return endpoints
 
-def compile_api_pages(endpoints, api_template_file):
+def compile_api_pages(endpoints, api_template_file, build_directory):
     """Creates the documentation pages and the folder structure using the
     template markdown file as a guide.
     """
@@ -158,6 +181,12 @@ def compile_api_pages(endpoints, api_template_file):
             template.replace("PARAMETERS", "")
 
         template.replace("DESCRIPTION", endpoint.description)
+        template.replace("SHORT", endpoint.short)
+
+        if endpoint.method == "POST":
+            template.replace("METHOD_COLOUR", "#FF6E26")
+        else:
+            template.replace("METHOD_COLOUR", "#46AF00")
 
         # If the endpoint has no footer, don't print anything extra
         if endpoint.footer is not None:
@@ -165,7 +194,11 @@ def compile_api_pages(endpoints, api_template_file):
         else:
             template.replace("FOOTER", "")
         
-        pages.append((template, endpoint.route))
+        template.replace("BUILD_DIRECTORY", build_directory)
+
+        template.replace("SLUG", "/".join(endpoint.route.split("/")[1:]))
+        
+        pages.append((template, endpoint.filepath))
     return pages
 
 def reset_build_directory(template_directory, build_directory):
@@ -185,44 +218,33 @@ def safe_open_w(path):
 
 def build_pages(pages, build_directory, api_build_directory):
     for page in pages:
-        template, route = page
-        page_filename = "{}/{}/{}.md".format(build_directory, api_build_directory, route)
+        template, filepath = page
+        page_filename = "{}/{}/{}".format(build_directory, api_build_directory, filepath)
         with safe_open_w(page_filename) as f:
             f.write(str(template))
 
-def build_sidebar(endpoints, template_directory, api_build_directory,
-                  build_directory):
-    """Create the sidebar file in the format expected by docsify such that we
-    can easily navigate between all the pages in the documentation.
+def build_sidebar(endpoints, api_section_label, build_directory,
+                  api_build_directory):
+    """Create category files expected by docusaurus so that it can auto-generate
+    the sidebar for us.
     """
-    try:
-        with open(template_directory + "/_sidebar.md") as f:
-            sidebar_template = PageTemplate(f.read())
-    except FileNotFoundError:
-        print("File '/sidebar.md' does not exist")
-        return
     
-    endpoint_sections = {}
-    api_section_list = []
-    for endpoint in endpoints:
-        endpoint: Endpoint
-        if endpoint.section not in endpoint_sections:
-            endpoint_sections[endpoint.section] = []
-        endpoint_sections[endpoint.section].append(endpoint)
+    api_sections = {(e.section_slug, e.section) for e in endpoints}
+    for slug, name in api_sections:
+        category_file = "{}/{}/{}/_category_.json".format(
+            build_directory,
+            api_build_directory,
+            slug
+        )
+        with open(category_file, "w") as f:
+            f.write('{{ "label": "{}" }}\n'.format(name))
     
-    for section, endpoints in endpoint_sections.items():
-        api_section_list.append("\n  - {}\n".format(section))
-        for endpoint in endpoints:
-            api_section_list.append("    - [{}]({}/{})".format(
-                endpoint.short,
-                api_build_directory,
-                endpoint.route
-            ))
-    api_section = "\n".join(api_section_list)
-
-    sidebar_template.replace("API_ENDPOINTS", api_section)
-    with safe_open_w(build_directory + "/_sidebar.md") as f:
-        f.write(str(sidebar_template))
+    api_category_filename = "{}/{}/_category_.json".format(
+        build_directory,
+        api_build_directory
+    )
+    with open(api_category_filename, "w") as f:
+        f.write('{{ "label": "{}" }}\n'.format(api_section_label))
 
 def main():
     try:
@@ -238,6 +260,7 @@ def main():
     template_directory     = config["template_directory"]
     build_directory        = config["build_directory"]
     api_build_directory    = config["api_build_directory"]
+    api_section_label      = config["api_section_label"]
 
     if "--clean" in sys.argv:
         try:
@@ -251,14 +274,14 @@ def main():
     if len(endpoints) == 0:
         return
     
-    pages = compile_api_pages(endpoints, api_template_file)
+    pages = compile_api_pages(endpoints, api_template_file, build_directory)
     if len(pages) == 0:
         return
 
     reset_build_directory(template_directory, build_directory)
     build_pages(pages, build_directory, api_build_directory)
-    build_sidebar(endpoints, template_directory,
-                  api_build_directory, build_directory)
+    build_sidebar(endpoints, api_section_label, build_directory,
+                  api_build_directory)
 
     print("Successfully generated {} pages".format(len(endpoints)))
 

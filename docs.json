@@ -753,7 +753,7 @@
     "knowledgebase/section/create": {
       "method": "POST",
       "privileged": true,
-      "short": "Create a knowledgebase section",
+      "short": "Create section",
       "description": "Create a new knowledgebase section.",
       "parameters": {
         "sectionSlug": {
@@ -786,7 +786,7 @@
     "knowledgebase/section/update": {
       "method": "POST",
       "privileged": true,
-      "short": "Update a knowledgebase section",
+      "short": "Update section",
       "description": "Update an existing section for the knowledgebase.",
       "parameters": {
         "sectionSlug": {
@@ -819,7 +819,7 @@
     "knowledgebase/section/delete": {
       "method": "POST",
       "privileged": true,
-      "short": "Delete a knowledgebase section",
+      "short": "Delete section",
       "description": "Delete an existing section from the knowledgebase.",
       "parameters": {
         "sectionSlug": {
@@ -832,19 +832,19 @@
     "knowledgebase/section/get": {
       "method": "GET",
       "privileged": true,
-      "short": "Get all knowledgebase sections",
+      "short": "Get all sections",
       "description": "Get a list of all the knowledgebase sections."
     },
     "knowledgebase/article/get": {
       "method": "GET",
       "privileged": true,
-      "short": "Get all knowledgebase articles",
+      "short": "Get all articles",
       "description": "Get a list of all the knowledgebase articles."
     },
     "knowledgebase/article/create": {
       "method": "POST",
       "privileged": true,
-      "short": "Create a knowledgebase article",
+      "short": "Create article",
       "description": "Create a new knowledgebase article.",
       "parameters": {
         "articleSlug": {
@@ -877,7 +877,7 @@
     "knowledgebase/article/update": {
       "method": "POST",
       "privileged": true,
-      "short": "Update a knowledgebase article",
+      "short": "Update article",
       "description": "Update an existing article for the knowledgebase.",
       "parameters": {
         "articleSlug": {
@@ -910,7 +910,7 @@
     "knowledgebase/article/delete": {
       "method": "POST",
       "privileged": true,
-      "short": "Delete a knowledgebase article",
+      "short": "Delete article",
       "description": "Delete an existing article from the knowledgebase.",
       "parameters": {
         "articleSlug": {
