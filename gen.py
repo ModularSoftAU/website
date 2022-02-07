@@ -228,16 +228,16 @@ def build_sidebar(endpoints, api_section_label, build_directory,
     """Create category files expected by docusaurus so that it can auto-generate
     the sidebar for us.
     """
-    
-    api_sections = {(e.section_slug, e.section) for e in endpoints}
-    for slug, name in api_sections:
+    api_sections = {(e.section, e.section_slug) for e in endpoints}
+    sorted_sections = sorted(list(api_sections))
+    for i, (name, slug) in enumerate(sorted_sections):
         category_file = "{}/{}/{}/_category_.json".format(
             build_directory,
             api_build_directory,
             slug
         )
         with open(category_file, "w") as f:
-            f.write('{{ "label": "{}" }}\n'.format(name))
+            f.write('{{ "label": "{}", "position": {} }}\n'.format(name, i))
     
     api_category_filename = "{}/{}/_category_.json".format(
         build_directory,
