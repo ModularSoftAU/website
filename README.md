@@ -10,5 +10,6 @@ To use and discover the documentation site, have a look at the tabs in the top r
 
 ```bash
 npm install
+python gen.py
 npm start
 ```
