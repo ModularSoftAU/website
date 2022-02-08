@@ -100,7 +100,7 @@ def parse_api_json(api_json, api_template_directory, must_have_footer=True):
                     parameters.append(Parameter(name, p_type, info, optional))
             
             # Load the footer.
-            footer_file = "{}/{}.md".format(api_template_directory, route)
+            footer_file = "{}/{}.mdx".format(api_template_directory, route)
             try:
                 with open(footer_file) as f:
                     footer = f.read()
@@ -167,6 +167,12 @@ def compile_api_pages(endpoints, api_template_file, build_directory):
     pages = []
     for endpoint in endpoints:
         template = PageTemplate(template_content)
+
+        if endpoint.footer is not None:
+            template.replace("FOOTER", endpoint.footer)
+        else:
+            template.replace("FOOTER", "")
+        
         template.replace("METHOD", endpoint.method)
         template.replace("ROUTE", endpoint.route)
         
@@ -189,10 +195,6 @@ def compile_api_pages(endpoints, api_template_file, build_directory):
             template.replace("METHOD_COLOUR", "#46AF00")
 
         # If the endpoint has no footer, don't print anything extra
-        if endpoint.footer is not None:
-            template.replace("FOOTER", endpoint.footer)
-        else:
-            template.replace("FOOTER", "")
         
         template.replace("BUILD_DIRECTORY", build_directory)
 

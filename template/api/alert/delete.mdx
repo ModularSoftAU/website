@@ -1,0 +1,45 @@
+<Tabs
+    defaultValue="first"
+    values={[
+        {label: "Typical", value: "first"},
+        {label: "Missing alertSlug", value: "second"},
+    ]}>
+<TabItem value="first">
+
+```json
+{
+    "alertSlug": "joinCommunityDiscord"
+}
+```
+
+## Response
+
+```json
+{
+    "success": true
+}
+```
+
+In this example, the `alertSlug` exists so the alert has been successfully deleted.
+
+</TabItem>
+<TabItem value="second">
+
+```json
+{
+    "alertSlug": "joinCommunityDiscord"
+}
+```
+
+## Response
+
+```json
+{
+    "success": false
+}
+```
+
+*TODO*
+
+</TabItem>
+</Tabs>

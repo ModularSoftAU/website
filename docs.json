@@ -124,7 +124,7 @@
     "appeal/create": {
       "method": "POST",
       "privileged": true,
-      "short": "Appeal a punishment",
+      "short": "Create appeal",
       "description": "Create an appeal to remove a punishment.",
       "parameters": {
         "punishmentId": {
@@ -150,7 +150,7 @@
     "appeal/comment": {
       "method": "POST",
       "privileged": true,
-      "short": "Add comment to appeal",
+      "short": "Comment on appeal",
       "description": "Submit a comment, or if Staff, a staff note onto an existing appeal.",
       "parameters": {
         "punishmentId": {
@@ -1375,13 +1375,13 @@
     }
   },
   "Shopping District Directory": {
-    "shoppingdistrictdirectory/get": {
+    "shop/get": {
       "method": "GET",
       "privileged": true,
       "short": "Get all shops",
       "description": "List all shops in the district."
     },
-    "shoppingdistrictdirectory/create": {
+    "shop/create": {
       "method": "POST",
       "privileged": true,
       "short": "Create a shop",
@@ -1404,7 +1404,7 @@
         }
       }
     },
-    "shoppingdistrictdirectory/edit": {
+    "shop/edit": {
       "method": "POST",
       "privileged": true,
       "short": "Edit a shop",
@@ -1432,7 +1432,7 @@
         }
       }
     },
-    "shoppingdistrictdirectory/delete": {
+    "shop/delete": {
       "method": "POST",
       "privileged": true,
       "short": "Delete a shop",
@@ -1445,7 +1445,7 @@
         }
       }
     },
-    "shoppingdistrictdirectory/$shopId/create/item": {
+    "shop/$shopId/create/item": {
       "method": "POST",
       "privileged": true,
       "short": "Add an item to a shop",
@@ -1473,7 +1473,7 @@
         }
       }
     },
-    "shoppingdistrictdirectory/$shopId/edit/item": {
+    "shop/$shopId/edit/item": {
       "method": "POST",
       "privileged": true,
       "short": "Edit an item in a shop",
@@ -1506,7 +1506,7 @@
         }
       }
     },
-    "shoppingdistrictdirectory/$shopId/delete/item": {
+    "shop/$shopId/delete/item": {
       "method": "POST",
       "privileged": true,
       "short": "Edit an item in a shop",

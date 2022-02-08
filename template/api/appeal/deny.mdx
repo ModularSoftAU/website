@@ -1,0 +1,49 @@
+<Tabs
+    defaultValue="first"
+    values={[
+        {label: "Typical", value: "first"},
+        {label: "Missing punishmentId", value: "second"},
+    ]}>
+<TabItem value="first">
+
+```json
+{
+    "punishmentId ": 123456,
+    "staffId ": 1337,
+    "content ": "The player was not using maths. They could find player placed chests too."
+}
+```
+
+## Response
+
+```json
+{
+    "success": true
+}
+```
+
+The appeal has been denied, and will be closed on the punishment.
+
+</TabItem>
+<TabItem value="second">
+
+```json
+{
+    "punishmentId ": 000000,
+    "staffId ": 1337,
+    "content ": "The player was not using maths. They could find player placed chests too."
+}
+```
+
+## Response
+
+```json
+{
+    "success": false
+}
+```
+
+*TODO*
+
+</TabItem>
+</Tabs>
