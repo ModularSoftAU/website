@@ -641,7 +641,7 @@
     "friend/request": {
       "method": "POST",
       "privileged": true,
-      "short": "Send a friend request",
+      "short": "Send friend request",
       "description": "Send a user a friend request.",
       "parameters": {
         "requestee": {
@@ -659,7 +659,7 @@
     "friend/accept": {
       "method": "POST",
       "privileged": true,
-      "short": "Accept a friend request",
+      "short": "Accept friend request",
       "description": "Accept the sent friend request.",
       "parameters": {
         "requestee": {
@@ -671,18 +671,13 @@
           "type": "string",
           "info": "The user that the requestee has requested to be friends with.",
           "optional": false
-        },
-        "action": {
-          "type": "string",
-          "info": "The action to process for the request. Note: I believe this is not required",
-          "optional": false
         }
       }
     },
     "friend/deny": {
       "method": "POST",
       "privileged": true,
-      "short": "Deny a friend request",
+      "short": "Deny friend request",
       "description": "Deny the sent friend request.",
       "parameters": {
         "requestee": {
@@ -694,18 +689,13 @@
           "type": "string",
           "info": "The user that the requestee has requested to be friends with.",
           "optional": false
-        },
-        "action": {
-          "type": "string",
-          "info": "The action to process for the request. Note: I believe this is not required",
-          "optional": false
         }
       }
     },
     "friend/remove": {
       "method": "POST",
       "privileged": true,
-      "short": "Remove a friend",
+      "short": "Remove friend",
       "description": "Remove an existing friend from your friends list.",
       "parameters": {
         "requestee": {
@@ -717,18 +707,13 @@
           "type": "string",
           "info": "The user that the requestee wants to remove.",
           "optional": false
-        },
-        "action": {
-          "type": "string",
-          "info": "The action to process for the request. Note: I believe this is not required",
-          "optional": false
         }
       }
     },
     "friend/block": {
       "method": "POST",
       "privileged": true,
-      "short": "Block a user",
+      "short": "Block user",
       "description": "Block and remove a friend from your friends list or block a user.",
       "parameters": {
         "requestee": {
@@ -739,11 +724,6 @@
         "requestedUser": {
           "type": "string",
           "info": "The user that the requestee wants to block.",
-          "optional": false
-        },
-        "action": {
-          "type": "string",
-          "info": "The action to process for the request. Note: I believe this is not required",
           "optional": false
         }
       }
@@ -832,14 +812,21 @@
     "knowledgebase/section/get": {
       "method": "GET",
       "privileged": true,
-      "short": "Get all sections",
+      "short": "Get sections",
       "description": "Get a list of all the knowledgebase sections."
     },
     "knowledgebase/article/get": {
       "method": "GET",
       "privileged": true,
-      "short": "Get all articles",
-      "description": "Get a list of all the knowledgebase articles."
+      "short": "Get articles",
+      "description": "Get a list of all the knowledgebase articles or get a single article.",
+      "parameters": {
+        "articleSlug": {
+          "type": "string",
+          "info": "The unique identifier for the article to get.",
+          "optional": true
+        }
+      }
     },
     "knowledgebase/article/create": {
       "method": "POST",

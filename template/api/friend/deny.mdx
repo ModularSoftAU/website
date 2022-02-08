@@ -1,7 +1,38 @@
+<Tabs
+    defaultValue="first"
+    values={[
+        {label: "Typical", value: "first"},
+        {label: "Missing requestee", value: "second"},
+        {label: "Missing requestedUser", value: "third"},
+    ]}>
+<TabItem value="first">
+
+```json
+{
+    "requestee": "shadowolfyt",
+    "requestedUser": "Camemes"
+}
+```
+
 ## Response
 
-*TODO*
+```json
+{
+    "success": true
+}
+```
 
-## Usage
+Camemes has chosen to deny the friend request sent by shadowolfyt.
 
-*TODO*
+</TabItem>
+<TabItem value="second">
+
+See [`friend/accept`](accept)
+
+</TabItem>
+<TabItem value="third">
+
+See [`friend/accept`](accept)
+
+</TabItem>
+</Tabs>

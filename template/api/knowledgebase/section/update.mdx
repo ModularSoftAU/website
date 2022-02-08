@@ -1,7 +1,37 @@
+<Tabs
+    defaultValue="first"
+    values={[
+        {label: "Typical", value: "first"},
+        {label: "Missing sectionSlug", value: "second"}
+    ]}>
+<TabItem value="first">
+
+See [`knowledgebase/section/create`](create)
+
+</TabItem>
+<TabItem value="second">
+
+When an section with slug 'missing-sectionSlug' does not exist.
+
+```json
+{
+    "sectionSlug": "missing-sectionSlug",
+    "sectionName": "Getting Started",
+    "description": "Just joined? Read these to get started on the Server",
+    "sectionIcon": "<url>",
+    "position": 3
+}
+```
+
 ## Response
 
+```json
+{
+    "success": false
+}
+```
+
 *TODO*
 
-## Usage
-
-*TODO*
+</TabItem>
+</Tabs>

@@ -1,7 +1,45 @@
+<Tabs
+    defaultValue="first"
+    values={[
+        {label: "Get List", value: "first"},
+        {label: "Get Individual", value: "second"},
+    ]}>
+<TabItem value="first">
+
 ## Response
 
-*TODO*
+```json
+{
+    "success": true,
+    "data": [
+        // TODO
+    ]
+}
+```
 
-## Usage
+Returns a list of articles.
 
-*TODO*
+</TabItem>
+<TabItem value="second">
+
+```json
+{
+    "articleSlug": "joiningTheNetwork"
+}
+```
+
+## Response
+
+```json
+{
+    "success": true,
+    "data": [
+        // TODO
+    ]
+}
+```
+
+Returns only the article requested.
+
+</TabItem>
+</Tabs>
