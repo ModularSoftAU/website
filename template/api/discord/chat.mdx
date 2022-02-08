@@ -1,7 +1,35 @@
+<Tabs
+    defaultValue="first"
+    values={[
+        {label: "Typical", value: "first"},
+        {label: "Invalid", value: "second"},
+    ]}>
+<TabItem value="first">
+
+```json
+{
+    "username": "shadowolfyt",
+    "server": "Survival",
+    "content": "This server is awesome"
+}
+```
+
 ## Response
 
+```json
+{
+    "success": true
+}
+```
+
+A Discord message will be created that says,
+
+"**Survival**  |  `shadowolfyt` :: This server is awesome"
+
+</TabItem>
+<TabItem value="second">
+
 *TODO*
 
-## Usage
-
-*TODO*
+</TabItem>
+</Tabs>

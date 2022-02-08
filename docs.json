@@ -3,7 +3,7 @@
     "alert/create": {
       "method": "POST",
       "privileged": true,
-      "short": "Create an alert",
+      "short": "Create alert",
       "description": "Create an alert on Network platforms.",
       "parameters": {
         "alertSlug": {
@@ -46,7 +46,7 @@
     "alert/edit": {
       "method": "POST",
       "privileged": true,
-      "short": "Edit an alert",
+      "short": "Edit alert",
       "description": "Edit an existing alert on Network platforms.",
       "parameters": {
         "alertSlug": {
@@ -89,7 +89,7 @@
     "alert/delete": {
       "method": "POST",
       "privileged": true,
-      "short": "Delete an alert",
+      "short": "Delete alert",
       "description": "Delete an existing alert on Network platforms.",
       "parameters": {
         "alertSlug": {
@@ -104,7 +104,7 @@
     "anticheat/flag": {
       "method": "POST",
       "privileged": true,
-      "short": "Flag a user",
+      "short": "Flag user",
       "description": "Flag a user via the anticheat and send to staff.",
       "parameters": {
         "username": {
@@ -267,13 +267,13 @@
     "application/get": {
       "method": "GET",
       "privileged": true,
-      "short": "Get all applications",
-      "description": "Get all applications."
+      "short": "Get forms",
+      "description": "Get a list of all the application forms."
     },
     "application/create": {
       "method": "POST",
       "privileged": true,
-      "short": "Generate an application form",
+      "short": "Create form",
       "description": "Create an application for users to apply for.",
       "parameters": {
         "displayName": {
@@ -311,7 +311,7 @@
     "application/edit": {
       "method": "POST",
       "privileged": true,
-      "short": "Edit an application form",
+      "short": "Edit form",
       "description": "Edit an existing application for users to apply for.",
       "parameters": {
         "applicationId": {
@@ -354,7 +354,7 @@
     "application/delete": {
       "method": "POST",
       "privileged": true,
-      "short": "Delete an existing application",
+      "short": "Delete form",
       "description": "Delete an existing application.",
       "parameters": {
         "applicationId": {
@@ -369,13 +369,13 @@
     "communitycreation/get": {
       "method": "GET",
       "privileged": true,
-      "short": "Get all community creations",
+      "short": "Get submissions",
       "description": "Get all community creation submissions."
     },
     "communitycreation/submit": {
       "method": "POST",
       "privileged": true,
-      "short": "Submit a creation",
+      "short": "Create submission",
       "description": "Submit content to the community creation page.",
       "parameters": {
         "creatorId": {
@@ -403,7 +403,7 @@
     "communitycreation/approve": {
       "method": "POST",
       "privileged": true,
-      "short": "Approve a creation submission",
+      "short": "Approve submission",
       "description": "Approve a community creation submission.",
       "parameters": {
         "id": {
@@ -416,7 +416,7 @@
     "communitycreation/deny": {
       "method": "POST",
       "privileged": true,
-      "short": "Deny a submitted creation",
+      "short": "Deny submission",
       "description": "Deny a community creation submission.",
       "parameters": {
         "id": {
@@ -429,7 +429,7 @@
     "communitycreation/delete": {
       "method": "POST",
       "privileged": true,
-      "short": "Delete a submitted creation",
+      "short": "Delete creation",
       "description": "Delete a submitted community creation.",
       "parameters": {
         "id": {
@@ -444,7 +444,7 @@
     "discord/switch": {
       "method": "POST",
       "privileged": true,
-      "short": "Log user's server switch",
+      "short": "Log server switch",
       "description": "Log a message to a Discord channel when user switches Server.",
       "parameters": {
         "username": {
@@ -462,7 +462,7 @@
     "discord/chat": {
       "method": "POST",
       "privileged": true,
-      "short": "Log user's public chat",
+      "short": "Log chat",
       "description": "Log a message to a Discord channel when user send a public chat message.",
       "parameters": {
         "username": {
@@ -485,7 +485,7 @@
     "discord/join": {
       "method": "POST",
       "privileged": true,
-      "short": "Log user joining network",
+      "short": "Log user joining",
       "description": "Log a message to a Discord channel when user joins the Network.",
       "parameters": {
         "username": {
@@ -498,7 +498,7 @@
     "discord/leave": {
       "method": "POST",
       "privileged": true,
-      "short": "Log user leaving network",
+      "short": "Log user leaving",
       "description": "Log a message to a Discord channel when user leaves the Network.",
       "parameters": {
         "username": {
@@ -511,7 +511,7 @@
     "discord/directMessage": {
       "method": "POST",
       "privileged": true,
-      "short": "Log user's direct message",
+      "short": "Log direct message",
       "description": "Log a message to a Discord channel when user sends a direct message to another user.",
       "parameters": {
         "senderUsername": {
@@ -541,13 +541,13 @@
     "event/get": {
       "method": "GET",
       "privileged": true,
-      "short": "Get all current events",
+      "short": "Get events",
       "description": "Get a list of all current events."
     },
     "event/create": {
       "method": "POST",
       "privileged": true,
-      "short": "Create an event",
+      "short": "Create event",
       "description": "Create an event to be published.",
       "parameters": {
         "name": {
@@ -580,7 +580,7 @@
     "event/edit": {
       "method": "POST",
       "privileged": true,
-      "short": "Edit an event",
+      "short": "Edit event",
       "description": "Edit an existing event, published or not.",
       "parameters": {
         "name": {
@@ -613,7 +613,7 @@
     "event/delete": {
       "method": "POST",
       "privileged": true,
-      "short": "Delete an event",
+      "short": "Delete event",
       "description": "Delete an existing event.",
       "parameters": {
         "eventId": {
@@ -626,7 +626,7 @@
     "event/publish": {
       "method": "POST",
       "privileged": true,
-      "short": "Publish an event",
+      "short": "Publish event",
       "description": "Publish an event.",
       "parameters": {
         "eventId": {
@@ -996,7 +996,7 @@
   "Ranks": {
     "rank/get": {
       "method": "GET",
-      "privileged": true,
+      "privileged": false,
       "short": "Get user's ranks",
       "description": "Returns users and their ranks. Can return a matching user's rank or a users that have a specific rank.",
       "parameters": {
@@ -1234,7 +1234,7 @@
   "Minecraft Servers": {
     "server/get": {
       "method": "GET",
-      "privileged": true,
+      "privileged": false,
       "short": "Get server list",
       "description": "Get a list of all Servers."
     },
@@ -1377,7 +1377,7 @@
   "Shopping District Directory": {
     "shop/get": {
       "method": "GET",
-      "privileged": true,
+      "privileged": false,
       "short": "Get all shops",
       "description": "List all shops in the district."
     },

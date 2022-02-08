@@ -1,7 +1,55 @@
+<Tabs
+    defaultValue="first"
+    values={[
+        {label: "Typical", value: "first"},
+        {label: "Missing applicationId", value: "second"},
+        {label: "Invalid", value: "third"},
+    ]}>
+<TabItem value="first">
+
+```json
+{
+    "applicationId": 12,
+    "displayName": "Developer",
+    "description": "Developers code stuff and sit down",
+    "displayIcon": "<url>"",
+    "requirementsMarkdown": "<url>"",
+    "redirectURL": "forms.google.com/<id>",
+    "position": 3
+}
+```
+
+See [`application/create`](create)
+
+</TabItem>
+<TabItem value="second">
+
+```json
+{
+    "applicationId": 000000,
+    "displayName": "Developer",
+    "description": "Developers code stuff and sit down",
+    "displayIcon": "<url>"",
+    "requirementsMarkdown": "<url>"",
+    "redirectURL": "forms.google.com/<id>",
+    "position": 3
+}
+```
+
 ## Response
 
+```json
+{
+    "success": false
+}
+```
+
 *TODO*
 
-## Usage
+</TabItem>
+<TabItem value="third">
 
 *TODO*
+
+</TabItem>
+</Tabs>
