@@ -1,7 +1,72 @@
+<Tabs
+    defaultValue="first"
+    values={[
+        {label: "Using reportId", value: "first"},
+        {label: "Using username", value: "second"},
+        {label: "Missing reportId", value: "third"},
+    ]}>
+<TabItem value="first">
+
+```json
+{
+    "reportId": 12
+}
+```
+
 ## Response
 
+```json
+{
+    "success": true,
+    "data": [
+        // TODO
+    ]
+}
+```
+
+The report with id 12 has been returned.
+
+</TabItem>
+<TabItem value="second">
+
+```json
+{
+    "username": "shadowolfyt"
+}
+```
+
+## Response
+
+```json
+{
+    "success": true,
+    "data": [
+        // TODO
+    ]
+}
+```
+
+A list of reports (*TODO: Clarification: from user OR of user*) has been
+returned.
+
+</TabItem>
+<TabItem value="third">
+
+```json
+{
+    "reportId": 000000
+}
+```
+
+## Response
+
+```json
+{
+    "success": false
+}
+```
+
 *TODO*
 
-## Usage
-
-*TODO*
+</TabItem>
+</Tabs>

@@ -1,7 +1,45 @@
+<Tabs
+    defaultValue="first"
+    values={[
+        {label: "Typical", value: "first"},
+        {label: "Missing reportId", value: "second"},
+    ]}>
+<TabItem value="first">
+
+```json
+{
+    "reportId": 12
+}
+```
+
 ## Response
 
+```json
+{
+    "success": true
+}
+```
+
+The report with id 12 has been deleted.
+
+</TabItem>
+<TabItem value="second">
+
+```json
+{
+    "reportId": 000000
+}
+```
+
+## Response
+
+```json
+{
+    "success": false
+}
+```
+
 *TODO*
 
-## Usage
-
-*TODO*
+</TabItem>
+</Tabs>

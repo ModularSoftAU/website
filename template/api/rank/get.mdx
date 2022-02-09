@@ -1,7 +1,92 @@
+<Tabs
+    defaultValue="first"
+    values={[
+        {label: "All Assignments", value: "first"},
+        {label: "Ranks of user", value: "second"},
+        {label: "Users with rank", value: "third"},
+        {label: "User has rank?", value: "fourth"},
+    ]}>
+<TabItem value="first">
+
 ## Response
 
-*TODO*
+```json
+{
+    "success": true,
+    "data": [
+        // TODO
+    ]
+}
+```
 
-## Usage
+A list of users and their ranks have been returned.
 
-*TODO*
+</TabItem>
+<TabItem value="second">
+
+```json
+{
+    "username": "shadowolfyt"
+}
+```
+
+## Response
+
+```json
+{
+    "success": true,
+    "data": [
+        // TODO
+    ]
+}
+```
+
+A list of ranks that have been assigned to shadowolfyt have been returned.
+
+</TabItem>
+<TabItem value="third">
+
+```json
+{
+    "rank": "developer"
+}
+```
+
+## Response
+
+```json
+{
+    "success": true,
+    "data": [
+        // TODO
+    ]
+}
+```
+
+A list of users that have been assigned to the rank 'developer' have been
+returned.
+
+</TabItem>
+<TabItem value="fourth">
+
+```json
+{
+    "username": "shadowolfyt",
+    "rank": "developer"
+}
+```
+
+## Response
+
+```json
+{
+    "success": true,
+}
+```
+
+Since both fields were assigned, this has queried the database looking for user
+shadowolfyt is assigned to rank developer. If this is true (*TODO: Clarification
+on what happens. Probably clarification on what happens if it is false*).
+
+</TabItem>
+</Tabs>

@@ -1,12 +1,12 @@
 {
-  "Alerts": {
-    "alert/create": {
+  "Announcements": {
+    "announcement/create": {
       "method": "POST",
       "privileged": true,
-      "short": "Create alert",
-      "description": "Create an alert on Network platforms.",
+      "short": "Create announcement",
+      "description": "Create an announcement on Network platforms.",
       "parameters": {
-        "alertSlug": {
+        "announcementSlug": {
           "type": "string",
           "info": "Unique Identifier.",
           "optional": false
@@ -18,17 +18,17 @@
         },
         "motd": {
           "type": "boolean",
-          "info": "Is the alert meant for the message of the day?",
+          "info": "Is the announcement meant for the message of the day?",
           "optional": false
         },
         "tips": {
           "type": "boolean",
-          "info": "Is this an alert to rotate in game?",
+          "info": "Is this an announcement to rotate in game?",
           "optional": false
         },
         "web": {
           "type": "boolean",
-          "info": "Is this a website banner alert to display globally?",
+          "info": "Is this a website banner announcement to display globally?",
           "optional": false
         },
         "link": {
@@ -43,13 +43,13 @@
         }
       }
     },
-    "alert/edit": {
+    "announcement/edit": {
       "method": "POST",
       "privileged": true,
-      "short": "Edit alert",
-      "description": "Edit an existing alert on Network platforms.",
+      "short": "Edit announcement",
+      "description": "Edit an existing announcement on Network platforms.",
       "parameters": {
-        "alertSlug": {
+        "announcementSlug": {
           "type": "string",
           "info": "Unique Identifier.",
           "optional": false
@@ -61,17 +61,17 @@
         },
         "motd": {
           "type": "boolean",
-          "info": "Is the alert meant for the message of the day?",
+          "info": "Is the announcement meant for the message of the day?",
           "optional": false
         },
         "tips": {
           "type": "boolean",
-          "info": "Is this an alert to rotate in game?",
+          "info": "Is this an announcement to rotate in game?",
           "optional": false
         },
         "web": {
           "type": "boolean",
-          "info": "Is this a website banner alert to display globally?",
+          "info": "Is this a website banner announcement to display globally?",
           "optional": false
         },
         "link": {
@@ -86,13 +86,13 @@
         }
       }
     },
-    "alert/delete": {
+    "announcement/delete": {
       "method": "POST",
       "privileged": true,
-      "short": "Delete alert",
-      "description": "Delete an existing alert on Network platforms.",
+      "short": "Delete announcement",
+      "description": "Delete an existing announcement on Network platforms.",
       "parameters": {
-        "alertSlug": {
+        "announcementSlug": {
           "type": "string",
           "info": "Unique Identifier.",
           "optional": false
@@ -912,7 +912,7 @@
     "punishment/issue": {
       "method": "POST",
       "privileged": true,
-      "short": "Issue a punishment",
+      "short": "Issue punishment",
       "description": "Issues a punishment to a user.",
       "parameters": {
         "playerUsername": {
@@ -938,7 +938,7 @@
         "length": {
           "type": "string",
           "info": "The length of the punishment (if applicable).",
-          "optional": false
+          "optional": true
         },
         "reason": {
           "type": "string",
@@ -950,7 +950,7 @@
     "punishment/delete": {
       "method": "POST",
       "privileged": true,
-      "short": "Delete a punishment",
+      "short": "Delete punishment",
       "description": "Delete an existing punishment.",
       "parameters": {
         "punishmentId": {
@@ -963,7 +963,7 @@
     "punishment/user": {
       "method": "GET",
       "privileged": true,
-      "short": "Get a user's punishments",
+      "short": "Get user's punishments",
       "description": "Get a list of all the punishments for a user.",
       "parameters": {
         "username": {
@@ -976,7 +976,7 @@
     "punishment/latest": {
       "method": "GET",
       "privileged": true,
-      "short": "Get the latest punishments",
+      "short": "Get latest punishments",
       "description": "Get the latest punishments issued."
     }
   },
@@ -984,7 +984,7 @@
     "rank/get": {
       "method": "GET",
       "privileged": false,
-      "short": "Get user's ranks",
+      "short": "Get rank assignments",
       "description": "Returns users and their ranks. Can return a matching user's rank or a users that have a specific rank.",
       "parameters": {
         "username": {
@@ -1002,13 +1002,13 @@
     "rank/list": {
       "method": "GET",
       "privileged": true,
-      "short": "Get a list of all current ranks",
+      "short": "Get ranks",
       "description": "Get a list of all current ranks."
     },
     "rank/create": {
       "method": "POST",
       "privileged": true,
-      "short": "Create a rank",
+      "short": "Create rank",
       "description": "Create a rank.",
       "parameters": {
         "rankSlug": {
@@ -1056,7 +1056,7 @@
     "rank/edit": {
       "method": "POST",
       "privileged": true,
-      "short": "Edit a rank",
+      "short": "Edit rank",
       "description": "Edit an existing rank.",
       "parameters": {
         "rankSlug": {
@@ -1104,7 +1104,7 @@
     "rank/delete": {
       "method": "POST",
       "privileged": true,
-      "short": "Delete a rank",
+      "short": "Delete rank",
       "description": "Delete an existing rank.",
       "parameters": {
         "rankSlug": {
@@ -1117,7 +1117,7 @@
     "rank/assign": {
       "method": "POST",
       "privileged": true,
-      "short": "Assign user a rank",
+      "short": "Assign rank",
       "description": "Assign a rank to an existing user.",
       "parameters": {
         "rankSlug": {
@@ -1135,7 +1135,7 @@
     "rank/unassign": {
       "method": "POST",
       "privileged": true,
-      "short": "Unassign user a rank",
+      "short": "Unassign rank",
       "description": "Unassign a rank from an existing user.",
       "parameters": {
         "rankSlug": {
@@ -1155,26 +1155,25 @@
     "report/get": {
       "method": "GET",
       "privileged": true,
-      "short": "Get all reports",
-      "description": "Get a list of all current Network reports."
-    },
-    "report/get/$username": {
-      "method": "GET",
-      "privileged": true,
-      "short": "Get all reports from user",
-      "description": "Get a list of all current Network reports from requested user.",
+      "short": "Get reports",
+      "description": "Get a list of all current Network reports.",
       "parameters": {
+        "reportId": {
+          "type": "integer",
+          "info": "The id of the player report.",
+          "optional": true
+        },
         "username": {
           "type": "string",
           "info": "User IGN.",
-          "optional": false
+          "optional": true
         }
       }
     },
     "report/create": {
       "method": "POST",
       "privileged": true,
-      "short": "Report a player",
+      "short": "Report player",
       "description": "Create a player report to send to Staff to investigate.",
       "parameters": {
         "reportedUser": {
@@ -1207,7 +1206,7 @@
     "report/close": {
       "method": "POST",
       "privileged": true,
-      "short": "Close a report",
+      "short": "Close report",
       "description": "Close an existing report on a player.",
       "parameters": {
         "reportId": {
