@@ -1,7 +1,69 @@
+<Tabs
+    defaultValue="first"
+    values={[
+        {label: "Typical", value: "first"},
+        {label: "Missing shopId", value: "second"},
+        {label: "Missing shopItemId", value: "third"},
+        {label: "Invalid Price", value: "fourth"},
+        {label: "Invalid Quantity", value: "fifth"},
+        {label: "Unknown Minecraft Item", value: "sixth"},
+    ]}>
+<TabItem value="first">
+
+```json
+{
+    "shopId": 12,
+    "shopItemId": 6,
+    "shopItem": "Glass",
+    "shopPrice": 2,
+    "shopBuyQuantity": 128
+}
+```
+
+See [`shop/$shopId/create/item`](../create/item)
+
+</TabItem>
+<TabItem value="second">
+
+See [`shop/$shopId/create/item`](../create/item)
+
+</TabItem>
+<TabItem value="third">
+
+```json
+{
+    "shopId": 12,
+    "shopItemId": 000000,
+    "shopItem": "Glass",
+    "shopPrice": 2,
+    "shopBuyQuantity": 128
+}
+```
+
 ## Response
 
+```json
+{
+    "success": false
+}
+```
+
 *TODO*
 
-## Usage
+</TabItem>
+<TabItem value="fourth">
 
-*TODO*
+See [`shop/$shopId/create/item`](../create/item)
+
+</TabItem>
+<TabItem value="fifth">
+
+See [`shop/$shopId/create/item`](../create/item)
+
+</TabItem>
+<TabItem value="sixth">
+
+See [`shop/$shopId/create/item`](../create/item)
+
+</TabItem>
+</Tabs>

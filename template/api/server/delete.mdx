@@ -1,7 +1,46 @@
+<Tabs
+    defaultValue="first"
+    values={[
+        {label: "Typical", value: "first"},
+        {label: "Missing serverId", value: "second"},
+    ]}>
+<TabItem value="first">
+
+```json
+{
+    "serverId": 2
+}
+```
+
 ## Response
 
+```json
+{
+    "success": true,
+    "message": "Deletion of server with id 2 has been successful"
+}
+```
+
+The minecraft server with id 2 has been deleted.
+
+</TabItem>
+<TabItem value="second">
+
+```json
+{
+    "serverId": 000000
+}
+```
+
+## Response
+
+```json
+{
+    "success": false
+}
+```
+
 *TODO*
 
-## Usage
-
-*TODO*
+</TabItem>
+</Tabs>

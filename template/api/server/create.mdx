@@ -1,7 +1,40 @@
+<Tabs
+    defaultValue="first"
+    values={[
+        {label: "Typical", value: "first"},
+        {label: "Invalid", value: "second"},
+    ]}>
+<TabItem value="first">
+
+```json
+{
+    "name": "Java",
+    "fqdn": "www.minecraft-server.com/java",
+    "ipAddress": "123.45.678.9",
+    "port": 1337,
+    "visible": true,
+    "position": 1
+}
+```
+
 ## Response
 
+```json
+{
+    "success": true,
+    "message": "The server Java (www.minecraft-server.com/java) has been successfully created!"
+}
+```
+
+A new minecraft server has been created. The ipAddress and port are there
+because the API will query the server every (*TODO: x minutes*) amount of
+minutes and will notify via Discord in a chat that it struggled to ping
+correctly and may notify for maintainence.
+
+</TabItem>
+<TabItem value="second">
+
 *TODO*
 
-## Usage
-
-*TODO*
+</TabItem>
+</Tabs>

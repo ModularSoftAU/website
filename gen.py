@@ -165,7 +165,7 @@ def compile_api_pages(endpoints, api_template_file, build_directory):
         return []
     
     pages = []
-    for endpoint in endpoints:
+    for i, endpoint in enumerate(endpoints):
         template = PageTemplate(template_content)
 
         if endpoint.footer is not None:
@@ -173,6 +173,7 @@ def compile_api_pages(endpoints, api_template_file, build_directory):
         else:
             template.replace("FOOTER", "")
         
+        template.replace("SIDEBAR_POSITION", str(i))
         template.replace("METHOD", endpoint.method)
         template.replace("ROUTE", endpoint.route)
         
@@ -223,6 +224,7 @@ def build_pages(pages, build_directory, api_build_directory):
         template, filepath = page
         page_filename = "{}/{}/{}".format(build_directory, api_build_directory, filepath)
         with safe_open_w(page_filename) as f:
+            # print("Writing to {}".format(page_filename))
             f.write(str(template))
 
 def build_sidebar(endpoints, api_section_label, build_directory,

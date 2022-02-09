@@ -1,7 +1,34 @@
+<Tabs
+    defaultValue="first"
+    values={[
+        {label: "Typical", value: "first"},
+        {label: "Invalid", value: "second"},
+    ]}>
+<TabItem value="first">
+
+```json
+{
+    "uuid": "0af03841-2894-434c-a4be-965b317244e8", // shadowolfyt
+    "ipAddress": "123.45.678.9",
+    "server": "Hub"
+}
+```
+
 ## Response
 
+```json
+{
+    "success": true
+}
+```
+
+A new session has been created for shadowolfyt. This is created when they join
+one of the servers.
+
+</TabItem>
+<TabItem value="second">
+
 *TODO*
 
-## Usage
-
-*TODO*
+</TabItem>
+</Tabs>

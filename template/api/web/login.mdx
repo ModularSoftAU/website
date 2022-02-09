@@ -1,7 +1,54 @@
+<Tabs
+    defaultValue="first"
+    values={[
+        {label: "Typical", value: "first"},
+        {label: "Never logged in", value: "second"},
+    ]}>
+<TabItem value="first">
+
+```json
+{
+    "username": "shadowolfyt",
+    "email": "shadowolf@craftingforchrist.net",
+    "password": "______"
+}
+```
+
 ## Response
 
+*TODO: This is not the behaviour of the implementation at the moment.*
+
+```json
+{
+    "success": true
+}
+```
+
+shadowolfyt is now logged in to the website.
+
+</TabItem>
+<TabItem value="second">
+
+When shadowolfyt has not played on the Minecraft server before
+
+```json
+{
+    "username": "shadowolfyt",
+    "email": "shadowolf@craftingforchrist.net",
+    "password": "______"
+}
+```
+
+## Response
+
+```json
+{
+    "success": false,
+    "message": "You have not logged in before. You are required to login before becoming a community site member. You can jump on and play here: <url>/play"
+}
+```
+
 *TODO*
 
-## Usage
-
-*TODO*
+</TabItem>
+</Tabs>

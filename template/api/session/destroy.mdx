@@ -1,7 +1,47 @@
+<Tabs
+    defaultValue="first"
+    values={[
+        {label: "Typical", value: "first"},
+        {label: "No session", value: "second"},
+    ]}>
+<TabItem value="first">
+
+```json
+{
+    "uuid": "0af03841-2894-434c-a4be-965b317244e8" // shadowolfyt
+}
+```
+
 ## Response
 
+```json
+{
+    "success": true
+}
+```
+
+shadowolfyt's session has been destroyed.
+
+</TabItem>
+<TabItem value="second">
+
+When shadowolfyt does not have an ongoing session.
+
+```json
+{
+    "uuid": "0af03841-2894-434c-a4be-965b317244e8" // shadowolfyt
+}
+```
+
+## Response
+
+```json
+{
+    "success": false
+}
+```
+
 *TODO*
 
-## Usage
-
-*TODO*
+</TabItem>
+</Tabs>

@@ -1,7 +1,108 @@
+<Tabs
+    defaultValue="first"
+    values={[
+        {label: "Typical", value: "first"},
+        {label: "Missing shopID", value: "second"},
+        {label: "Invalid Price", value: "third"},
+        {label: "Invalid Quantity", value: "fourth"},
+        {label: "Unknown Minecraft Item", value: "fifth"},
+    ]}>
+<TabItem value="first">
+
+```json
+{
+    "shopId": 12,
+    "shopItem": "Glass",
+    "shopPrice": 2,
+    "shopBuyQuantity": 128
+}
+```
+
 ## Response
 
+```json
+{
+    "success": true
+}
+```
+
+128 items of Glass has been added to the shop with id 12. The price of Glass in
+the shop is 2 (*TODO: Currency? Diamonds?*).
+
+</TabItem>
+<TabItem value="second">
+
+```json
+{
+    "shopId": 000000,
+    "shopItem": "Glass",
+    "shopPrice": 2,
+    "shopBuyQuantity": 128
+}
+```
+
+## Response
+
+```json
+{
+    "success": false
+}
+```
+
 *TODO*
 
-## Usage
+</TabItem>
+<TabItem value="third">
+
+When the shopPrice is not positive
+
+```json
+{
+    "shopId": 12,
+    "shopItem": "Glass",
+    "shopPrice": -2,
+    "shopBuyQuantity": 128
+}
+```
+
+## Response
+
+```json
+{
+    "success": false
+}
+```
 
 *TODO*
+
+</TabItem>
+<TabItem value="fourth">
+
+When the shopBuyQuantity is not positive
+
+```json
+{
+    "shopId": 12,
+    "shopItem": "Glass",
+    "shopPrice": 2,
+    "shopBuyQuantity": -128
+}
+```
+
+## Response
+
+```json
+{
+    "success": false
+}
+```
+
+*TODO*
+
+</TabItem>
+<TabItem value="fifth">
+
+*TODO: Is this something we are handling?*
+
+</TabItem>
+</Tabs>
