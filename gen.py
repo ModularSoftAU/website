@@ -179,40 +179,36 @@ def compile_api_pages(endpoints, api_template_file, build_directory):
     pages = []
     for i, endpoint in enumerate(endpoints):
         template = PageTemplate(template_content)
-
+        # If the endpoint has no footer, don't print anything extra
         if endpoint.footer is not None:
             template.replace("FOOTER", endpoint.footer)
         else:
             template.replace("FOOTER", "")
-        
         template.replace("SIDEBAR_POSITION", str(i))
         template.replace("METHOD", endpoint.method)
         template.replace("ROUTE", endpoint.route)
-        
         # If the endpoint is not privileged, don't print anything extra
         template.remove_line_with_if("PRIVILEGED", not endpoint.privileged)
-        
         # If the endpoint has no input parameters, don't print anything extra
         if len(endpoint.parameters) > 0:
             parameters_text = "\n".join([str(p) for p in endpoint.parameters])
             template.replace("PARAMETERS", "## Parameters\n\n{}".format(parameters_text))
         else:
             template.replace("PARAMETERS", "")
-
         template.replace("DESCRIPTION", endpoint.description)
         template.replace("SHORT", endpoint.short)
-
         if endpoint.method == "POST":
             template.replace("METHOD_COLOUR", "#FF6E26")
         else:
             template.replace("METHOD_COLOUR", "#46AF00")
-
-        # If the endpoint has no footer, don't print anything extra
-        
         template.replace("BUILD_DIRECTORY", build_directory)
-
         template.replace("SLUG", "/".join(endpoint.route.split("/")[1:]))
-        
+        # If you want to add any extra values to the template then here is the
+        # place to add them. All you need to do is add (CUSTOM_FIELD) to the
+        # api_template_file
+
+        # template.replace("CUSTOM_FIELD", "My custom string")
+
         pages.append((template, endpoint.filepath))
     return pages
 
@@ -282,13 +278,11 @@ def rebuild_api(config, reset=True):
     print("Successfully generated {} pages".format(len(endpoints)))
 
 def live_directory_stats(directory):
-    """This function uses os.stat() to generate a directory of files and their
-    modification times as the value. This can be directory passed into
+    """This function uses os.stat() to generate a dictionary of files and their
+    modification times as the value. This can be passed into
     live_compare_difference if two calls of this function were performed at
-    different points in time.
+    different times.
     """
-    def no_prefix(prefix, string):
-        return string[len(prefix) + 1:]
     file_list = []
     for path, _, files in os.walk(directory):
         file_list += [path + "/" + file for file in files]
@@ -297,8 +291,8 @@ def live_directory_stats(directory):
     for file in file_list:
         stats = os.stat(file)
         modification_time = stats[stat.ST_MTIME]
- 
-        file_stats[no_prefix(directory, file)] = modification_time
+        # Remove the directory prefix when creating the key
+        file_stats[file[len(directory) + 1:]] = modification_time
     return file_stats
 
 def live_compare_difference(old, new):
@@ -373,7 +367,6 @@ def live_compile(config):
             rebuild_api(config, reset=len(removed_pages) > 0)
         # Set the new statistics to be the old for the next iteration
         old_api = new_api
-
 
 def main():
     if len(sys.argv) == 1:
