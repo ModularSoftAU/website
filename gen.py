@@ -2,6 +2,8 @@ import json
 import os
 import shutil
 import sys
+import time
+import stat
 
 
 class Parameter:
@@ -67,7 +69,17 @@ class PageTemplate:
     def __str__(self):
         return self.content
 
-    
+class Config:
+    def __init__(self, config):
+        self.api_json               = config["api_json"]
+        self.api_template_file      = config["api_template_file"]
+        self.api_template_directory = config["api_template_directory"]
+        self.template_directory     = config["template_directory"]
+        self.build_directory        = config["build_directory"]
+        self.api_build_directory    = config["api_build_directory"]
+        self.api_section_label      = config["api_section_label"]
+
+
 def parse_api_json(api_json, api_template_directory, must_have_footer=True):
     """Parse's the json file containing all the documentation and return a list
     of Endpoint objects containing the relevant data from the json.
@@ -76,7 +88,7 @@ def parse_api_json(api_json, api_template_directory, must_have_footer=True):
     same route defined in docs.json. If an endpoint is missing a footer you may
     omit the endpoint by setting must_have_footer to True.
     """
-    with open(api_json) as f:
+    with open(api_json, encoding="utf8") as f:
         sections = json.loads(f.read())
     
     endpoints = []
@@ -102,7 +114,7 @@ def parse_api_json(api_json, api_template_directory, must_have_footer=True):
             # Load the footer.
             footer_file = "{}/{}.mdx".format(api_template_directory, route)
             try:
-                with open(footer_file) as f:
+                with open(footer_file, encoding="utf8") as f:
                     footer = f.read()
             except FileNotFoundError:
                 footer = None
@@ -158,7 +170,7 @@ def compile_api_pages(endpoints, api_template_file, build_directory):
     template markdown file as a guide.
     """
     try:
-        with open(api_template_file) as f:
+        with open(api_template_file, encoding="utf8") as f:
             template_content = f.read()
     except FileNotFoundError:
         print("File '{}' does not exist".format(api_template_file))
@@ -217,7 +229,7 @@ def safe_open_w(path):
     From: https://stackoverflow.com/a/23794010
     '''
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    return open(path, 'w')
+    return open(path, 'w', encoding="utf-8")
 
 def build_pages(pages, build_directory, api_build_directory):
     for page in pages:
@@ -250,44 +262,164 @@ def build_sidebar(endpoints, api_section_label, build_directory,
     with open(api_category_filename, "w") as f:
         f.write('{{ "label": "{}" }}\n'.format(api_section_label))
 
+def rebuild_api(config, reset=True):
+    endpoints = compile_api_endpoints(config.api_json,
+                                      config.api_template_directory)
+    if len(endpoints) == 0:
+        return
+    
+    pages = compile_api_pages(endpoints, config.api_template_file,
+                              config.build_directory)
+    if len(pages) == 0:
+        return
+
+    if reset:
+        reset_build_directory(config.template_directory, config.build_directory)
+    build_pages(pages, config.build_directory, config.api_build_directory)
+    build_sidebar(endpoints, config.api_section_label, config.build_directory,
+                  config.api_build_directory)
+
+    print("Successfully generated {} pages".format(len(endpoints)))
+
+def live_directory_stats(directory):
+    """This function uses os.stat() to generate a directory of files and their
+    modification times as the value. This can be directory passed into
+    live_compare_difference if two calls of this function were performed at
+    different points in time.
+    """
+    def no_prefix(prefix, string):
+        return string[len(prefix) + 1:]
+    file_list = []
+    for path, _, files in os.walk(directory):
+        file_list += [path + "/" + file for file in files]
+    
+    file_stats = {}
+    for file in file_list:
+        stats = os.stat(file)
+        modification_time = stats[stat.ST_MTIME]
+ 
+        file_stats[no_prefix(directory, file)] = modification_time
+    return file_stats
+
+def live_compare_difference(old, new):
+    """Given two dictionaries of files, this function will compare between the
+    two whether files were added/removed/modified. The return value is a tuple
+    of three lists.
+    """
+    removed_files = []
+    modified_files = []
+    new_files = []
+
+    for file in old.keys():
+        if file not in new:
+            removed_files.append(file)
+            continue
+        old_modification_time = old[file]
+        new_modification_time = new[file]
+        if old_modification_time != new_modification_time:
+            modified_files.append(file)
+    for file in new.keys():
+        if file not in old:
+            new_files.append(file)
+    return removed_files, modified_files, new_files
+
+def live_compile(config):
+    """Whenever a change (new file, modified file, deleted file) occurs in the
+    template directory or the api directory, the build directory is immediately
+    updated to reflect this change as gracefully as possible. This means that
+    you can edit in the template directories while 'npm start' is running in
+    another shell instance. This will wait at least 1 second before polling the
+    directory again.
+    """
+    print("Live compiling {} and {}. CTRL+C to stop".format(
+        config.template_directory, config.api_template_directory))
+    # Retrieving the statistics
+    old_pages = live_directory_stats(config.template_directory)
+    old_api = live_directory_stats(config.api_template_directory)
+    while True:
+        time.sleep(1)
+        # Checks to see if anything has changed
+        new_pages = live_directory_stats(config.template_directory)
+        removed_pages, modified_pages, added_pages = \
+            live_compare_difference(old_pages, new_pages)
+        
+        # If pages were removed, delete them from the build directory
+        for file in removed_pages:
+            print("Removing '{}'".format(file))
+            os.remove(config.build_directory + "/" + file)
+        
+        # If pages were added or modified, then write the new file to the build
+        # directory, overwriting anything there previously.
+        for file in modified_pages + added_pages:
+            print("Updating '{}'".format(file))
+            with open(config.template_directory + "/" + file) as f:
+                to_write = f.read()
+            with open(config.build_directory + "/" + file, "w") as w:
+                w.write(to_write)
+        
+        # Set the new statistics to be the old for the next iteration
+        old_pages = new_pages
+
+        # Perform the same as above but for the API documentation. This is
+        # slightly more complicated as we need to rebuild from the API template
+        # plus include the footer. At the moment this just rebuilds the entire
+        # API which is mostly overkill. In the event that a file is removed,
+        # then the entire build directory is reset too.
+        new_api = live_directory_stats(config.api_template_directory)
+        removed_pages, modified_pages, added_pages = \
+            live_compare_difference(old_api, new_api)
+        if len(modified_pages + removed_pages + added_pages) > 0:
+            print("Rebuilding API")
+            rebuild_api(config, reset=len(removed_pages) > 0)
+        # Set the new statistics to be the old for the next iteration
+        old_api = new_api
+
+
 def main():
+    if len(sys.argv) == 1:
+        print("Usage: python gen.py [--build] [--clean] [--live] [--help]")
+    
+    if "--help" in sys.argv:
+        print("Compiles the documentation in the Docusaurus format.")
+        print(" --help  \t Displays this information and exits.")
+        print(" --build \t Compiles the documentation using the information")
+        print("         \t in config.json.")
+        print(" --clean \t Deletes the build directory and exits.")
+        print(" --live  \t Runs with live compile. This implicitly begins a")
+        print("         \t build, but then whenever a change occurs in the")
+        print("         \t template directory or the api template directory,")
+        print("         \t the build directory is updated accordingly.")
+        print("         \t This allows you to have 'npm start' going in")
+        print("         \t another shell instance. This sometimes doesn't")
+        print("         \t work when an API page is removed. Running")
+        print("         \t 'npm start' again will fix this.")
+        return
+
     try:
         with open("config.json") as f:
-            config = json.loads(f.read())
+            config = Config(json.loads(f.read()))
     except FileNotFoundError:
         print("File 'config.json' does not exist")
         return
     
-    api_json               = config["api_json"]
-    api_template_file      = config["api_template_file"]
-    api_template_directory = config["api_template_directory"]
-    template_directory     = config["template_directory"]
-    build_directory        = config["build_directory"]
-    api_build_directory    = config["api_build_directory"]
-    api_section_label      = config["api_section_label"]
-
     if "--clean" in sys.argv:
         try:
-            shutil.rmtree(build_directory)
+            shutil.rmtree(config.build_directory)
         except FileNotFoundError:
             pass
-        print("Cleaned '{}'".format(build_directory))
-        return
-
-    endpoints = compile_api_endpoints(api_json, api_template_directory)
-    if len(endpoints) == 0:
+        print("Cleaned '{}'".format(config.build_directory))
         return
     
-    pages = compile_api_pages(endpoints, api_template_file, build_directory)
-    if len(pages) == 0:
-        return
+    if "--build" in sys.argv:
+        rebuild_api(config)
 
-    reset_build_directory(template_directory, build_directory)
-    build_pages(pages, build_directory, api_build_directory)
-    build_sidebar(endpoints, api_section_label, build_directory,
-                  api_build_directory)
-
-    print("Successfully generated {} pages".format(len(endpoints)))
+    if "--live" in sys.argv:
+        if "--build" not in sys.argv:
+            rebuild_api(config)
+        try:
+            live_compile(config)
+        except KeyboardInterrupt:
+            pass
 
 
 if __name__ == "__main__":

@@ -1393,7 +1393,7 @@
           "info": "A description of the shop.",
           "optional": false
         },
-        "serverId ": {
+        "serverId": {
           "type": "integer",
           "info": "The ID of the server hosting the shop.",
           "optional": false

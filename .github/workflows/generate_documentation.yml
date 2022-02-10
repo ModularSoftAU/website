@@ -28,7 +28,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - name: Generate API documentation
-      run: python gen.py
+      run: python gen.py --build
     - name: npm install and build
       run: |
         npm ci
