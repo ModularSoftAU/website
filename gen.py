@@ -1,9 +1,9 @@
-import json
 import os
 import shutil
 import sys
 import time
 import stat
+import yaml
 
 
 class Parameter:
@@ -71,7 +71,7 @@ class PageTemplate:
 
 class Config:
     def __init__(self, config):
-        self.api_json               = config["api_json"]
+        self.api_docs               = config["api_docs"]
         self.api_template_file      = config["api_template_file"]
         self.api_template_directory = config["api_template_directory"]
         self.template_directory     = config["template_directory"]
@@ -80,16 +80,16 @@ class Config:
         self.api_section_label      = config["api_section_label"]
 
 
-def parse_api_json(api_json, api_template_directory, must_have_footer=True):
-    """Parse's the json file containing all the documentation and return a list
-    of Endpoint objects containing the relevant data from the json.
+def parse_api_docs(api_docs, api_template_directory, must_have_footer=True):
+    """Parse's the yaml file containing all the documentation and return a list
+    of Endpoint objects containing the relevant data from the yaml.
     
     Endpoints may also comes with a footer which is defined by a file of the
-    same route defined in docs.json. If an endpoint is missing a footer you may
+    same route defined in docs.yaml. If an endpoint is missing a footer you may
     omit the endpoint by setting must_have_footer to True.
     """
-    with open(api_json, encoding="utf8") as f:
-        sections = json.loads(f.read())
+    with open(api_docs, encoding="utf8") as f:
+        sections = yaml.safe_load(f.read())
     
     endpoints = []
     for section, pages in sections.items():
@@ -150,14 +150,14 @@ def are_valid_endpoints(endpoints):
                 return False
     return True
 
-def compile_api_endpoints(api_json, api_template_directory):
+def compile_api_endpoints(api_docs, api_template_directory):
     try:
-        endpoints = parse_api_json(api_json, api_template_directory)
+        endpoints = parse_api_docs(api_docs, api_template_directory)
     except FileNotFoundError:
-        print("File '{}' does not exist".format(api_json))
+        print("File '{}' does not exist".format(api_docs))
         return []
     except KeyError as e:
-        print("Parsing of '{}' failed. Missing key {}.".format(api_json, e))
+        print("Parsing of '{}' failed. Missing key {}.".format(api_docs, e))
         return []
     
     if not are_valid_endpoints(endpoints):
@@ -259,7 +259,7 @@ def build_sidebar(endpoints, api_section_label, build_directory,
         f.write('{{ "label": "{}" }}\n'.format(api_section_label))
 
 def rebuild_api(config, reset=True):
-    endpoints = compile_api_endpoints(config.api_json,
+    endpoints = compile_api_endpoints(config.api_docs,
                                       config.api_template_directory)
     if len(endpoints) == 0:
         return
@@ -376,7 +376,7 @@ def main():
         print("Compiles the documentation in the Docusaurus format.")
         print(" --help  \t Displays this information and exits.")
         print(" --build \t Compiles the documentation using the information")
-        print("         \t in config.json.")
+        print("         \t in config.yaml.")
         print(" --clean \t Deletes the build directory and exits.")
         print(" --live  \t Runs with live compile. This implicitly begins a")
         print("         \t build, but then whenever a change occurs in the")
@@ -389,10 +389,10 @@ def main():
         return
 
     try:
-        with open("config.json") as f:
-            config = Config(json.loads(f.read()))
+        with open("config.yaml") as f:
+            config = Config(yaml.safe_load(f.read()))
     except FileNotFoundError:
-        print("File 'config.json' does not exist")
+        print("File 'config.yaml' does not exist")
         return
     
     if "--clean" in sys.argv:

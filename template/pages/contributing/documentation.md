@@ -24,6 +24,12 @@ You can also check to see if Python is installed with:
 python --version
 ```
 
+You will then need to install the yaml parser with:
+
+```bash
+python -m pip install -r requirements.txt
+```
+
 ## Compiling Documentation
 
 Open a terminal and run:
@@ -53,43 +59,36 @@ navigate your changes locally.
 ## Contributing to the API Documentation
 
 The API documentation is unique because most of each page is built dynamically
-using `gen.py`. To edit one of the endpoints key information open `docs.json`
+using `gen.py`. To edit one of the endpoints key information open `docs.yaml`
 and navigate to the endpoint you wish to edit. For example:
 
-```json
-{
-  // ...
-  "Anticheat": {
-    "anticheat/flag": {
-      "method": "POST",
-      "privileged": true,
-      "short": "Flag user",
-      "description": "Flag a user via the anticheat and send to staff.",
-      "parameters": {
-        "username": {
-          "type": "string",
-          "info": "User IGN.",
-          "optional": false
-        },
-        "type": {
-          "type": "string",
-          "info": "The type of hack that the player has been flagged for.",
-          "optional": false
-        }
-      }
-    }
-  },
-  // ...
-}
+```yaml
+---
+Anticheat:
+  anticheat/flag:
+    method: POST
+    privileged: true
+    short: Flag user
+    description: Flag a user via the anticheat and send to staff.
+    parameters:
+      username:
+        type: string
+        info: User IGN.
+        optional: false
+      type:
+        type: string
+        info: The type of hack that the player has been flagged for.
+        optional: false
+# ...
 ```
 
 You can see how this is rendered by looking at
-[anticheat/flag](../api/anticheat/flag).
+[anticheat/flag](/api/anticheat/flag).
 
 ### Understanding the API Template
 
 The API template can be found at `template/api/template.mdx`. This file outlines
-how `gen.py` will generate each API page from the data contained in `data.json`.
+how `gen.py` will generate each API page from the data contained in `docs.yaml`.
 Variables with parentheses `(VAR)` perform a simple replace. Variables with
 opening parentheses `(VAR)` and closing parentheses `(/VAR)` can be included
 based on a condition. These substitutions are performed in `compile_api_pages`
@@ -129,9 +128,9 @@ in `gen.py`. Example:
 
 ### Adding a page
 
-To add a page, simply create a new endpoint in `docs.json` under the section you
+To add a page, simply create a new endpoint in `docs.yaml` under the section you
 desire. In the example above the section is called "Anticheat". You may create
-a new section by adding one in `docs.json` also.
+a new section by adding one in `docs.yaml` also.
 
 :::caution Types
 
