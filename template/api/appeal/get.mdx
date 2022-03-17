@@ -2,9 +2,26 @@
     defaultValue="first"
     values={[
         {label: "Typical", value: "first"},
-        {label: "Missing punishmentId", value: "second"},
+        {label: "Using punishmentId", value: "second"},
+        {label: "Missing punishmentId", value: "third"},
     ]}>
 <TabItem value="first">
+
+## Response
+
+```json
+{
+    "success": true,
+    "data": [
+        // TODO
+    ]
+}
+```
+
+All appeals are returned.
+
+</TabItem>
+<TabItem value="second">
 
 ```json
 {
@@ -17,17 +34,16 @@
 ```json
 {
     "success": true,
-    "comments": [
+    "data": [
         // TODO
     ]
 }
 ```
 
-Response contains a list of comments that have been added the the selected
-appeal.
+Only appeals with a matching punishmentId are returned.
 
 </TabItem>
-<TabItem value="second">
+<TabItem value="third">
 
 ```json
 {

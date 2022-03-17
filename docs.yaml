@@ -126,16 +126,16 @@ Appeals:
         type: string
         info: The content of the appeal comment.
         optional: false
-  appeal/$punishmentId/get:
+  appeal/get:
     method: GET
     privileged: true
-    short: Get appeal comments
-    description: Get all comments on the selected appeal.
+    short: Get appeals
+    description: Get a list of all appeals.
     parameters:
       punishmentId:
         type: integer
-        info: The punishment ID to view all comments on.
-        optional: false
+        info: Filter by matching punishment ID.
+        optional: true
   appeal/accept:
     method: POST
     privileged: true
@@ -648,7 +648,7 @@ Knowledge Base:
     parameters:
       articleSlug:
         type: string
-        info: The unique identifier for the article to get.
+        info: Filter by matching article unique identifier.
         optional: true
   knowledgebase/article/create:
     method: POST
@@ -743,18 +743,6 @@ Punishments:
         type: string
         info: Reason for the punishement.
         optional: false
-  punishment/user:
-    method: GET
-    privileged: true
-    short: Get user's punishments
-    description: Get a list of all the punishments for a user.
-    parameters:
-      username:
-        type: string
-        info:
-          "User IGN. TODO: Needs to be clear that this parameter comes from a
-          query"
-        optional: false
   punishment/delete:
     method: POST
     privileged: true
@@ -765,32 +753,25 @@ Punishments:
         type: integer
         info: The ID of the punishment to delete.
         optional: false
-  punishment/latest:
+  punishment/get:
     method: GET
     privileged: true
-    short: Get latest punishments
-    description: Get the latest punishments issued.
+    short: Get punishments
+    description: Gets a list of all punishments issued.
 Ranks:
-  rank/list:
-    method: GET
-    privileged: true
-    short: Get ranks
-    description: Get a list of all current ranks.
   rank/get:
     method: GET
     privileged: false
     short: Get rank assignments
-    description:
-      Returns users and their ranks. Can return a matching user's rank
-      or a users that have a specific rank.
+    description: Returns a list of all the ranks and the users assigned to each rank.
     parameters:
       username:
         type: string
-        info: User IGN. Include results with a matching username.
+        info: Filter by matching user IGN.
         optional: true
       rank:
         type: string
-        info: Rank Display Name. Only include results with a matching rank.
+        info: Filter by matching rank display name.
         optional: true
   rank/create:
     method: POST
@@ -915,11 +896,11 @@ User Reports:
     parameters:
       reportId:
         type: integer
-        info: The id of the player report.
+        info: Filter by matching report ID.
         optional: true
       username:
         type: string
-        info: User IGN.
+        info: Filter by matching user IGN.
         optional: true
   report/create:
     method: POST
@@ -1077,7 +1058,7 @@ Shopping District Directory:
     method: GET
     privileged: false
     short: Get shops
-    description: List all shops in the directory.
+    description: Get a list of all the shops in the directory.
   shop/create:
     method: POST
     privileged: true
@@ -1132,7 +1113,7 @@ Shopping District Directory:
         type: integer
         info: The ID of the shop to delete.
         optional: false
-  shop/$shopId/create/item:
+  shop/items/create:
     method: POST
     privileged: true
     short: Add item to shop
@@ -1154,7 +1135,7 @@ Shopping District Directory:
         type: integer
         info: The quantity of the item you buy with the price. (Must be positive)
         optional: false
-  shop/$shopId/edit/item:
+  shop/items/edit:
     method: POST
     privileged: true
     short: Edit item in shop
@@ -1180,7 +1161,7 @@ Shopping District Directory:
         type: integer
         info: The quantity of the item you buy with the price.
         optional: false
-  shop/$shopId/delete/item:
+  shop/items/delete:
     method: POST
     privileged: true
     short: Delete item in shop

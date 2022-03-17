@@ -1,11 +1,28 @@
 <Tabs
     defaultValue="first"
     values={[
-        {label: "Using reportId", value: "first"},
-        {label: "Using username", value: "second"},
-        {label: "Missing reportId", value: "third"},
+        {label: "Typical", value: "first"},
+        {label: "Using reportId", value: "second"},
+        {label: "Using username", value: "third"},
+        {label: "Missing reportId", value: "fourth"},
     ]}>
 <TabItem value="first">
+
+## Response
+
+```json
+{
+    "success": true,
+    "data": [
+        // TODO
+    ]
+}
+```
+
+A list of all reports has been returned.
+
+</TabItem>
+<TabItem value="second">
 
 ```json
 {
@@ -27,7 +44,7 @@
 The report with id 12 has been returned.
 
 </TabItem>
-<TabItem value="second">
+<TabItem value="third">
 
 ```json
 {
@@ -50,7 +67,7 @@ A list of reports (*TODO: Clarification: from user OR of user*) has been
 returned.
 
 </TabItem>
-<TabItem value="third">
+<TabItem value="fourth">
 
 ```json
 {
