@@ -83,7 +83,7 @@ Anticheat:
 ```
 
 You can see how this is rendered by looking at
-[anticheat/flag](/api/anticheat/flag).
+[anticheat/flag](../api/anticheat/flag).
 
 ### Understanding the API Template
 
