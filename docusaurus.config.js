@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'ModularEnigma',
-  tagline: 'ZanderDocs',
+  tagline: 'Documentation for the zander platform',
   url: 'http://zanderdocs.modularenigma.com/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -24,13 +24,13 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/ModularEnigma/zander-docs/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/ModularEnigma/zander-docs/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -56,7 +56,7 @@ const config = {
             label: 'Documentation',
           },
           {
-            to: '/guides',
+            to: '/blog',
             label: 'Guides',
             position: 'left'
           },
