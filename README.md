@@ -14,3 +14,14 @@ python gen.py
 npm install
 npm start
 ```
+
+### python gen.py
+
+#### --build
+Build the generated docs.
+
+#### --clean
+Remove docs folder.
+
+#### --live
+This live compiles template/pages and template/api. You can use CTRL+C to stop
