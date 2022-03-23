@@ -1,9 +1,0 @@
-{
-  "api_json": "docs.json",
-  "api_template_file": "template/api/template.mdx",
-  "api_template_directory": "template/api",
-  "template_directory": "template/pages",
-  "build_directory": "docs",
-  "api_build_directory": "api",
-  "api_section_label": "API Endpoints"
-}

@@ -19,7 +19,7 @@
 }
 ```
 
-A list of users and their ranks have been returned.
+A list of ranks and all users assigned to each rank has been returned.
 
 </TabItem>
 <TabItem value="second">
@@ -41,7 +41,8 @@ A list of users and their ranks have been returned.
 }
 ```
 
-A list of ranks that have been assigned to shadowolfyt have been returned.
+A list of ranks that have been filtered to only include results with username
+shadowolfyt.
 
 </TabItem>
 <TabItem value="third">
@@ -63,8 +64,7 @@ A list of ranks that have been assigned to shadowolfyt have been returned.
 }
 ```
 
-A list of users that have been assigned to the rank 'developer' have been
-returned.
+The list has been filtered to only include the rank specified.
 
 </TabItem>
 <TabItem value="fourth">
@@ -81,12 +81,12 @@ returned.
 ```json
 {
     "success": true,
+    "data": []
 }
 ```
 
-Since both fields were assigned, this has queried the database looking for user
-shadowolfyt is assigned to rank developer. If this is true (*TODO: Clarification
-on what happens. Probably clarification on what happens if it is false*).
+Filters using both fields. If an empty list is returned, then this combination
+does not exist. If something does return, then the combination does exist.
 
 </TabItem>
 </Tabs>
