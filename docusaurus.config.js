@@ -55,11 +55,11 @@ const config = {
             position: 'left',
             label: 'Documentation',
           },
-          {
-            to: '/blog',
-            label: 'Guides',
-            position: 'left'
-          },
+          // {
+          //   to: '/blog',
+          //   label: 'Guides',
+          //   position: 'left'
+          // },
           {
             href: 'https://github.com/ModularEnigma/zander-docs',
             label: 'GitHub',
