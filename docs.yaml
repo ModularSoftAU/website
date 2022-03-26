@@ -297,7 +297,7 @@ Community Creations:
   communitycreation/submit:
     method: POST
     privileged: true
-    short: Create submission
+    short: Submit submission
     description: Submit content to the community creation page.
     parameters:
       creatorId:
@@ -1368,6 +1368,10 @@ Website:
       password:
         type: string
         info: Password that user has inserted.
+        optional: false
+      confirmPassword:
+        type: string
+        info: The same as password hopefully.
         optional: false
   web/register/verify:
     method: POST
