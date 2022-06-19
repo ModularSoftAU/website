@@ -1,0 +1,85 @@
+<Tabs
+    defaultValue="first"
+    values={[
+        {label: "Typical", value: "first"},
+        {label: "Missing requestee", value: "second"},
+        {label: "Missing requestedUser", value: "third"},
+        {label: "Request already exists", value: "fourth"},
+        {label: "Already friends", value: "fifth"},
+    ]}>
+<TabItem value="first">
+
+```json
+{
+    "requestee": "shadowolfyt",
+    "requestedUser": "Camemes"
+}
+```
+
+## Response
+
+```json
+{
+    "success": true
+}
+```
+
+shadowolfyt has sent a friend request to Camemes. Camemes can choose to take
+action on this request.
+
+</TabItem>
+<TabItem value="second">
+
+See [`friend/accept`](accept)
+
+</TabItem>
+<TabItem value="third">
+
+See [`friend/accept`](accept)
+
+</TabItem>
+<TabItem value="fourth">
+
+When shadowolfyt has already sent Camemes a friend request.
+
+```json
+{
+    "requestee": "shadowolfyt",
+    "requestedUser": "Camemes"
+}
+```
+
+## Response
+
+```json
+{
+    "success": false
+}
+```
+
+*TODO*
+
+</TabItem>
+<TabItem value="fifth">
+
+When shadowolfyt and Camemes are already friends.
+
+```json
+{
+    "requestee": "shadowolfyt",
+    "requestedUser": "Camemes"
+}
+```
+
+## Response
+
+```json
+{
+    "success": false
+}
+```
+
+*TODO*
+
+</TabItem>
+</Tabs>

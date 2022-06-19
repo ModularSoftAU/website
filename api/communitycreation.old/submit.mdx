@@ -1,0 +1,53 @@
+<Tabs
+    defaultValue="first"
+    values={[
+        {label: "Typical", value: "first"},
+        {label: "Missing creatorId", value: "second"},
+    ]}>
+<TabItem value="first">
+
+```json
+{
+    "creatorId": 12,
+    "creationName": "My Starter Home",
+    "creationDescription": "A small house that I have made to get started",
+    "creationLink": "imgur.com/..."
+}
+```
+
+## Response
+
+```json
+{
+    "success": true,
+    "message": "The creation ${creationName} has been successfully submitted for approval."
+}
+```
+
+A new alert has been created. This alert is message of the day and will be
+coloured.
+
+</TabItem>
+<TabItem value="second">
+
+```json
+{
+    "creatorId": 000000,
+    "creationName": "My Starter Home",
+    "creationDescription": "A small house that I have made to get started",
+    "creationLink": "imgur.com/<url>"
+}
+```
+
+## Response
+
+```json
+{
+    "success": false
+}
+```
+
+*TODO*
+
+</TabItem>
+</Tabs>

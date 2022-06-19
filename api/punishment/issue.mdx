@@ -1,0 +1,108 @@
+<Tabs
+    defaultValue="first"
+    values={[
+        {label: "Typical", value: "first"},
+        {label: "Invalid platform", value: "second"},
+        {label: "Invalid type", value: "third"},
+        {label: "Invalid length for type", value: "fourth"},
+    ]}>
+<TabItem value="first">
+
+```json
+{
+    "playerUsername": "shadowolfyt",
+    "staffUsername": :"Camemes",
+    "platform": "server",
+    "type": "kick",
+    "length": "5d",
+    "reason": "Bad System Admin"
+}
+```
+
+## Response
+
+```json
+{
+    "success": true
+}
+```
+
+shadowolfyt has been kicked from the server for 5d by Camemes for being a 'Bad
+System Admin'.
+
+</TabItem>
+<TabItem value="second">
+
+```json
+{
+    "playerUsername": "shadowolfyt",
+    "staffUsername": :"Camemes",
+    "platform": "invalid-platform",
+    "type": "kick",
+    "length": "5d",
+    "reason": "Bad System Admin"
+}
+```
+
+## Response
+
+```json
+{
+    "success": false
+}
+```
+
+*TODO*
+
+</TabItem>
+<TabItem value="third">
+
+```json
+{
+    "playerUsername": "shadowolfyt",
+    "staffUsername": :"Camemes",
+    "platform": "server",
+    "type": "invalid-type",
+    "length": "5d",
+    "reason": "Bad System Admin"
+}
+```
+
+## Response
+
+```json
+{
+    "success": false
+}
+```
+
+*TODO*
+
+</TabItem>
+<TabItem value="fourth">
+
+When issuing a kick, a length must be included. Bans do not require a length and
+thus the length parameter does not need to be included.
+
+```json
+{
+    "playerUsername": "shadowolfyt",
+    "staffUsername": :"Camemes",
+    "platform": "server",
+    "type": "kick",
+    "reason": "Bad System Admin"
+}
+```
+
+## Response
+
+```json
+{
+    "success": false
+}
+```
+
+*TODO*
+
+</TabItem>
+</Tabs>

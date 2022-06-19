@@ -1,0 +1,36 @@
+<Tabs
+    defaultValue="first"
+    values={[
+        {label: "Typical", value: "first"},
+        {label: "Invalid", value: "second"},
+    ]}>
+<TabItem value="first">
+
+```json
+{
+    "senderUsername": "shadowolfyt",
+    "recipientUsername": "Camemes",
+    "server": "Survival",
+    "content": "I Love Minecraft"
+}
+```
+
+## Response
+
+```json
+{
+    "success": true
+}
+```
+
+A Discord message will be created that says,
+
+"📧 | **Survival** | `shadowolfyt` **=>** `Camemes` :: I Love Minecraft"
+
+</TabItem>
+<TabItem value="second">
+
+*TODO*
+
+</TabItem>
+</Tabs>

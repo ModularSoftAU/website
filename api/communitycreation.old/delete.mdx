@@ -1,0 +1,45 @@
+<Tabs
+    defaultValue="first"
+    values={[
+        {label: "Typical", value: "first"},
+        {label: "Missing id", value: "second"},
+    ]}>
+<TabItem value="first">
+
+```json
+{
+    "id": 12
+}
+```
+
+## Response
+
+```json
+{
+    "success": true
+}
+```
+
+The community creation has now been deleted. *TODO: Clarification?*
+
+</TabItem>
+<TabItem value="second">
+
+```json
+{
+    "id": 000000
+}
+```
+
+## Response
+
+```json
+{
+    "success": false
+}
+```
+
+*TODO*
+
+</TabItem>
+</Tabs>

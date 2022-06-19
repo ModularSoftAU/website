@@ -1,0 +1,57 @@
+<Tabs
+    defaultValue="first"
+    values={[
+        {label: "Typical", value: "first"},
+        {label: "Duplicate sectionSlug", value: "second"}
+    ]}>
+<TabItem value="first">
+
+```json
+{
+    "sectionSlug": "gettingStarted",
+    "sectionName": "Getting Started",
+    "description": "Just joined? Read these to get started on the Server",
+    "sectionIcon": "<url>",
+    "position": 3
+}
+```
+
+## Response
+
+```json
+{
+    "success": true
+}
+```
+
+A new section has been created with the name 'Getting Started'. The section will
+be given the appropriate icon and description. *TODO: Clarification on how the
+knowledgebase works*.
+
+</TabItem>
+<TabItem value="second">
+
+When an section already exists with the articleSlug 'existing-sectionSlug'.
+
+```json
+{
+    "sectionSlug": "existing-sectionSlug",
+    "sectionName": "Getting Started",
+    "description": "Just joined? Read these to get started on the Server",
+    "sectionIcon": "<url>",
+    "position": 3
+}
+```
+
+## Response
+
+```json
+{
+    "success": false
+}
+```
+
+*TODO*
+
+</TabItem>
+</Tabs>

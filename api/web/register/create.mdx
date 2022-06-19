@@ -1,0 +1,109 @@
+<Tabs
+    defaultValue="first"
+    values={[
+        {label: "Typical", value: "first"},
+        {label: "Never logged in", value: "second"},
+        {label: "Email in use", value: "third"},
+        {label: "Mismatched password", value: "fourth"},
+    ]}>
+<TabItem value="first">
+
+```json
+{
+    "username": "shadowolfyt",
+    "email": "shadowolf@craftingforchrist.net",
+    "password": "______",
+    "confirmPassword": "______"
+}
+```
+
+## Response
+
+```json
+{
+    "success": true,
+    "message": "You are now successfully registered. Please go back and login to get started!"
+}
+```
+
+A new account for user shadowolfyt has been created. This will initiate the
+verification process (*TODO: Clarification on whether is the case*).
+
+</TabItem>
+<TabItem value="second">
+
+When shadowolfyt has not played on the Minecraft server before
+
+```json
+{
+    "username": "shadowolfyt",
+    "email": "shadowolf@craftingforchrist.net",
+    "password": "______",
+    "confirmPassword": "______"
+}
+```
+
+## Response
+
+```json
+{
+    "success": false,
+    "message": "You have not logged in before. You are required to login before becoming a community site member. You can jump on and play here: <url>/play"
+}
+```
+
+*TODO*
+
+</TabItem>
+<TabItem value="third">
+
+When the email `shadowolf@craftingforchrist.net` is already being used for
+another account.
+
+```json
+{
+    "username": "shadowolfyt",
+    "email": "shadowolf@craftingforchrist.net",
+    "password": "______",
+    "confirmPassword": "______"
+}
+```
+
+## Response
+
+```json
+{
+    "success": false,
+    "message": "The email you have provided is already in use, please enter another email and try again."
+}
+```
+
+*TODO*
+
+</TabItem>
+<TabItem value="fourth">
+
+When the password and confirmPassword do not match.
+
+```json
+{
+    "username": "shadowolfyt",
+    "email": "shadowolf@craftingforchrist.net",
+    "password": "___a___",
+    "confirmPassword": "___b___"
+}
+```
+
+## Response
+
+```json
+{
+    "success": false,
+    "message": "The password you have provided does not match. Please try again."
+}
+```
+
+*TODO*
+
+</TabItem>
+</Tabs>

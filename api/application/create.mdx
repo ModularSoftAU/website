@@ -1,0 +1,37 @@
+<Tabs
+    defaultValue="first"
+    values={[
+        {label: "Typical", value: "first"},
+        {label: "Invalid", value: "second"},
+    ]}>
+<TabItem value="first">
+
+```json
+{
+    "displayName": "Developer",
+    "description": "Developers code stuff and sit down",
+    "displayIcon": "<url>",
+    "requirementsMarkdown": "<url>",
+    "redirectURL": "forms.google.com/<id>",
+    "position": 3
+}
+```
+
+## Response
+
+```json
+{
+    "success": true,
+    "message": "The application Developer has been successfully created!"
+}
+```
+
+A new application form has been created. *TODO: Where does form appear?*
+
+</TabItem>
+<TabItem value="second">
+
+*TODO*
+
+</TabItem>
+</Tabs>

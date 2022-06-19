@@ -1,0 +1,37 @@
+<Tabs
+    defaultValue="first"
+    values={[
+        {label: "Typical", value: "first"},
+        {label: "Invalid", value: "second"},
+    ]}>
+<TabItem value="first">
+
+```json
+{
+    "name": "Mixed Minigames",
+    "icon": "https://imgur.com/<url>",
+    "eventDateTime": "2022-05-30 19:39:57",
+    "hostingServer": "Survival",
+    "information": "Come and join us as we compete in minigames together!"
+}
+```
+
+## Response
+
+```json
+{
+    "success": true,
+    "message": "The event Mixed Minigames has been successfully created!"
+}
+```
+
+A new event has been created. This event is not live yet. To publish an event
+see [`event/publish`](publish).
+
+</TabItem>
+<TabItem value="second">
+
+*TODO*
+
+</TabItem>
+</Tabs>
