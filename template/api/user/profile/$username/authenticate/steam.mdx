@@ -1,7 +1,0 @@
-## Response
-
-*TODO*
-
-## Usage
-
-*TODO*

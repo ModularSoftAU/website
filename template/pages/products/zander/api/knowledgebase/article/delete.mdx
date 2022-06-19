@@ -1,0 +1,51 @@
+<Tabs
+    defaultValue="first"
+    values={[
+        {label: "Typical", value: "first"},
+        {label: "Missing articleSlug", value: "second"},
+    ]}>
+<TabItem value="first">
+
+```json
+{
+    "articleSlug": "joiningTheNetwork"
+}
+```
+
+## Response
+
+:::caution
+
+*TODO: This is not the behaviour of the implementation at the moment.*
+
+:::
+
+```json
+{
+    "success": true
+}
+```
+
+The article with slug 'joiningTheNetwork' has been deleted.
+
+</TabItem>
+<TabItem value="second">
+
+```json
+{
+    "articleSlug": "missing-articleSlug"
+}
+```
+
+## Response
+
+```json
+{
+    "success": false
+}
+```
+
+*TODO*
+
+</TabItem>
+</Tabs>

@@ -1,0 +1,61 @@
+<Tabs
+    defaultValue="first"
+    values={[
+        {label: "Typical", value: "first"},
+        {label: "Existing rankSlug", value: "second"},
+    ]}>
+<TabItem value="first">
+
+```json
+{
+    "rankSlug": "developer",
+    "displayName": "Developer",
+    "priority": 900,
+    "rankBadgeColour": "#cd00cd",
+    "rankTextColour": "#000000",
+    "discordRoleId": 899745763549138954,
+    "isStaff": true,
+    "isDonator": true
+}
+```
+
+## Response
+
+```json
+{
+    "success": true,
+    "message": "The rank Developer has been successfully created!"
+}
+```
+
+A new rank called 'Developer' has been created. This rank will be allocated a
+new role in Discord that matches the parameters entered.
+
+</TabItem>
+<TabItem value="second">
+
+```json
+{
+    "rankSlug": "existing-rankSlug",
+    "displayName": "Developer",
+    "priority": 900,
+    "rankBadgeColour": "#cd00cd",
+    "rankTextColour": "#000000",
+    "discordRoleId": 899745763549138954,
+    "isStaff": true,
+    "isDonator": true
+}
+```
+
+## Response
+
+```json
+{
+    "success": false
+}
+```
+
+*TODO*
+
+</TabItem>
+</Tabs>
