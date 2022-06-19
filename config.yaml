@@ -1,8 +1,8 @@
 ---
 api_docs: docs.yaml
-api_template_file: template/api/template.mdx
-api_template_directory: template/api
-template_directory: template/pages
+api_template_file: api/template.mdx
+api_template_directory: api
+template_directory: pages
 build_directory: docs
-api_build_directory: api
+api_build_subdirectory: products/zander/api
 api_section_label: API Endpoints

@@ -1,0 +1,92 @@
+<Tabs
+    defaultValue="first"
+    values={[
+        {label: "All Assignments", value: "first"},
+        {label: "Ranks of user", value: "second"},
+        {label: "Users with rank", value: "third"},
+        {label: "User has rank?", value: "fourth"},
+    ]}>
+<TabItem value="first">
+
+## Response
+
+```json
+{
+    "success": true,
+    "data": [
+        // TODO
+    ]
+}
+```
+
+A list of ranks and all users assigned to each rank has been returned.
+
+</TabItem>
+<TabItem value="second">
+
+```json
+{
+    "username": "shadowolfyt"
+}
+```
+
+## Response
+
+```json
+{
+    "success": true,
+    "data": [
+        // TODO
+    ]
+}
+```
+
+A list of ranks that have been filtered to only include results with username
+shadowolfyt.
+
+</TabItem>
+<TabItem value="third">
+
+```json
+{
+    "rank": "developer"
+}
+```
+
+## Response
+
+```json
+{
+    "success": true,
+    "data": [
+        // TODO
+    ]
+}
+```
+
+The list has been filtered to only include the rank specified.
+
+</TabItem>
+<TabItem value="fourth">
+
+```json
+{
+    "username": "shadowolfyt",
+    "rank": "developer"
+}
+```
+
+## Response
+
+```json
+{
+    "success": true,
+    "data": []
+}
+```
+
+Filters using both fields. If an empty list is returned, then this combination
+does not exist. If something does return, then the combination does exist.
+
+</TabItem>
+</Tabs>

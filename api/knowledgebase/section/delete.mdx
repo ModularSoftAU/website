@@ -1,0 +1,51 @@
+<Tabs
+    defaultValue="first"
+    values={[
+        {label: "Typical", value: "first"},
+        {label: "Missing sectionSlug", value: "second"},
+    ]}>
+<TabItem value="first">
+
+```json
+{
+    "sectionSlug": "gettingStarted"
+}
+```
+
+## Response
+
+:::caution
+
+*TODO: This is not the behaviour of the implementation at the moment.*
+
+:::
+
+```json
+{
+    "success": true
+}
+```
+
+The section with slug 'gettingStarted' has been deleted.
+
+</TabItem>
+<TabItem value="second">
+
+```json
+{
+    "sectionSlug": "missing-sectionSlug"
+}
+```
+
+## Response
+
+```json
+{
+    "success": false
+}
+```
+
+*TODO*
+
+</TabItem>
+</Tabs>

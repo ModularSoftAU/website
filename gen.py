@@ -76,7 +76,7 @@ class Config:
         self.api_template_directory = config["api_template_directory"]
         self.template_directory     = config["template_directory"]
         self.build_directory        = config["build_directory"]
-        self.api_build_directory    = config["api_build_directory"]
+        self.api_build_directory    = config["api_build_subdirectory"]
         self.api_section_label      = config["api_section_label"]
 
 

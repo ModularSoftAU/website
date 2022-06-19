@@ -82,132 +82,132 @@ Announcements:
         type: string
         info: Unique Identifier.
         optional: false
-Anticheat:
-  anticheat/flag:
-    method: POST
-    privileged: true
-    short: Flag user
-    description: Flag a user via the anticheat and send to staff.
-    parameters:
-      username:
-        type: string
-        info: User IGN.
-        optional: false
-      type:
-        type: string
-        info: The type of hack that the player has been flagged for.
-        optional: false
-Appeals:
-  appeal/create:
-    method: POST
-    privileged: true
-    short: Create appeal
-    description: Create an appeal to remove a punishment.
-    parameters:
-      punishmentId:
-        type: integer
-        info: The punishment ID the user is appealing.
-        optional: false
-  appeal/comment:
-    method: POST
-    privileged: true
-    short: Comment on appeal
-    description: Submit a comment, or if Staff, a staff note onto an existing appeal.
-    parameters:
-      punishmentId:
-        type: integer
-        info: The punishment ID to add a comments to.
-        optional: false
-      staffId:
-        type: integer
-        info: The id of the Staff member providing comment.
-        optional: true
-      content:
-        type: string
-        info: The content of the appeal comment.
-        optional: false
-  appeal/get:
-    method: GET
-    privileged: true
-    short: Get appeals
-    description: Get a list of all appeals.
-    parameters:
-      punishmentId:
-        type: integer
-        info: Filter by matching punishment ID.
-        optional: true
-  appeal/accept:
-    method: POST
-    privileged: true
-    short: Accept appeal
-    description: Accept and unpunish the user from an existing punishment.
-    parameters:
-      punishmentId:
-        type: integer
-        info: The punishment ID to accept.
-        optional: false
-      staffId:
-        type: integer
-        info: The id of the Staff member providing comment.
-        optional: false
-      content:
-        type: string
-        info: The content of the appeal comment.
-        optional: true
-  appeal/deny:
-    method: POST
-    privileged: true
-    short: Deny appeal
-    description: Deny and close existing appeal of an existing punishment.
-    parameters:
-      punishmentId:
-        type: integer
-        info: The punishment ID to deny.
-        optional: false
-      staffId:
-        type: integer
-        info: The id of the Staff member providing comment.
-        optional: false
-      content:
-        type: string
-        info: The content of the appeal comment.
-        optional: true
-  appeal/escalate:
-    method: POST
-    privileged: true
-    short: Escalate appeal
-    description: Escalate an existing punishment to Senior Staff.
-    parameters:
-      punishmentId:
-        type: integer
-        info: The punishment ID to escalate.
-        optional: false
-      staffId:
-        type: integer
-        info: The id of the Staff member providing comment.
-        optional: false
-      content:
-        type: string
-        info: The content of the appeal comment.
-        optional: true
-  appeal/deescalate:
-    method: POST
-    privileged: true
-    short: De-escalate appeal
-    description: De-escalate an existing punishment to Staff.
-    parameters:
-      punishmentId:
-        type: integer
-        info: The punishment ID to escalate.
-        optional: false
-      staffId:
-        type: integer
-        info: The id of the Staff member providing comment.
-        optional: false
-      content:
-        type: string
-        info: The content of the appeal comment.
-        optional: true
+# Anticheat:
+#   anticheat/flag:
+#     method: POST
+#     privileged: true
+#     short: Flag user
+#     description: Flag a user via the anticheat and send to staff.
+#     parameters:
+#       username:
+#         type: string
+#         info: User IGN.
+#         optional: false
+#       type:
+#         type: string
+#         info: The type of hack that the player has been flagged for.
+#         optional: false
+# Appeals:
+#   appeal/create:
+#     method: POST
+#     privileged: true
+#     short: Create appeal
+#     description: Create an appeal to remove a punishment.
+#     parameters:
+#       punishmentId:
+#         type: integer
+#         info: The punishment ID the user is appealing.
+#         optional: false
+#   appeal/comment:
+#     method: POST
+#     privileged: true
+#     short: Comment on appeal
+#     description: Submit a comment, or if Staff, a staff note onto an existing appeal.
+#     parameters:
+#       punishmentId:
+#         type: integer
+#         info: The punishment ID to add a comments to.
+#         optional: false
+#       staffId:
+#         type: integer
+#         info: The id of the Staff member providing comment.
+#         optional: true
+#       content:
+#         type: string
+#         info: The content of the appeal comment.
+#         optional: false
+#   appeal/get:
+#     method: GET
+#     privileged: true
+#     short: Get appeals
+#     description: Get a list of all appeals.
+#     parameters:
+#       punishmentId:
+#         type: integer
+#         info: Filter by matching punishment ID.
+#         optional: true
+#   appeal/accept:
+#     method: POST
+#     privileged: true
+#     short: Accept appeal
+#     description: Accept and unpunish the user from an existing punishment.
+#     parameters:
+#       punishmentId:
+#         type: integer
+#         info: The punishment ID to accept.
+#         optional: false
+#       staffId:
+#         type: integer
+#         info: The id of the Staff member providing comment.
+#         optional: false
+#       content:
+#         type: string
+#         info: The content of the appeal comment.
+#         optional: true
+#   appeal/deny:
+#     method: POST
+#     privileged: true
+#     short: Deny appeal
+#     description: Deny and close existing appeal of an existing punishment.
+#     parameters:
+#       punishmentId:
+#         type: integer
+#         info: The punishment ID to deny.
+#         optional: false
+#       staffId:
+#         type: integer
+#         info: The id of the Staff member providing comment.
+#         optional: false
+#       content:
+#         type: string
+#         info: The content of the appeal comment.
+#         optional: true
+#   appeal/escalate:
+#     method: POST
+#     privileged: true
+#     short: Escalate appeal
+#     description: Escalate an existing punishment to Senior Staff.
+#     parameters:
+#       punishmentId:
+#         type: integer
+#         info: The punishment ID to escalate.
+#         optional: false
+#       staffId:
+#         type: integer
+#         info: The id of the Staff member providing comment.
+#         optional: false
+#       content:
+#         type: string
+#         info: The content of the appeal comment.
+#         optional: true
+#   appeal/deescalate:
+#     method: POST
+#     privileged: true
+#     short: De-escalate appeal
+#     description: De-escalate an existing punishment to Staff.
+#     parameters:
+#       punishmentId:
+#         type: integer
+#         info: The punishment ID to escalate.
+#         optional: false
+#       staffId:
+#         type: integer
+#         info: The id of the Staff member providing comment.
+#         optional: false
+#       content:
+#         type: string
+#         info: The content of the appeal comment.
+#         optional: true
 Applications:
   application/get:
     method: GET
@@ -288,64 +288,64 @@ Applications:
         type: integer
         info: The id of the application to delete.
         optional: false
-Community Creations:
-  communitycreation/get:
-    method: GET
-    privileged: true
-    short: Get submissions
-    description: Get all community creation submissions.
-  communitycreation/submit:
-    method: POST
-    privileged: true
-    short: Submit submission
-    description: Submit content to the community creation page.
-    parameters:
-      creatorId:
-        type: integer
-        info: The user ID for the submitter.
-        optional: false
-      creationName:
-        type: string
-        info: A short name of the creation.
-        optional: true
-      creationDescription:
-        type: string
-        info: The description for the creation.
-        optional: true
-      creationLink:
-        type: string
-        info: The link to the raw image.
-        optional: false
-  communitycreation/approve:
-    method: POST
-    privileged: true
-    short: Approve submission
-    description: Approve a community creation submission.
-    parameters:
-      id:
-        type: integer
-        info: The ID of the creation submission to approve.
-        optional: false
-  communitycreation/deny:
-    method: POST
-    privileged: true
-    short: Deny submission
-    description: Deny a community creation submission.
-    parameters:
-      id:
-        type: integer
-        info: The ID of the creation submission to deny.
-        optional: false
-  communitycreation/delete:
-    method: POST
-    privileged: true
-    short: Delete creation
-    description: Delete a submitted community creation.
-    parameters:
-      id:
-        type: integer
-        info: The ID of the creation to delete.
-        optional: false
+# Community Creations:
+#   communitycreation/get:
+#     method: GET
+#     privileged: true
+#     short: Get submissions
+#     description: Get all community creation submissions.
+#   communitycreation/submit:
+#     method: POST
+#     privileged: true
+#     short: Submit submission
+#     description: Submit content to the community creation page.
+#     parameters:
+#       creatorId:
+#         type: integer
+#         info: The user ID for the submitter.
+#         optional: false
+#       creationName:
+#         type: string
+#         info: A short name of the creation.
+#         optional: true
+#       creationDescription:
+#         type: string
+#         info: The description for the creation.
+#         optional: true
+#       creationLink:
+#         type: string
+#         info: The link to the raw image.
+#         optional: false
+#   communitycreation/approve:
+#     method: POST
+#     privileged: true
+#     short: Approve submission
+#     description: Approve a community creation submission.
+#     parameters:
+#       id:
+#         type: integer
+#         info: The ID of the creation submission to approve.
+#         optional: false
+#   communitycreation/deny:
+#     method: POST
+#     privileged: true
+#     short: Deny submission
+#     description: Deny a community creation submission.
+#     parameters:
+#       id:
+#         type: integer
+#         info: The ID of the creation submission to deny.
+#         optional: false
+#   communitycreation/delete:
+#     method: POST
+#     privileged: true
+#     short: Delete creation
+#     description: Delete a submitted community creation.
+#     parameters:
+#       id:
+#         type: integer
+#         info: The ID of the creation to delete.
+#         optional: false
 Discord:
   discord/join:
     method: POST
@@ -423,156 +423,156 @@ Discord:
         type: string
         info: Chat content.
         optional: false
-Events:
-  event/get:
-    method: GET
-    privileged: true
-    short: Get events
-    description: Get a list of all current events.
-  event/create:
-    method: POST
-    privileged: true
-    short: Create event
-    description: Create an event to be published.
-    parameters:
-      name:
-        type: string
-        info: The display name for the event.
-        optional: false
-      icon:
-        type: string
-        info: A link to an image that will be the icon to showcase the event.
-        optional: false
-      eventDateTime:
-        type: string
-        info: The date and time for the event.
-        optional: false
-      hostingServer:
-        type: string
-        info: The id of the server where the event will be hosted.
-        optional: false
-      information:
-        type: string
-        info: Information about the event.
-        optional: false
-  event/edit:
-    method: POST
-    privileged: true
-    short: Edit event
-    description: Edit an existing event, published or not.
-    parameters:
-      name:
-        type: string
-        info: The display name for the event.
-        optional: false
-      icon:
-        type: string
-        info: A link to an image that will be the icon to showcase the event.
-        optional: false
-      eventDateTime:
-        type: string
-        info: The date and time for the event.
-        optional: false
-      hostingServer:
-        type: string
-        info: The id of the server where the event will be hosted.
-        optional: false
-      information:
-        type: string
-        info: Information about the event.
-        optional: false
-  event/publish:
-    method: POST
-    privileged: true
-    short: Publish event
-    description: Publish an event.
-    parameters:
-      eventId:
-        type: integer
-        info: The ID of the event to publish
-        optional: false
-  event/delete:
-    method: POST
-    privileged: true
-    short: Delete event
-    description: Delete an existing event.
-    parameters:
-      eventId:
-        type: integer
-        info: The ID of the event to delete
-        optional: false
-Friends:
-  friend/request:
-    method: POST
-    privileged: true
-    short: Send friend request
-    description: Send a user a friend request.
-    parameters:
-      requestee:
-        type: string
-        info: The user that has requested to be friends.
-        optional: false
-      requestedUser:
-        type: string
-        info: The user that the requestee has requested to be friends with.
-        optional: false
-  friend/accept:
-    method: POST
-    privileged: true
-    short: Accept friend request
-    description: Accept the sent friend request.
-    parameters:
-      requestee:
-        type: string
-        info: The user that has requested to be friends.
-        optional: false
-      requestedUser:
-        type: string
-        info: The user that the requestee has requested to be friends with.
-        optional: false
-  friend/deny:
-    method: POST
-    privileged: true
-    short: Deny friend request
-    description: Deny the sent friend request.
-    parameters:
-      requestee:
-        type: string
-        info: The user that has requested to be friends.
-        optional: false
-      requestedUser:
-        type: string
-        info: The user that the requestee has requested to be friends with.
-        optional: false
-  friend/remove:
-    method: POST
-    privileged: true
-    short: Remove friend
-    description: Remove an existing friend from your friends list.
-    parameters:
-      requestee:
-        type: string
-        info: The user that has requested to be friends.
-        optional: false
-      requestedUser:
-        type: string
-        info: The user that the requestee wants to remove.
-        optional: false
-  friend/block:
-    method: POST
-    privileged: true
-    short: Block user
-    description: Block and remove a friend from your friends list or block a user.
-    parameters:
-      requestee:
-        type: string
-        info: The user that has requested to be friends.
-        optional: false
-      requestedUser:
-        type: string
-        info: The user that the requestee wants to block.
-        optional: false
-Knowledge Base:
+# Events:
+#   event/get:
+#     method: GET
+#     privileged: true
+#     short: Get events
+#     description: Get a list of all current events.
+#   event/create:
+#     method: POST
+#     privileged: true
+#     short: Create event
+#     description: Create an event to be published.
+#     parameters:
+#       name:
+#         type: string
+#         info: The display name for the event.
+#         optional: false
+#       icon:
+#         type: string
+#         info: A link to an image that will be the icon to showcase the event.
+#         optional: false
+#       eventDateTime:
+#         type: string
+#         info: The date and time for the event.
+#         optional: false
+#       hostingServer:
+#         type: string
+#         info: The id of the server where the event will be hosted.
+#         optional: false
+#       information:
+#         type: string
+#         info: Information about the event.
+#         optional: false
+#   event/edit:
+#     method: POST
+#     privileged: true
+#     short: Edit event
+#     description: Edit an existing event, published or not.
+#     parameters:
+#       name:
+#         type: string
+#         info: The display name for the event.
+#         optional: false
+#       icon:
+#         type: string
+#         info: A link to an image that will be the icon to showcase the event.
+#         optional: false
+#       eventDateTime:
+#         type: string
+#         info: The date and time for the event.
+#         optional: false
+#       hostingServer:
+#         type: string
+#         info: The id of the server where the event will be hosted.
+#         optional: false
+#       information:
+#         type: string
+#         info: Information about the event.
+#         optional: false
+#   event/publish:
+#     method: POST
+#     privileged: true
+#     short: Publish event
+#     description: Publish an event.
+#     parameters:
+#       eventId:
+#         type: integer
+#         info: The ID of the event to publish
+#         optional: false
+#   event/delete:
+#     method: POST
+#     privileged: true
+#     short: Delete event
+#     description: Delete an existing event.
+#     parameters:
+#       eventId:
+#         type: integer
+#         info: The ID of the event to delete
+#         optional: false
+# Friends:
+#   friend/request:
+#     method: POST
+#     privileged: true
+#     short: Send friend request
+#     description: Send a user a friend request.
+#     parameters:
+#       requestee:
+#         type: string
+#         info: The user that has requested to be friends.
+#         optional: false
+#       requestedUser:
+#         type: string
+#         info: The user that the requestee has requested to be friends with.
+#         optional: false
+#   friend/accept:
+#     method: POST
+#     privileged: true
+#     short: Accept friend request
+#     description: Accept the sent friend request.
+#     parameters:
+#       requestee:
+#         type: string
+#         info: The user that has requested to be friends.
+#         optional: false
+#       requestedUser:
+#         type: string
+#         info: The user that the requestee has requested to be friends with.
+#         optional: false
+#   friend/deny:
+#     method: POST
+#     privileged: true
+#     short: Deny friend request
+#     description: Deny the sent friend request.
+#     parameters:
+#       requestee:
+#         type: string
+#         info: The user that has requested to be friends.
+#         optional: false
+#       requestedUser:
+#         type: string
+#         info: The user that the requestee has requested to be friends with.
+#         optional: false
+#   friend/remove:
+#     method: POST
+#     privileged: true
+#     short: Remove friend
+#     description: Remove an existing friend from your friends list.
+#     parameters:
+#       requestee:
+#         type: string
+#         info: The user that has requested to be friends.
+#         optional: false
+#       requestedUser:
+#         type: string
+#         info: The user that the requestee wants to remove.
+#         optional: false
+#   friend/block:
+#     method: POST
+#     privileged: true
+#     short: Block user
+#     description: Block and remove a friend from your friends list or block a user.
+#     parameters:
+#       requestee:
+#         type: string
+#         info: The user that has requested to be friends.
+#         optional: false
+#       requestedUser:
+#         type: string
+#         info: The user that the requestee wants to block.
+#         optional: false
+Knowledgebase:
   knowledgebase/section/get:
     method: GET
     privileged: true
@@ -758,136 +758,136 @@ Punishments:
     privileged: true
     short: Get punishments
     description: Gets a list of all punishments issued.
-Ranks:
-  rank/get:
-    method: GET
-    privileged: false
-    short: Get rank assignments
-    description: Returns a list of all the ranks and the users assigned to each rank.
-    parameters:
-      username:
-        type: string
-        info: Filter by matching user IGN.
-        optional: true
-      rank:
-        type: string
-        info: Filter by matching rank display name.
-        optional: true
-  rank/create:
-    method: POST
-    privileged: true
-    short: Create rank
-    description: Create a rank.
-    parameters:
-      rankSlug:
-        type: string
-        info: Unique Identifier.
-        optional: false
-      displayName:
-        type: string
-        info: Rank's Display Name.
-        optional: false
-      priority:
-        type: integer
-        info: Priority of rank in hierarchy.
-        optional: false
-      rankBadgeColour:
-        type: string
-        info: Colour of the rank text in-game and background of badge on the website.
-        optional: false
-      rankTextColour:
-        type: string
-        info: Colour of the text on the Website.
-        optional: false
-      discordRoleId:
-        type: integer
-        info: ID of the role on Discord to assign user to.
-        optional: false
-      isStaff:
-        type: boolean
-        info: Boolean for if the rank is Staff, to appear on Staff page.
-        optional: false
-      isDonator:
-        type: boolean
-        info: Boolean for if the rank is a donation rank to appear on ranks page.
-        optional: false
-  rank/edit:
-    method: POST
-    privileged: true
-    short: Edit rank
-    description: Edit an existing rank.
-    parameters:
-      rankSlug:
-        type: string
-        info: Unique Identifier.
-        optional: false
-      displayName:
-        type: string
-        info: Rank's Display Name.
-        optional: false
-      priority:
-        type: integer
-        info: Priority of rank in hierarchy.
-        optional: false
-      rankBadgeColour:
-        type: string
-        info: Colour of the rank text in-game and background of badge on the website.
-        optional: false
-      rankTextColour:
-        type: string
-        info: Colour of the text on the Website.
-        optional: false
-      discordRoleId:
-        type: integer
-        info: ID of the role on Discord to assign user to.
-        optional: false
-      isStaff:
-        type: boolean
-        info: Boolean for if the rank is Staff, to appear on Staff page.
-        optional: false
-      isDonator:
-        type: boolean
-        info: Boolean for if the rank is a donation rank to appear on ranks page.
-        optional: false
-  rank/assign:
-    method: POST
-    privileged: true
-    short: Assign rank
-    description: Assign a rank to an existing user.
-    parameters:
-      rankSlug:
-        type: string
-        info: Unique Identifier.
-        optional: false
-      username:
-        type: string
-        info: User IGN to assign to.
-        optional: false
-  rank/unassign:
-    method: POST
-    privileged: true
-    short: Unassign rank
-    description: Unassign a rank from an existing user.
-    parameters:
-      rankSlug:
-        type: string
-        info: Unique Identifier.
-        optional: false
-      username:
-        type: string
-        info: User IGN to unassign from.
-        optional: false
-  rank/delete:
-    method: POST
-    privileged: true
-    short: Delete rank
-    description: Delete an existing rank.
-    parameters:
-      rankSlug:
-        type: string
-        info: Unique Identifier.
-        optional: false
-User Reports:
+# Ranks:
+#   rank/get:
+#     method: GET
+#     privileged: false
+#     short: Get rank assignments
+#     description: Returns a list of all the ranks and the users assigned to each rank.
+#     parameters:
+#       username:
+#         type: string
+#         info: Filter by matching user IGN.
+#         optional: true
+#       rank:
+#         type: string
+#         info: Filter by matching rank display name.
+#         optional: true
+#   rank/create:
+#     method: POST
+#     privileged: true
+#     short: Create rank
+#     description: Create a rank.
+#     parameters:
+#       rankSlug:
+#         type: string
+#         info: Unique Identifier.
+#         optional: false
+#       displayName:
+#         type: string
+#         info: Rank's Display Name.
+#         optional: false
+#       priority:
+#         type: integer
+#         info: Priority of rank in hierarchy.
+#         optional: false
+#       rankBadgeColour:
+#         type: string
+#         info: Colour of the rank text in-game and background of badge on the website.
+#         optional: false
+#       rankTextColour:
+#         type: string
+#         info: Colour of the text on the Website.
+#         optional: false
+#       discordRoleId:
+#         type: integer
+#         info: ID of the role on Discord to assign user to.
+#         optional: false
+#       isStaff:
+#         type: boolean
+#         info: Boolean for if the rank is Staff, to appear on Staff page.
+#         optional: false
+#       isDonator:
+#         type: boolean
+#         info: Boolean for if the rank is a donation rank to appear on ranks page.
+#         optional: false
+#   rank/edit:
+#     method: POST
+#     privileged: true
+#     short: Edit rank
+#     description: Edit an existing rank.
+#     parameters:
+#       rankSlug:
+#         type: string
+#         info: Unique Identifier.
+#         optional: false
+#       displayName:
+#         type: string
+#         info: Rank's Display Name.
+#         optional: false
+#       priority:
+#         type: integer
+#         info: Priority of rank in hierarchy.
+#         optional: false
+#       rankBadgeColour:
+#         type: string
+#         info: Colour of the rank text in-game and background of badge on the website.
+#         optional: false
+#       rankTextColour:
+#         type: string
+#         info: Colour of the text on the Website.
+#         optional: false
+#       discordRoleId:
+#         type: integer
+#         info: ID of the role on Discord to assign user to.
+#         optional: false
+#       isStaff:
+#         type: boolean
+#         info: Boolean for if the rank is Staff, to appear on Staff page.
+#         optional: false
+#       isDonator:
+#         type: boolean
+#         info: Boolean for if the rank is a donation rank to appear on ranks page.
+#         optional: false
+#   rank/assign:
+#     method: POST
+#     privileged: true
+#     short: Assign rank
+#     description: Assign a rank to an existing user.
+#     parameters:
+#       rankSlug:
+#         type: string
+#         info: Unique Identifier.
+#         optional: false
+#       username:
+#         type: string
+#         info: User IGN to assign to.
+#         optional: false
+#   rank/unassign:
+#     method: POST
+#     privileged: true
+#     short: Unassign rank
+#     description: Unassign a rank from an existing user.
+#     parameters:
+#       rankSlug:
+#         type: string
+#         info: Unique Identifier.
+#         optional: false
+#       username:
+#         type: string
+#         info: User IGN to unassign from.
+#         optional: false
+#   rank/delete:
+#     method: POST
+#     privileged: true
+#     short: Delete rank
+#     description: Delete an existing rank.
+#     parameters:
+#       rankSlug:
+#         type: string
+#         info: Unique Identifier.
+#         optional: false
+Report:
   report/get:
     method: GET
     privileged: true
@@ -938,7 +938,7 @@ User Reports:
         type: integer
         info: The ID for the player report.
         optional: false
-Minecraft Servers:
+Servers:
   server/get:
     method: GET
     privileged: false
@@ -1053,129 +1053,129 @@ Sessions:
         type: string
         info: The UUID for the Minecraft user.
         optional: false
-Shopping District Directory:
-  shop/get:
-    method: GET
-    privileged: false
-    short: Get shops
-    description: Get a list of all the shops in the directory.
-  shop/create:
-    method: POST
-    privileged: true
-    short: Create shop
-    description: Create a shop listing in the directory.
-    parameters:
-      shopOwner:
-        type: string
-        info: User IGN of the shop owner.
-        optional: false
-      shopName:
-        type: string
-        info: The display name for the shop.
-        optional: false
-      shopDescription:
-        type: string
-        info: A description of the shop.
-        optional: false
-      serverId:
-        type: integer
-        info: The ID of the server hosting the shop.
-        optional: false
-  shop/edit:
-    method: POST
-    privileged: true
-    short: Edit shop
-    description: Edit an existing shop listing in the directory.
-    parameters:
-      shopId:
-        type: string
-        info: The display name for the shop.
-        optional: false
-      shopName:
-        type: string
-        info: The display name for the shop.
-        optional: false
-      shopDescription:
-        type: string
-        info: A description of the shop.
-        optional: false
-      shopCreatorId:
-        type: integer
-        info: The ID of the user that has created the listing.
-        optional: false
-  shop/delete:
-    method: POST
-    privileged: true
-    short: Delete shop
-    description: Delete an existing shop listing in the directory.
-    parameters:
-      shopId:
-        type: integer
-        info: The ID of the shop to delete.
-        optional: false
-  shop/items/create:
-    method: POST
-    privileged: true
-    short: Add item to shop
-    description: Create an item in a shop listing in the directory.
-    parameters:
-      shopId:
-        type: integer
-        info: The ID of the shop.
-        optional: false
-      shopItem:
-        type: string
-        info: The Minecraft item name of the shop item.
-        optional: false
-      shopPrice:
-        type: integer
-        info: The price for the item. (Must be positive)
-        optional: false
-      shopBuyQuantity:
-        type: integer
-        info: The quantity of the item you buy with the price. (Must be positive)
-        optional: false
-  shop/items/edit:
-    method: POST
-    privileged: true
-    short: Edit item in shop
-    description: Edit an item in the shop listing in the directory.
-    parameters:
-      shopId:
-        type: integer
-        info: The ID of the shop containing the item.
-        optional: false
-      shopItemId:
-        type: integer
-        info: The ID of the item to edit.
-        optional: false
-      shopItem:
-        type: string
-        info: The Minecraft item name of the shop item.
-        optional: false
-      shopPrice:
-        type: integer
-        info: The price for the item.
-        optional: false
-      shopBuyQuantity:
-        type: integer
-        info: The quantity of the item you buy with the price.
-        optional: false
-  shop/items/delete:
-    method: POST
-    privileged: true
-    short: Delete item in shop
-    description: Delete an item in the shop listing in the directory.
-    parameters:
-      shopId:
-        type: integer
-        info: The ID of the shop containing the item.
-        optional: false
-      shopItemId:
-        type: integer
-        info: The ID of the item to delete.
-        optional: false
-Users:
+# Shopping District Directory:
+#   shop/get:
+#     method: GET
+#     privileged: false
+#     short: Get shops
+#     description: Get a list of all the shops in the directory.
+#   shop/create:
+#     method: POST
+#     privileged: true
+#     short: Create shop
+#     description: Create a shop listing in the directory.
+#     parameters:
+#       shopOwner:
+#         type: string
+#         info: User IGN of the shop owner.
+#         optional: false
+#       shopName:
+#         type: string
+#         info: The display name for the shop.
+#         optional: false
+#       shopDescription:
+#         type: string
+#         info: A description of the shop.
+#         optional: false
+#       serverId:
+#         type: integer
+#         info: The ID of the server hosting the shop.
+#         optional: false
+#   shop/edit:
+#     method: POST
+#     privileged: true
+#     short: Edit shop
+#     description: Edit an existing shop listing in the directory.
+#     parameters:
+#       shopId:
+#         type: string
+#         info: The display name for the shop.
+#         optional: false
+#       shopName:
+#         type: string
+#         info: The display name for the shop.
+#         optional: false
+#       shopDescription:
+#         type: string
+#         info: A description of the shop.
+#         optional: false
+#       shopCreatorId:
+#         type: integer
+#         info: The ID of the user that has created the listing.
+#         optional: false
+#   shop/delete:
+#     method: POST
+#     privileged: true
+#     short: Delete shop
+#     description: Delete an existing shop listing in the directory.
+#     parameters:
+#       shopId:
+#         type: integer
+#         info: The ID of the shop to delete.
+#         optional: false
+#   shop/items/create:
+#     method: POST
+#     privileged: true
+#     short: Add item to shop
+#     description: Create an item in a shop listing in the directory.
+#     parameters:
+#       shopId:
+#         type: integer
+#         info: The ID of the shop.
+#         optional: false
+#       shopItem:
+#         type: string
+#         info: The Minecraft item name of the shop item.
+#         optional: false
+#       shopPrice:
+#         type: integer
+#         info: The price for the item. (Must be positive)
+#         optional: false
+#       shopBuyQuantity:
+#         type: integer
+#         info: The quantity of the item you buy with the price. (Must be positive)
+#         optional: false
+#   shop/items/edit:
+#     method: POST
+#     privileged: true
+#     short: Edit item in shop
+#     description: Edit an item in the shop listing in the directory.
+#     parameters:
+#       shopId:
+#         type: integer
+#         info: The ID of the shop containing the item.
+#         optional: false
+#       shopItemId:
+#         type: integer
+#         info: The ID of the item to edit.
+#         optional: false
+#       shopItem:
+#         type: string
+#         info: The Minecraft item name of the shop item.
+#         optional: false
+#       shopPrice:
+#         type: integer
+#         info: The price for the item.
+#         optional: false
+#       shopBuyQuantity:
+#         type: integer
+#         info: The quantity of the item you buy with the price.
+#         optional: false
+#   shop/items/delete:
+#     method: POST
+#     privileged: true
+#     short: Delete item in shop
+#     description: Delete an item in the shop listing in the directory.
+#     parameters:
+#       shopId:
+#         type: integer
+#         info: The ID of the shop containing the item.
+#         optional: false
+#       shopItemId:
+#         type: integer
+#         info: The ID of the item to delete.
+#         optional: false
+User:
   user/create:
     method: POST
     privileged: true
@@ -1190,142 +1190,142 @@ Users:
         type: string
         info: The username for the user.
         optional: false
-  user/profile/$username/about/update:
-    method: POST
-    privileged: true
-    short: Update about page
-    description: Update a user's profile about page information.
-    parameters:
-      username:
-        type: string
-        info: User IGN.
-        optional: false
-  user/profile/$username/about/coverArt:
-    method: POST
-    privileged: true
-    short: Update cover art
-    description: Update a user's profile banner with requested cover art.
-    parameters:
-      username:
-        type: string
-        info: User IGN.
-        optional: false
-      coverArtId:
-        type: integer
-        info: "Cover art id. TODO: What does this mean?"
-        optional: false
-  user/notification/create:
-    method: POST
-    privileged: true
-    short: Create notification
-    description: Create a notification for the user.
-    parameters:
-      username:
-        type: string
-        info: User IGN.
-        optional: false
-      body:
-        type: string
-        info: The text or message you would like to notify.
-        optional: false
-      link:
-        type: string
-        info: Where should it direct the user to.
-        optional: false
-  user/notification/delete:
-    method: POST
-    privileged: true
-    short: Delete notification
-    description: Delete a notification for the user that has marked as read.
-    parameters:
-      username:
-        type: string
-        info: User IGN.
-        optional: false
-      notificationId:
-        type: integer
-        info: The id of the notification.
-        optional: false
-  user/profile/$username/authenticate/twitter:
-    method: POST
-    privileged: true
-    short: Link Twitter
-    description: Link user's Twitter account to profile.
-    parameters:
-      username:
-        type: string
-        info: User IGN.
-        optional: false
-  user/profile/$username/authenticate/twitch:
-    method: POST
-    privileged: true
-    short: Link Twitch
-    description: Link user's Twitch account to profile.
-    parameters:
-      username:
-        type: string
-        info: User IGN.
-        optional: false
-  user/profile/$username/authenticate/youtube:
-    method: POST
-    privileged: true
-    short: Link Youtube
-    description: Link user's Youtube account to profile.
-    parameters:
-      username:
-        type: string
-        info: User IGN.
-        optional: false
-  user/profile/$username/authenticate/instagram:
-    method: POST
-    privileged: true
-    short: Link Instagram
-    description: Link user's Instagram account to profile.
-    parameters:
-      username:
-        type: string
-        info: User IGN.
-        optional: false
-  user/profile/$username/authenticate/steam:
-    method: POST
-    privileged: true
-    short: Link Steam
-    description: Link user's Steam account to profile.
-    parameters:
-      username:
-        type: string
-        info: User IGN.
-        optional: false
-  user/profile/$username/authenticate/github:
-    method: POST
-    privileged: true
-    short: Link GitHub
-    description: Link user's GitHub account to profile.
-    parameters:
-      username:
-        type: string
-        info: User IGN.
-        optional: false
-  user/profile/$username/authenticate/spotify:
-    method: POST
-    privileged: true
-    short: Link Spotify
-    description: Link user's Spotify account to profile.
-    parameters:
-      username:
-        type: string
-        info: User IGN.
-        optional: false
-  user/profile/$username/authenticate/discord:
-    method: POST
-    privileged: true
-    short: Link Discord
-    description: Link user's Discord account to profile.
-    parameters:
-      username:
-        type: string
-        info: User IGN.
-        optional: false
+  # user/profile/$username/about/update:
+  #   method: POST
+  #   privileged: true
+  #   short: Update about page
+  #   description: Update a user's profile about page information.
+  #   parameters:
+  #     username:
+  #       type: string
+  #       info: User IGN.
+  #       optional: false
+  # user/profile/$username/about/coverArt:
+  #   method: POST
+  #   privileged: true
+  #   short: Update cover art
+  #   description: Update a user's profile banner with requested cover art.
+  #   parameters:
+  #     username:
+  #       type: string
+  #       info: User IGN.
+  #       optional: false
+  #     coverArtId:
+  #       type: integer
+  #       info: "Cover art id. TODO: What does this mean?"
+  #       optional: false
+  # user/notification/create:
+  #   method: POST
+  #   privileged: true
+  #   short: Create notification
+  #   description: Create a notification for the user.
+  #   parameters:
+  #     username:
+  #       type: string
+  #       info: User IGN.
+  #       optional: false
+  #     body:
+  #       type: string
+  #       info: The text or message you would like to notify.
+  #       optional: false
+  #     link:
+  #       type: string
+  #       info: Where should it direct the user to.
+  #       optional: false
+  # user/notification/delete:
+  #   method: POST
+  #   privileged: true
+  #   short: Delete notification
+  #   description: Delete a notification for the user that has marked as read.
+  #   parameters:
+  #     username:
+  #       type: string
+  #       info: User IGN.
+  #       optional: false
+  #     notificationId:
+  #       type: integer
+  #       info: The id of the notification.
+  #       optional: false
+  # user/profile/$username/authenticate/twitter:
+  #   method: POST
+  #   privileged: true
+  #   short: Link Twitter
+  #   description: Link user's Twitter account to profile.
+  #   parameters:
+  #     username:
+  #       type: string
+  #       info: User IGN.
+  #       optional: false
+  # user/profile/$username/authenticate/twitch:
+  #   method: POST
+  #   privileged: true
+  #   short: Link Twitch
+  #   description: Link user's Twitch account to profile.
+  #   parameters:
+  #     username:
+  #       type: string
+  #       info: User IGN.
+  #       optional: false
+  # user/profile/$username/authenticate/youtube:
+  #   method: POST
+  #   privileged: true
+  #   short: Link Youtube
+  #   description: Link user's Youtube account to profile.
+  #   parameters:
+  #     username:
+  #       type: string
+  #       info: User IGN.
+  #       optional: false
+  # user/profile/$username/authenticate/instagram:
+  #   method: POST
+  #   privileged: true
+  #   short: Link Instagram
+  #   description: Link user's Instagram account to profile.
+  #   parameters:
+  #     username:
+  #       type: string
+  #       info: User IGN.
+  #       optional: false
+  # user/profile/$username/authenticate/steam:
+  #   method: POST
+  #   privileged: true
+  #   short: Link Steam
+  #   description: Link user's Steam account to profile.
+  #   parameters:
+  #     username:
+  #       type: string
+  #       info: User IGN.
+  #       optional: false
+  # user/profile/$username/authenticate/github:
+  #   method: POST
+  #   privileged: true
+  #   short: Link GitHub
+  #   description: Link user's GitHub account to profile.
+  #   parameters:
+  #     username:
+  #       type: string
+  #       info: User IGN.
+  #       optional: false
+  # user/profile/$username/authenticate/spotify:
+  #   method: POST
+  #   privileged: true
+  #   short: Link Spotify
+  #   description: Link user's Spotify account to profile.
+  #   parameters:
+  #     username:
+  #       type: string
+  #       info: User IGN.
+  #       optional: false
+  # user/profile/$username/authenticate/discord:
+  #   method: POST
+  #   privileged: true
+  #   short: Link Discord
+  #   description: Link user's Discord account to profile.
+  #   parameters:
+  #     username:
+  #       type: string
+  #       info: User IGN.
+  #       optional: false
 Voting:
   vote/get:
     method: GET

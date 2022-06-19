@@ -1,0 +1,50 @@
+<Tabs
+    defaultValue="first"
+    values={[
+        {label: "Typical", value: "first"},
+        {label: "Missing punishmentId", value: "second"},
+    ]}>
+<TabItem value="first">
+
+```json
+{
+    "punishmentId": 123456,
+    "staffId": 1337,
+    "content": "The evidence doesn't match up. I'll escalate the appeal."
+}
+```
+
+## Response
+
+```json
+{
+    "success": true
+}
+```
+
+The appeal has been escalated to an admin for them to investigate. They may
+choose to de-escalate the appeal, or take action based on the evidence.
+
+</TabItem>
+<TabItem value="second">
+
+```json
+{
+    "punishmentId": 000000,
+    "staffId": 1337,
+    "content": "The evidence doesn't match up. I'll escalate the appeal."
+}
+```
+
+## Response
+
+```json
+{
+    "success": false
+}
+```
+
+*TODO*
+
+</TabItem>
+</Tabs>

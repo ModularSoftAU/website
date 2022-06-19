@@ -1,0 +1,70 @@
+<Tabs
+    defaultValue="first"
+    values={[
+        {label: "Typical", value: "first"},
+        {label: "Already assigned", value: "second"},
+        {label: "Missing rankSlug", value: "third"},
+    ]}>
+<TabItem value="first">
+
+```json
+{
+    "rankSlug": "developer",
+    "username": "shadowolfyt"
+}
+```
+
+## Response
+
+```json
+{
+    "success": true
+}
+```
+
+shadowolfyt has been assigned the rank of 'developer'.
+
+</TabItem>
+<TabItem value="second">
+
+When 'shadowolfyt' already has the rank of 'developer'.
+
+```json
+{
+    "rankSlug": "developer",
+    "username": "shadowolfyt"
+}
+```
+
+## Response
+
+```json
+{
+    "success": false
+}
+```
+
+*TODO*
+
+</TabItem>
+<TabItem value="third">
+
+```json
+{
+    "rankSlug": "missing-rankSlug",
+    "username": "shadowolfyt"
+}
+```
+
+## Response
+
+```json
+{
+    "success": false
+}
+```
+
+*TODO*
+
+</TabItem>
+</Tabs>

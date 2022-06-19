@@ -1,0 +1,50 @@
+<Tabs
+    defaultValue="first"
+    values={[
+        {label: "Typical", value: "first"},
+        {label: "Missing eventId", value: "second"},
+    ]}>
+<TabItem value="first">
+
+```json
+{
+    "eventId": 12
+}
+```
+
+## Response
+
+:::caution
+
+*TODO: This is not the behaviour of the implementation at the moment.*
+
+:::
+
+```json
+{
+    "success": true
+}
+```
+
+The event with id 12 has been deleted.
+
+</TabItem>
+<TabItem value="second">
+
+```json
+{
+    "eventId": 000000
+}
+```
+
+## Response
+
+```json
+{
+    "success": false,
+    "message": "The event with the id 0 does not exist."
+}
+```
+
+</TabItem>
+</Tabs>
