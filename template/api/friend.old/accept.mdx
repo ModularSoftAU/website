@@ -1,0 +1,91 @@
+<Tabs
+    defaultValue="first"
+    values={[
+        {label: "Typical", value: "first"},
+        {label: "Missing requestee", value: "second"},
+        {label: "Missing requestedUser", value: "third"},
+        {label: "No request existed", value: "fourth"},
+    ]}>
+<TabItem value="first">
+
+```json
+{
+    "requestee": "shadowolfyt",
+    "requestedUser": "Camemes"
+}
+```
+
+## Response
+
+```json
+{
+    "success": true
+}
+```
+
+Camemes has accepted the friend request from shadowolfyt.
+
+</TabItem>
+<TabItem value="second">
+
+```json
+{
+    "requestee": "missing-requestee",
+    "requestedUser": "Camemes"
+}
+```
+
+## Response
+
+```json
+{
+    "success": false
+}
+```
+
+*TODO*
+
+</TabItem>
+<TabItem value="third">
+
+```json
+{
+    "requestee": "shadowolfyt",
+    "requestedUser": "missing-requestedUser"
+}
+```
+
+## Response
+
+```json
+{
+    "success": false
+}
+```
+
+*TODO*
+
+</TabItem>
+<TabItem value="fourth">
+
+When shadowolfyt has submitted no such friend request.
+
+```json
+{
+    "requestee": "shadowolfyt",
+    "requestedUser": "Camemes"
+}
+```
+
+## Response
+
+```json
+{
+    "success": false
+}
+```
+
+*TODO*
+
+</TabItem>
+</Tabs>

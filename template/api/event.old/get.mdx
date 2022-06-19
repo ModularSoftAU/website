@@ -1,0 +1,37 @@
+<Tabs
+    defaultValue="first"
+    values={[
+        {label: "Typical", value: "first"},
+        {label: "No events scheduled", value: "second"},
+    ]}>
+<TabItem value="first">
+
+## Response
+
+```json
+{
+    "success": true,
+    "data": [
+        // TODO
+    ]
+}
+```
+
+Returns a list containing all the events scheduled.
+
+</TabItem>
+<TabItem value="second">
+
+## Response
+
+```json
+{
+    "success": true,
+    "message": []
+}
+```
+
+An empty list is returned.
+
+</TabItem>
+</Tabs>

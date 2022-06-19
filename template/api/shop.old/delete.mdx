@@ -1,0 +1,46 @@
+<Tabs
+    defaultValue="first"
+    values={[
+        {label: "Typical", value: "first"},
+        {label: "Missing shopId", value: "second"},
+    ]}>
+<TabItem value="first">
+
+```json
+{
+    "shopId": 12
+}
+```
+
+## Response
+
+```json
+{
+    "success": true,
+    "message": "Deletion of Shop 12 has been successful"
+}
+```
+
+The shop with id 12 has been deleted.
+
+</TabItem>
+<TabItem value="second">
+
+```json
+{
+    "shopId": 000000
+}
+```
+
+## Response
+
+```json
+{
+    "success": false
+}
+```
+
+*TODO*
+
+</TabItem>
+</Tabs>

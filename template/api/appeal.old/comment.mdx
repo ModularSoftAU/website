@@ -1,0 +1,70 @@
+<Tabs
+    defaultValue="first"
+    values={[
+        {label: "Staff comment", value: "first"},
+        {label: "Player comment", value: "second"},
+        {label: "Missing punishmentId", value: "third"},
+    ]}>
+<TabItem value="first">
+
+```json
+{
+    "punishmentId": 123456,
+    "staffId": 1337,
+    "content": "Player knew exactly where the diamonds were"
+}
+```
+
+## Response
+
+```json
+{
+    "success": true
+}
+```
+
+A staff note has been added to the appeal by staff member 1337.
+
+</TabItem>
+<TabItem value="second">
+
+```json
+{
+    "punishmentId": 123456,
+    "content": "I watched a video on how to find diamonds using maths"
+}
+```
+
+## Response
+
+```json
+{
+    "success": true
+}
+```
+
+A comment has been added. This will typically be done by the player who lodged
+the appeal.
+
+</TabItem>
+<TabItem value="third">
+
+```json
+{
+    "punishmentId": 000000,
+    "content": "I watched a video on how to find diamonds using maths"
+}
+```
+
+## Response
+
+```json
+{
+    "success": false
+}
+```
+
+*TODO*
+
+</TabItem>
+</Tabs>

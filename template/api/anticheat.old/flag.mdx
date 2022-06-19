@@ -1,0 +1,47 @@
+<Tabs
+    defaultValue="first"
+    values={[
+        {label: "Typical", value: "first"},
+        {label: "Invalid Player", value: "second"},
+    ]}>
+<TabItem value="first">
+
+```json
+{
+    "username": "shadowolfyt",
+    "type": "xray"
+}
+```
+
+## Response
+
+```json
+{
+    "success": true
+}
+```
+
+shadowolfyt has been flagged for using xray. This flag will be sent to staff.
+
+</TabItem>
+<TabItem value="second">
+
+```json
+{
+    "username": "missing-player",
+    "type": "xray"
+}
+```
+
+## Response
+
+```json
+{
+    "success": false
+}
+```
+
+*TODO*
+
+</TabItem>
+</Tabs>

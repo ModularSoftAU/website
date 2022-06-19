@@ -1,0 +1,53 @@
+<Tabs
+    defaultValue="first"
+    values={[
+        {label: "Typical", value: "first"},
+        {label: "Missing eventId", value: "second"},
+    ]}>
+<TabItem value="first">
+
+```json
+{
+    "eventId": 12
+}
+```
+
+## Response
+
+:::caution
+
+*TODO: This is not the behaviour of the implementation at the moment.*
+
+:::
+
+```json
+{
+    "success": true
+}
+```
+
+The event with id 12 has been published. This will create a notification in the
+Discord to inform people about the event and the event will appear (*TODO:
+Clarification*) on the website.
+
+</TabItem>
+<TabItem value="second">
+
+```json
+{
+    "eventId": 000000
+}
+```
+
+## Response
+
+```json
+{
+    "success": false
+}
+```
+
+*TODO*
+
+</TabItem>
+</Tabs>
