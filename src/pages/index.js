@@ -17,7 +17,7 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
+            Documentation Introduction
           </Link>
         </div>
       </div>
@@ -29,8 +29,8 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Zander Documentation - ${siteConfig.title}`}
-      description="Documentation for zander application and modules.">
+      title={`Home`}
+      description="Documentation ModularEnigma products and application.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

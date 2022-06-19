@@ -1,3 +1,0 @@
-# Proxy Installation
-
-Text Here

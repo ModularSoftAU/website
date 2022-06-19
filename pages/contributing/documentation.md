@@ -1,7 +1,7 @@
 ---
-title: Documentation
+title: Docs Documentation
 description: Contributing to the documentation
-sidebar_label: Documentation
+sidebar_label: Docs Documentation
 sidebar_position: 2
 ---
 
