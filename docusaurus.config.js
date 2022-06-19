@@ -10,7 +10,7 @@ const config = {
   tagline: 'Documentation for the zander platform',
   url: 'http://zanderdocs.modularenigma.com/',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'ModularEnigma', // Usually your GitHub org/user name.
