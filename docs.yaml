@@ -212,12 +212,17 @@ Applications:
   application/get:
     method: GET
     privileged: true
-    short: Get forms
+    short: Get applications
     description: Get a list of all the application forms.
+    parameters:
+      id:
+        type: integer
+        info: The id of the application to view.
+        optional: true
   application/create:
     method: POST
     privileged: true
-    short: Create form
+    short: Create application
     description: Create an application for users to apply for.
     parameters:
       displayName:
@@ -234,26 +239,26 @@ Applications:
         optional: false
       requirementsMarkdown:
         type: string
-        info: A link to a markdown file that renders the requirements for the role
+        info: A link to a markdown file that renders the requirements for the role.
         optional: false
       redirectURL:
         type: string
-        info: The Google Form URL to redirect to
+        info: The external URL to link the user to to complete commence the application process.
         optional: false
       position:
         type: integer
         info: Which position should this application sit on the page
         optional: false
+      applicationStatus:
+        type: integer
+        info: Whether the application is Open or Closed.
+        optional: false
   application/edit:
     method: POST
     privileged: true
-    short: Edit form
+    short: Edit application
     description: Edit an existing application for users to apply for.
     parameters:
-      applicationId:
-        type: integer
-        info: The id of the application to edit.
-        optional: false
       displayName:
         type: string
         info: The display name for the application.
@@ -268,20 +273,24 @@ Applications:
         optional: false
       requirementsMarkdown:
         type: string
-        info: A link to a markdown file that renders the requirements for the role
+        info: A link to a markdown file that renders the requirements for the role.
         optional: false
       redirectURL:
         type: string
-        info: The Google Form URL to redirect to
+        info: The external URL to link the user to to complete commence the application process.
         optional: false
       position:
         type: integer
         info: Which position should this application sit on the page
         optional: false
+      applicationStatus:
+        type: integer
+        info: Whether the application is Open or Closed.
+        optional: false
   application/delete:
     method: POST
     privileged: true
-    short: Delete form
+    short: Delete application
     description: Delete an existing application.
     parameters:
       applicationId:
