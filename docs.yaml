@@ -364,7 +364,7 @@ Discord:
     parameters:
       username:
         type: string
-        info: User IGN.
+        info: Users IGN.
         optional: false
   discord/leave:
     method: POST
@@ -384,7 +384,7 @@ Discord:
     parameters:
       username:
         type: string
-        info: User IGN.
+        info: Users IGN.
         optional: false
       server:
         type: string
@@ -408,30 +408,30 @@ Discord:
         type: string
         info: Chat content.
         optional: false
-  discord/directMessage:
-    method: POST
-    privileged: true
-    short: Log direct message
-    description:
-      Log a message to a Discord channel when user sends a direct message
-      to another user.
-    parameters:
-      senderUsername:
-        type: string
-        info: Sender's IGN.
-        optional: false
-      recipientUsername:
-        type: string
-        info: Recipient's IGN.
-        optional: false
-      server:
-        type: string
-        info: Server display name.
-        optional: false
-      content:
-        type: string
-        info: Chat content.
-        optional: false
+#   discord/directMessage:
+#     method: POST
+#     privileged: true
+#     short: Log direct message
+#     description:
+#       Log a message to a Discord channel when user sends a direct message
+#       to another user.
+#     parameters:
+#       senderUsername:
+#         type: string
+#         info: Sender's IGN.
+#         optional: false
+#       recipientUsername:
+#         type: string
+#         info: Recipient's IGN.
+#         optional: false
+#       server:
+#         type: string
+#         info: Server display name.
+#         optional: false
+#       content:
+#         type: string
+#         info: Chat content.
+#         optional: false
 # Events:
 #   event/get:
 #     method: GET
@@ -1001,7 +1001,7 @@ Servers:
         type: string
         info: IP Address of the server.
         optional: false
-      prot:
+      port:
         type: integer
         info: Port for the server.
         optional: false
@@ -1189,7 +1189,7 @@ User:
     method: POST
     privileged: true
     short: Create user
-    description: Create a new user in database when joined for the first time.
+    description: Create a new user when joined for the first time.
     parameters:
       uuid:
         type: string
@@ -1339,7 +1339,7 @@ Voting:
   vote/get:
     method: GET
     privileged: true
-    short: Get monthly votes
+    short: Get all monthly votes
     description: List all current votes for the month so far.
   vote/cast:
     method: POST
