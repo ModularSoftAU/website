@@ -5,5 +5,4 @@ sidebar_label: Reports
 sidebar_position: 5
 ---
 
-# Introduction
-zander
+The purpose of reports is to report bad actors/users to the Network Staff.

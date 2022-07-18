@@ -5,5 +5,18 @@ sidebar_label: Discord
 sidebar_position: 5
 ---
 
-# Introduction
-zander
+## Discord Commands
+
+### General
+*Table here*
+
+### Community
+*Table here*
+
+### Moderation
+*Table here*
+
+### Administration
+*Table here*
+
+## Discord Events
