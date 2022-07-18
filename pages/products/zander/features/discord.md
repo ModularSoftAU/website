@@ -5,7 +5,7 @@ sidebar_label: Discord
 sidebar_position: 5
 ---
 
-## Discord Commands
+The zander application has a helpful amount of commands and features.
 
 ### General
 *Table here*
