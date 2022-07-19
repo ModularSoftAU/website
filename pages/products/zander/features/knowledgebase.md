@@ -5,6 +5,10 @@ sidebar_label: Knowledgebase
 sidebar_position: 5
 ---
 
+:::caution
+This feature is not yet fully implemented and is still in development, the documentation and feature is subject to change.
+:::
+
 The purpose this feature is to allow staff, administrators and documentators to create and publish knowledgebase articles and sections both public and private for the use of documentation, guides and references for both external and internal usage.
 
 ## Knowledgebase Sections
