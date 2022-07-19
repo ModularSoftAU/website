@@ -63,27 +63,23 @@ using `gen.py`. To edit one of the endpoints key information open `docs.yaml`
 and navigate to the endpoint you wish to edit. For example:
 
 ```yaml
----
-Anticheat:
-  anticheat/flag:
+# ...
+Discord:
+  discord/join:
     method: POST
     privileged: true
-    short: Flag user
-    description: Flag a user via the anticheat and send to staff.
+    short: Log user joining
+    description: Log a message to a Discord channel when user joins the Network.
     parameters:
       username:
         type: string
         info: User IGN.
         optional: false
-      type:
-        type: string
-        info: The type of hack that the player has been flagged for.
-        optional: false
 # ...
 ```
 
 You can see how this is rendered by looking at
-[anticheat/flag](../api/anticheat/flag).
+[discord/join](/docs/products/zander/api/discord/join)
 
 ### Understanding the API Template
 
