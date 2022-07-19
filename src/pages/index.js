@@ -11,13 +11,14 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
+        {/* <img src="../../img/MELogo.png"></img> */}
         <h1 className="hero__title">{siteConfig.title}</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
             to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
+            Documentation Introduction
           </Link>
         </div>
       </div>
@@ -29,8 +30,8 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Zander Documentation - ${siteConfig.title}`}
-      description="Documentation for zander application and modules.">
+      title={`Home`}
+      description="Documentation ModularEnigma products and application.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

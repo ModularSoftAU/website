@@ -4,31 +4,29 @@ import styles from './HomepageFeatures.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
+    title: 'Innovative Products',
     Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        We have designed Zander to be easy to use and set up.
-        If you have any trouble we have a small team of Developers that can help you in troubleshooting and answering questions.
+        With all of the products and applications we develop, we always strive to make our products unique in design and function for your needs.
       </>
     ),
   },
   {
-    title: 'Open Source',
+    title: 'Active Development',
     Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Don't actually know yet...
+        ALl of our products and applications are actively being updated, fixing bugs and adding additional features.
       </>
     ),
   },
   {
-    title: 'Multi-Platform Framework',
+    title: 'Supportive Community',
     Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Zander uses multiple frameworks, APIs and platforms to make what it is work. 
-        With the use of Minecraft, Discord, the Website, an internal API and all interconnected through a MySQL database.
+        We have an active development and user community to always help you with our products and to troubleshoot your issues.
       </>
     ),
   },

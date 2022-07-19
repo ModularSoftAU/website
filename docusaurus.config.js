@@ -7,14 +7,14 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'ModularEnigma',
-  tagline: 'Documentation for the zander platform',
-  url: 'http://zanderdocs.modularenigma.com/',
+  tagline: '📌 Documentation for ModularEnigma products',
+  url: 'http://docs.modularenigma.com/',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'ModularEnigma', // Usually your GitHub org/user name.
-  projectName: 'zander-docs', // Usually your repo name.
+  projectName: 'docs', // Usually your repo name.
 
   presets: [
     [
@@ -24,14 +24,14 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/ModularEnigma/zander-docs/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/ModularEnigma/docs/tree/main/packages/create-docusaurus/templates/shared/',
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/ModularEnigma/zander-docs/tree/main/packages/create-docusaurus/templates/shared/',
-        },
+        // blog: {
+        //   showReadingTime: true,
+        //   // Please change this to your repo.
+        //   editUrl:
+        //     'https://github.com/ModularEnigma/docs/tree/main/packages/create-docusaurus/templates/shared/',
+        // },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -55,13 +55,8 @@ const config = {
             position: 'left',
             label: 'Documentation',
           },
-          // {
-          //   to: '/blog',
-          //   label: 'Guides',
-          //   position: 'left'
-          // },
           {
-            href: 'https://github.com/ModularEnigma/zander-docs',
+            href: 'https://github.com/ModularEnigma/docs',
             label: 'GitHub',
             position: 'right',
           },
@@ -71,16 +66,16 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Documentation',
+            title: 'Products',
             items: [
               {
-                label: 'Tutorial',
+                label: 'Zander',
                 to: '/docs/intro',
               },
             ],
           },
           {
-            title: 'Community',
+            title: 'Crafting For Christ',
             items: [
               {
                 label: 'Discord',
@@ -93,7 +88,7 @@ const config = {
             ],
           },
           {
-            title: 'More',
+            title: 'Our Platforms',
             items: [
               {
                 label: 'GitHub',
