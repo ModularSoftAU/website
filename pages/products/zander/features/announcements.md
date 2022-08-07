@@ -5,6 +5,10 @@ sidebar_label: Announcements
 sidebar_position: 1
 ---
 
+:::caution
+This feature is not yet fully implemented and is still in development, the documentation and feature is subject to change.
+:::
+
 The purpose of this feature is to create and display announcements across the Network on a rotational basis.
 
 ## Types of Annnouncements
