@@ -1,7 +1,7 @@
 ---
 title: Using JSON Simple
 sidebar_label: Using JSON Simple
-sidebar_position: 0
+sidebar_position: 1
 ---
 
 The main take away with JSONSimple (and most other Java JSON libraries) is that Objects can be one of three things at all times.

@@ -5,4 +5,6 @@ sidebar_label: Installation & Configuration
 sidebar_position: 1
 ---
 
-## Zander API rules
+# Zander Web/API
+
+# Zander Proxy
