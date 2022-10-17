@@ -8,7 +8,7 @@ sidebar_position: 2
 Contributing to the documentation is readily encouraged. Feel free to submit a
 pull request if you feel you can add to the documentation.
 
-## Getting Started
+## Documentation Installation
 
 To compile the documentation you will need [Node.js](https://nodejs.org/en/) and
 [Python3](https://www.python.org/). With Node.js installed you should be able to
@@ -30,7 +30,7 @@ You will then need to install the yaml parser with:
 python -m pip install -r requirements.txt
 ```
 
-## Compiling Documentation
+## Compiling the Documentation
 
 Open a terminal and run:
 
@@ -47,14 +47,20 @@ build takes place. Edits in `template/page` or `template/api` will persist.
 
 :::
 
-Then run:
+
+Then run the following to install all of the nodejs packages required for the documentation platform:
+
+```bash
+npm i
+```
+
+Then run the following to start the documentation platform:
 
 ```bash
 npm start
 ```
 
-This will start Docusaurus at [`localhost:3000`](localhost:3000) where you can
-navigate your changes locally.
+This will start Docusaurus at [`localhost:3000`](localhost:3000) where you can navigate your changes locally.
 
 ## Contributing to the API Documentation
 
