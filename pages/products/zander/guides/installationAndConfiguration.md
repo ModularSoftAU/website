@@ -56,9 +56,14 @@ You can change and customise your Zander experience for your Network in the conf
 ## Features (features.json) Toggleability
 You can find more about the functionality and toggling features across the Network under the [Features page](../features/features.md)
 
-# Proxy
+# Proxy & Auth
+:::info
 
-# Auth
+This module is not required if you are not aiming to have registrations on your site.
+
+:::
+
+Auth requires simple setup. In the `config.yml` set the `BaseAPIURL` and the unique `APIKey` and this will automatically tie into the registration system .
 
 # Vote
 
