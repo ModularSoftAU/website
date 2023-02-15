@@ -11,7 +11,7 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        {/* <img src="../../img/MELogo.png"></img> */}
+        <img src="../../img/modularsoftLogo.png"></img>
         <h1 className="hero__title">{siteConfig.title}</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
@@ -31,7 +31,7 @@ export default function Home() {
   return (
     <Layout
       title={`Home`}
-      description="Documentation ModularEnigma products and application.">
+      description="Documentation ModularSoft products and applications.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
