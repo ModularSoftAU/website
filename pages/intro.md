@@ -3,7 +3,7 @@ sidebar_position: 1
 ---
 
 # Welcome
-Welcome to the ModularEnigma documentation site.
+Welcome to the Modular Software website.
 
 Here you will find documentation, guides and help with all of our products that we provide.
 

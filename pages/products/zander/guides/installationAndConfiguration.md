@@ -13,7 +13,7 @@ sidebar_position: 1
 * You can use `node -v` in your console to check the current version you have.
 
 # Website/API
-* Download and clone the repo using `git clone https://github.com/ModularEnigma/zander-web` in your Terminal.
+* Download and clone the repo using `git clone https://github.com/ModularSoftAU/zander-web` in your Terminal.
 * Rename your `.env.example` file to `.env` to make this active.
 * Rename your `config.json.example` file to `config.json` to make this active.
 

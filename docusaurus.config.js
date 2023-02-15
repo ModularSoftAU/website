@@ -6,15 +6,15 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'ModularEnigma',
-  tagline: '📌 Documentation for ModularEnigma products',
-  url: 'http://docs.modularenigma.com/',
+  title: 'ModularSoft',
+  tagline: '📌 Documentation for ModularSoft products',
+  url: 'http://modularsoft.org/',
   baseUrl: '/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'ModularEnigma', // Usually your GitHub org/user name.
-  projectName: 'docs', // Usually your repo name.
+  organizationName: 'ModularSoftAU', // Usually your GitHub org/user name.
+  projectName: 'website', // Usually your repo name.
 
   presets: [
     [
@@ -24,13 +24,13 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/ModularEnigma/docs/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/ModularSoftAU/website/tree/main/packages/create-docusaurus/templates/shared/',
         },
         // blog: {
         //   showReadingTime: true,
         //   // Please change this to your repo.
         //   editUrl:
-        //     'https://github.com/ModularEnigma/docs/tree/main/packages/create-docusaurus/templates/shared/',
+        //     'https://github.com/ModularSoft/website/tree/main/packages/create-docusaurus/templates/shared/',
         // },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -43,9 +43,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'ModularEnigma',
+        title: 'ModularSoft',
         logo: {
-          alt: 'ModularEnigma Logo',
+          alt: 'ModularSoft Logo',
           src: 'img/favicon.ico',
         },
         items: [
@@ -56,7 +56,7 @@ const config = {
             label: 'Documentation',
           },
           {
-            href: 'https://github.com/ModularEnigma/docs',
+            href: 'https://github.com/ModularSoft/website',
             label: 'GitHub',
             position: 'right',
           },
@@ -92,12 +92,16 @@ const config = {
             items: [
               {
                 label: 'GitHub',
-                href: 'https://github.com/ModularEnigma',
+                href: 'https://github.com/ModularSoftAU',
+              },
+              {
+                label: 'Discord',
+                href: 'https://discord.com',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} ModularEnigma. Built with Docusaurus.`,
+        copyright: `Copyright © 2021 - ${new Date().getFullYear()} Modular Software. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
