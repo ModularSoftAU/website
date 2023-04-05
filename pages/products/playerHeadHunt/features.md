@@ -5,24 +5,14 @@ sidebar_label: Features
 sidebar_position: 2
 ---
 
-## Gameplay
-When a player right-clicks a Player Head, the coordinates are logged in a database and a number incremented in their name.
-
 ## Milestones
-When a player finds over an X amount of heads, a message will broadcast to all online players that they have reached a milestone.
-The milestones are hardcoded and at this time cannot be changed, these milestones are `10, 50, 100, 150, 200, 500`.
+When a player finds a certain number of heads, a message will be broadcast to all online players to inform them that the player has reached a milestone. The milestones can be set as major or minor in the configuration file.
 
-## Milestone Helmets
-To symbolise to other people in the Head Hunt where people are at, every goal achieved in the table below is given a helmet to visualise how much someone has progressed in the Hunt.
+### Milestone Helmets
+When a player finds a certain number of heads, a message will be broadcast to all online players to inform them that the player has reached a milestone. The milestones can be set as major or minor in the configuration file.
 
-| Number | Helmet    |
-|--------|-----------|
-| 50     | Leather   |
-| 100    | Chainmail |
-| 150    | Iron      |
-| 200    | Gold      |
-| 250    | Diamond   |
-| 300    | Netherite |
+### Milestone Messages
+Milestones are set to show how close a player is to the end of the hunt. Milestones can be either major or minor. A major milestone broadcasts the player's count at that milestone stage to all online players, while a minor milestone only displays a message with a sound to the player.
 
 ## Head Collection Cooldown
-To avoid hunters following other players to collect their heads, heads will disappear and reappear in a configurable option `HEAD.RESPAWNTIMER`
+To prevent players from following other players to collect their heads, the heads will disappear and reappear after a configurable amount of time using the `HEAD.RESPAWNTIMER` option.
