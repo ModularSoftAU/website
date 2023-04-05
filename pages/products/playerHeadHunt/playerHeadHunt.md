@@ -10,6 +10,12 @@ Player Head Hunt is a customisable hide and seek head hunting plugin that allows
 ## Download
 You can download a copy of our plugin directly [here](https://github.com/ModularSoftAU/PlayerHeadHunt/releases)
 
+:::note
+
+Have an issue to report or a suggestion for the plugin? Jump over to our [Discord](https://discord.gg/YRpakuYhJZ) and ask in our `#playerheadhunt` forum channel.
+
+:::
+
 ## Installation
 ### Dependencies
 * `WorldEdit` is **required** since it is used to count all the heads in the hunting region.
