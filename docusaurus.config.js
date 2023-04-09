@@ -108,6 +108,33 @@ const config = {
         darkTheme: darkCodeTheme,
         additionalLanguages: ['java', 'json'],
       },
+      algolia: {
+        // The application ID provided by Algolia
+        appId: 'SV8F0YX93F',
+
+        // Public API key: it is safe to commit it
+        apiKey: 'a2f321bcf90874e1db65a1a7fcddef23',
+
+        indexName: 'modularsoft',
+
+        // Optional: see doc section below
+        contextualSearch: true,
+
+        // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+        externalUrlRegex: 'external\\.com|domain\\.com',
+
+        // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
+        replaceSearchResultPathname: {
+          from: '/docs/', // or as RegExp: /\/docs\//
+          to: '/',
+        },
+
+        // Optional: Algolia search parameters
+        searchParameters: {},
+
+        // Optional: path for search page that enabled by default (`false` to disable it)
+        searchPagePath: 'search',
+      },
     }),
 };
 
