@@ -11,5 +11,6 @@ Here you will find documentation, guides and help with all of our products that 
 Here are the current projects that are avaliable and that are documented for your use:
 ### [zander](./products/zander)
 ### [Player Head Hunt](./products/playerHeadHunt)
+### [DevoteMe](./products/devoteMe)
 
 And more currently in progress with the team working and developing products and applications.
