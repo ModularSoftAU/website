@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'ModularSoft',
+  title: 'Modular Software',
   tagline: '📌 Documentation for Modular Software products',
   url: 'http://modularsoft.org/',
   baseUrl: '/',
@@ -69,8 +69,12 @@ const config = {
             title: 'Products',
             items: [
               {
-                label: 'Zander',
-                to: '/docs/intro',
+                label: 'Player Head Hunt',
+                to: '/docs/products/playerHeadHunt',
+              },
+              {
+                label: 'DevoteMe',
+                to: '/docs/products/devoteMe',
               },
             ],
           },

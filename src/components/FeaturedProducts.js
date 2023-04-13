@@ -1,11 +1,11 @@
 import React from 'react';
 import clsx from 'clsx';
-import styles from './HomepageFeatures.module.css';
+import styles from './Features.module.css';
 
 const FeatureList = [
   {
-    title: 'Innovative Products',
-    Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'DevoteMe',
+    Svg: require('../img/products/devoteMe/logo-color.svg').default,
     description: (
       <>
         With all of the products and applications we develop, we always strive to make our products unique in design and function for your needs.
@@ -13,7 +13,7 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Active Development',
+    title: 'Player Head Hunt',
     Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
@@ -22,7 +22,7 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Supportive Community',
+    title: 'SMP Datapack',
     Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
