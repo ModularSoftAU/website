@@ -1,6 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
-import styles from './HomepageFeatures.module.css';
+import styles from './Features.module.css';
 
 const FeatureList = [
   {
@@ -8,7 +8,7 @@ const FeatureList = [
     Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        With all of the products and applications we develop, we always strive to make our products unique in design and function for your needs.
+        At our company, we are dedicated to crafting products and applications that are tailored to meet your specific needs. We take pride in creating designs and functionalities that set our products apart from the rest.
       </>
     ),
   },
@@ -17,7 +17,7 @@ const FeatureList = [
     Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        ALl of our products and applications are actively being updated, fixing bugs and adding additional features.
+        Our team is committed to continuously improving all of our products and applications. We take a proactive approach to development, regularly updating and enhancing functionality, while diligently addressing any bugs or issues that arise.
       </>
     ),
   },
@@ -26,13 +26,13 @@ const FeatureList = [
     Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        We have an active development and user community to always help you with our products and to troubleshoot your issues.
+        Our products are backed by a robust community of both developers and users, all dedicated to providing exceptional support. Whether you need help troubleshooting an issue or simply have a question, you can rely on our community to provide timely and knowledgeable assistance.
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function CompanyFeature({Svg, title, description}) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
@@ -46,13 +46,13 @@ function Feature({Svg, title, description}) {
   );
 }
 
-export default function HomepageFeatures() {
+export default function CompanyHomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">
         <div className="row">
           {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
+            <CompanyFeature key={idx} {...props} />
           ))}
         </div>
       </div>

@@ -4,21 +4,22 @@ import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
-import HomepageFeatures from '../components/HomepageFeatures';
+import CompanyFeatures from '../components/CompanyFeatures';
+import FeaturedProducts from '../components/FeaturedProducts';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <img src="../../img/modularsoftLogo.png"></img>
-        <h1 className="hero__title">{siteConfig.title}</h1>
+        <img src="../img/modularsoftLogo.png" height="80"/>
+        {/* <h1 className="hero__title">{siteConfig.title}</h1> */}
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
             to="/docs/intro">
-            Documentation Introduction
+            Documenation
           </Link>
         </div>
       </div>
@@ -31,10 +32,11 @@ export default function Home() {
   return (
     <Layout
       title={`Home`}
-      description="Documentation ModularSoft products and applications.">
+      description="Documentation Modular Software products and applications.">
       <HomepageHeader />
       <main>
-        <HomepageFeatures />
+        <CompanyFeatures />
+        <FeaturedProducts />
       </main>
     </Layout>
   );
