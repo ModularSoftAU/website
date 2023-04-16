@@ -1,58 +1,71 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './Features.module.css';
+import Link from '@docusaurus/Link';
 
 const FeatureList = [
   {
-    title: 'DevoteMe',
-    Svg: require('../img/products/devoteMe/logo-color.svg').default,
+    Title: 'DevoteMe',
+    Img: require('../img/products/devoteMe/logo-color.png').default,
+    LinkRef: '/docs/products/devoteMe/',
     description: (
       <>
-        With all of the products and applications we develop, we always strive to make our products unique in design and function for your needs.
+        A platform that aims to help people connect with the Gospel in a more accessible way. While the Bible is a crucial resource for Christians, the platform acknowledges that there are several other ways to strengthen one's faith and deepen their relationship with God.
       </>
     ),
   },
   {
-    title: 'Player Head Hunt',
-    Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
+    Title: 'Player Head Hunt',
+    Img: require('../img/products/playerHeadHunt/logo-color.png').default,
+    LinkRef: '/docs/products/playerHeadHunt/',
     description: (
       <>
-        ALl of our products and applications are actively being updated, fixing bugs and adding additional features.
+        Lets you collect heads or blocks in a variety of exciting games you can create and configure, such as hide and seek or Easter egg hunts. With this the possibilities for fun and creativity are endless.
       </>
     ),
   },
-  {
-    title: 'SMP Datapack',
-    Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        We have an active development and user community to always help you with our products and to troubleshoot your issues.
-      </>
-    ),
-  },
+  // {
+  //   Title: 'SMP Datapack',
+  //   Img: require('../img/products/playerHeadHunt/logo-color.png').default,
+  //   LinkRef: '/docs/products/playerHeadHunt/',
+  //   description: (
+  //     <>
+  //       Tailored specifically to the way Minecraft is played, our meticulously crafted pack enhances your gameplay with revamped mechanics and recipes, delivering an immersive experience that keeps you engaged for hours.
+  //     </>
+  //   ),
+  // },
 ];
 
-function Feature({Svg, title, description}) {
+function ProductFeature({Img, LinkRef, Title, description}) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} alt={title} />
+        <img src={Img} height="250px" />
       </div>
       <div className="text--center padding-horiz--md">
-        <h3>{title}</h3>
+        <h3>{Title}</h3>
+
+        <Link
+          className="button button--secondary button--lg"
+          to={LinkRef}>
+          Product Documenation
+        </Link>
+        <br /><br />
+
         <p>{description}</p>
       </div>
     </div>
   );
 }
 
-export default function HomepageFeatures() {
+export default function ProductsHomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">
+        <h1 className="text--center">Featured Products</h1>
         <div className="row">
           {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
+            <ProductFeature key={idx} {...props} />
           ))}
         </div>
       </div>
