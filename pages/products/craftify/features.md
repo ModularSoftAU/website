@@ -5,19 +5,28 @@ sidebar_label: Features
 sidebar_position: 2
 ---
 
-* End crystals can be found in End-City loot chests
-* Skeleton horses can drop end crystals
-* Players will drop their head when killed by a player
-* The Ender Dragon drops an egg on death
-* Drowned drops copper more often, and drops shells
+## Loot Tables
+* End crystals are obtainable through End-City loot chests.
+* It is possible for skeleton horses to drop end crystals as a rare drop.
+* When a player is killed by another player, their head will be dropped as a loot item.
+* When defeated, the Ender Dragon will drop an egg as an item.
+* The Drowned mob has a higher chance of dropping copper and also drops Nautilus Shell.
 * Warden can drop more sculk things
+    *need more specific information*
 
-## Warps
-* Wild warp system to randomly teleport players to a new location from spawn
-* Targeted warps, up to 6 locations
+## Warp
+The Wild warp system is a unique feature in many online games that allows players to be randomly teleported to a new location from their original spawn point. 
 
-## Other Features
-* Number of bees in a nest/hive is displayed when broken
-* Dragon death is announced to the server
-* Welcome pack is given on first join
-* Warning against x-ray given when first getting diamonds of any type
+This feature is particularly useful in games with large maps or those that require exploration, as it allows players to discover new areas without having to travel long distances on foot. In addition to the Wild warp system, this offers targeted warps that allow players to choose from up to six pre-set locations.
+
+This feature is particularly useful for players who want to quickly travel to specific locations or for those who want to return to areas they have previously explored. Overall, these warp systems offer players greater flexibility and convenience when playing online games.
+
+## Other Functions
+* If a nest or hive is broken, the number of bees inhabiting it is shown.
+    *insert screenshot of nest*
+* When the dragon is defeated, an announcement is broadcasted to the server.
+    *insert screenshot of announcement*
+* New players are granted a welcome pack upon their initial login.
+    *insert screenshot of pack*
+* Upon collecting their first diamond, every player receives a warning message cautioning them against using x-ray cheats.
+    *insert screenshot of message*
