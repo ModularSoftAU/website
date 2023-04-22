@@ -5,7 +5,7 @@ sidebar_label: Craftify
 sidebar_position: 1
 ---
 
-This datapack is the pack that we use to power the unique features and recipes on the Crafting For Christ Survival Server.
+Tailored specifically to the way Minecraft is played, our meticulously crafted pack enhances your gameplay with revamped mechanics and recipes.
 
 ## Download
 You can download a copy of our datapack directly [here](https://github.com/ModularSoftAU/Craftify/archive/refs/heads/master.zip)
