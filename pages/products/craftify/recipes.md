@@ -8,47 +8,46 @@ sidebar_position: 1
 # Bulk Crafting
 
 ## Chests
-Using logs to craft a chest will yield 4 chests, making it easier to craft large amounts of chests without needing to break the logs down into planks first.
+Crafting a chest with logs directly results in four chests, simplifying the process of creating numerous chests without the need to convert logs into planks first.
 
 ![](../../../src/img/products/craftify/crafting/bulk_chest.png)
 
 ## Logs
-Any combination of log-types will work, including stripped logs.
+Stripped logs or any combination of log-types can be used interchangeably.
 
 ![](../../../src/img/products/craftify/crafting/bulk_chest_random.png)
 
 
 ## Bone Blocks
-
-Similarly, Bone blocks can be crafted directly from bones.
+Bone blocks can be easily crafted by using bones as raw materials.
 
 ![](../../../src/img/products/craftify/crafting/bone_block.png)
 
 ## Bundles
-The vanilla recipe for Bundles has been enabled.
+The ability to craft Bundles using the vanilla recipe has been enabled.
 
 ![](../../../src/img/products/craftify/crafting/bundle.png)
 
 ## Vanilla Crafting Rebalances
-Minor changes have been made to vanilla crafting recipes:
+Vanilla crafting recipes have undergone minor changes:
 
 ### 6-Sided Logs
-6-sided log crafting now returns 4 wood, rather than 3.
+The 6-sided log crafting process has been modified to yield 4 wood instead of 3.
 
 ![](../../../src/img/products/craftify/crafting/wood_rebalance.png)
 
 ### Fermented Spider Eyes
-Fermented spider eyes can use both red and brown mushrooms.
+Both red and brown mushrooms can be used to ferment spider eyes.
 
 ![](../../../src/img/products/craftify/crafting/fermented_spider_eye.png)
 
 ## Bee Nests
-The "natural" bee nests can be crafted by combining the "artifical" beehives with honeycomb.
+To create "natural" bee nests, one can combine "artificial" beehives with honeycomb through crafting.
 
 ![](../../../src/img/products/craftify/crafting/bee_nest.png)
 
 ## Chainmail
-All chainmail armour can be crafted from chains.
+To craft all types of chainmail armor, chains are required as the main material.
 
 ![](../../../src/img/products/craftify/crafting/chainmail_helmet.png)
 
@@ -59,55 +58,51 @@ All chainmail armour can be crafted from chains.
 ![](../../../src/img/products/craftify/crafting/chainmail_boots.png)
 
 ## Dispenser
-Dispensers can be crafting a bow around a dropper, making bulk crafting much easier. The vanila recipe is still in place.
+The combination of a dispenser and a dropper allows for convenient bulk crafting of bows, while still retaining the original vanilla recipe.
 
 ![](../../../src/img/products/craftify/crafting/dispenser.png)
 
 ## End Crystal
-In addition to the vanilla recipe, two end crystals can be obtained from the Dragon Egg, which is now a guarenteed drop from the Ender Dragon, and can also be found in End City chests.
+Two additional end crystals can be acquired from the Dragon Egg, which is now a guaranteed drop from the Ender Dragon and can also be found in End City chests, in addition to the vanilla recipe.
 
 ![](../../../src/img/products/craftify/crafting/dragon_egg.png)
 
 
 ## Elytra
-The elytra is craftable from a Diamond Chestplate, an Ender Eye, a Chorus Flower, and 6 Phantom Membrane.
+To craft an elytra, you need a Diamond Chestplate, an Ender Eye, a Chorus Flower, and 6 Phantom Membrane.
 
 :::note
-
-You must have visited The End dimension first before being able to craft this.
-
+To craft this, prior visitation to The End dimension is a requirement.
 :::
 
 ![](../../../src/img/products/craftify/crafting/elytra.png)
 
 ## Bottle-o-Enchanting
-The Experience Bottle can be crafted from quartz, glowstone dust, and a water bottle.
-In 1.19 this recipe will change to use skulk blocks instead.
+To craft an Experience Bottle, you will need quartz, glowstone dust, and a water bottle.
 
 ![](../../../src/img/products/craftify/crafting/experience_bottle.png)
 
 *Insert alternate updated recipe with Skulk*
 
 ## Trident
-The trident may be crafted from 3 diamond swords (for the tines) and 2 conduits (for the handle).
+To craft a trident, you need three diamond swords for the tines and two conduits for the handle.
 
 ![](../../../src/img/products/craftify/crafting/trident.png)
 
 ## Notch Apple
-Enchanted Golden Apples can be duplicated by combining a regular golden apple, an enchanted golden apple, and 7 blocks of gold.
-This is intended to be reminicent of the original vanilla recipe, and is technically cheaper by 1 ingot.
+The duplication of Enchanted Golden Apples involves combining a regular golden apple, an enchanted golden apple, and 7 blocks of gold, which is not only reminiscent of the original vanilla recipe but also one ingot cheaper.
 
 ![](../../../src/img/products/craftify/crafting/noch_apple.png)
 
 ## Blackstone
 
 ### Blackstone
-Blackstone can be crafted from Basalt and Cobblestone, both of which are able to be created by lava.
+Blackstone, a type of block, can be produced by combining Basalt and Cobblestone, which are both materials that can be created using lava.
 
 ![](../../../src/img/products/craftify/crafting/blackstone.png)
 
 ### Guilded Blackstone
-Guilded Blackstone can be crafted by surrounding blackstone with gold nuggets.
+The process of crafting Guilded Blackstone involves surrounding blackstone with gold nuggets.
 
 ![](../../../src/img/products/craftify/crafting/guilded_blackstone.png)
 
@@ -117,22 +112,20 @@ Flint can be repacked into gravel.
 ![](../../../src/img/products/craftify/crafting/gravel.png)
 
 ## Rotten Flesh
-9 rotten flesh can be crafted into 1 rabbit hide. The vanila recipe can then be used to craft 4 rabbit hide into 1 leather.
+By crafting 9 rotten flesh, players can obtain 1 rabbit hide, which can then be used with the vanilla recipe to craft 4 rabbit hides into 1 piece of leather.
 
 ![](../../../src/img/products/craftify/crafting/flesh_to_leather.png)
 
 ## Sponge Duplication
-Crafting together sponge (wet or dry) with coral blocks and corals (of any combination of colour, but must not be dead) will yield 4 sponges.
+When sponge (wet or dry) is combined with coral blocks and live corals (of any color), 4 sponges can be crafted.
 
 ![](../../../src/img/products/craftify/crafting/sponge.png)
 
 ## Unpackable Ice
-Blue ice and Packed ice crafting recipes can be reversed, making it a useful way to store ice/water
+The crafting recipes for Blue ice and Packed ice can be reversed, providing a convenient way to store ice or water.
 
 ### Blue Ice
-
 ![](../../../src/img/products/craftify/crafting/unpack_blue_ice.png)
 
 ### Packed Ice
-
 ![](../../../src/img/products/craftify/crafting/unpack_packed_ice.png)
