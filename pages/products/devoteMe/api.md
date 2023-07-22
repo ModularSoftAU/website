@@ -30,7 +30,7 @@ Have an issue to report or need assistance with the API? Jump over to our [Disco
 
 ## Configuration
 
-### Enviroment Variables
+### Environment Variables
 | Variable | Description                         | Default |
 | -------- | ----------------------------------- | ------- |
 | PORT     | The port for the API to operate on. | 8080    |

@@ -43,7 +43,7 @@ There is currently only 1 product offering (but hopefully soon to be) more offer
 :::
 
 ### API
-You can download a copy of our API directly [here](https://github.com/ModularSoftAU/DevoteMe-API/releases)
+You can download a copy of our API directly [here](https://github.com/ModularSoftAU/DevoteMe-API/releases).
 
 ### Discord
-You can download a copy of our Discord bot directly [here](https://github.com/ModularSoftAU/DevoteMe-Discord/releases)
+You can download a copy of our Discord bot directly [here](https://github.com/ModularSoftAU/DevoteMe-Discord/releases).
