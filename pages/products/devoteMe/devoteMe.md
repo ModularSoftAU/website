@@ -13,18 +13,9 @@ We recognise that technology has significantly changed the way people access inf
 
 :::warning
 
-Please be aware this application is in Beta and is no way finished or completed.
+Please be aware this application is in Beta
 
 :::
-
-## Download
-There is currently only 1 product offering (but hopefully soon to be) more offerings soon...
-
-### API
-You can download a copy of our API directly [here](https://github.com/ModularSoftAU/DevoteMe-API/releases)
-
-### Discord
-You can download a copy of our Discord bot directly [here](https://github.com/ModularSoftAU/DevoteMe-Discord/releases)
 
 :::note
 
@@ -32,17 +23,27 @@ Have an issue to report or a suggestion for the DevoteMe suite? Jump over to our
 
 :::
 
-## Installation
+## Features
+### Devotions
+Not yet configurable but daily, DevoteMe can post devotions from In Touch Australia @ https://www.intouchaustralia.org/read/daily-devotions to your Discord channel with a Bible Reading, a short devotion and a reading for those participating in a Bible In A Year program.
+
+This is avaiable on our Discord module.
+
+### Verse of The Day
+Not yet configurable but daily, DevoteMe can post the Verse of The Day from BibleGateway to your Discord channel with a Bible verse.
+
+This is avaiable on our Discord module.
+
+## Download
+
+:::info
+
+There is currently only 1 product offering (but hopefully soon to be) more offerings soon...
+
+:::
+
 ### API
-:::note
+You can download a copy of our API directly [here](https://github.com/ModularSoftAU/DevoteMe-API/releases).
 
-We currently don't have a copy of DevoteMe-API that can be easily added and configured, we are looking to implement this in an update. If you're able, you can look into deploying your own version.
-
-:::
-
-### Discord Bot
-:::note
-
-We currently don't have a copy of DevoteMe-Discord that can be easily added and configured, we are looking to implement this in an update. If you're able, you can look into deploying your own version.
-
-:::
+### Discord
+You can download a copy of our Discord bot directly [here](https://github.com/ModularSoftAU/DevoteMe-Discord/releases).
