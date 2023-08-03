@@ -1,0 +1,3 @@
+[submodule "vendor/APIGenerator"]
+	path = vendor/APIGenerator
+	url = https://github.com/ModularSoftAU/APIGenerator.git
