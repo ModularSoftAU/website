@@ -17,6 +17,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+        with:
+          submodules: recursive
+      
       - name: Set up Python 3.10
         uses: actions/setup-python@v2
         with:
@@ -35,7 +38,8 @@ jobs:
 
       - name: Generate API documentation
         run: |
-          python gen.py --build
+          cd vendor
+          python APIGenerator/src/gen.py --build
 
       - name: npm install and build
         run: |

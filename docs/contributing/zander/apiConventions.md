@@ -292,15 +292,19 @@ These exist to prevent API functionality from mingling with website functionalit
 
     ```yaml
     # ...
-    Group:
-      group/endpoint:
-        method: GET
-        privileged: true # or false
-        short: My endpoint
-        description: This endpoint does...
-        username:
-          type: string
-          info: Filter by matching user IGN.
-          optional: true
+    rank:
+      sidebar: Ranks
+      files:
+      - get.mdx:
+          route: rank/get
+          method: GET
+          privileged: false
+          short: Get rank assignments
+          description: Returns a list of all the ranks and the users assigned to each rank.
+          parameters:
+            username:
+              type: string
+              info: Filter by matching user IGN.
+              optional: true
     # ...
     ```
