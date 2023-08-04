@@ -24,16 +24,16 @@ const FeatureList = [
       </>
     ),
   },
-  // {
-  //   Title: 'SMP Datapack',
-  //   Img: require('../img/products/playerHeadHunt/logo-color.png').default,
-  //   LinkRef: '/docs/products/playerHeadHunt/',
-  //   description: (
-  //     <>
-  //       Tailored specifically to the way Minecraft is played, our meticulously crafted pack enhances your gameplay with revamped mechanics and recipes, delivering an immersive experience that keeps you engaged for hours.
-  //     </>
-  //   ),
-  // },
+  {
+    Title: 'Craftify',
+    Img: require('../img/products/craftify/logo-color.png').default,
+    LinkRef: '/docs/products/craftify/',
+    description: (
+      <>
+        Tailored specifically to the way Minecraft is played, our meticulously crafted pack enhances your gameplay with revamped mechanics and recipes.
+      </>
+    ),
+  },
 ];
 
 function ProductFeature({Img, LinkRef, Title, description}) {
