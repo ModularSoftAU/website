@@ -1,7 +1,7 @@
 ---
 title: Zander
 description: TODO
-sidebar_label: Craftify
+sidebar_label: Zander
 sidebar_position: 1
 ---
 

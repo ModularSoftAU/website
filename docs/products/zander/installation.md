@@ -1,7 +1,7 @@
 ---
-title: Zander Installation
+title: Installation
 description: TODO
-sidebar_label: Zander Installation
+sidebar_label: Installation
 sidebar_position: 1
 ---
 
