@@ -14,10 +14,6 @@ PORT=8080
 siteAddress=http://localhost:8080
 TZ=Australia/Sydney
 
-discordoAuth2URL=AUTHURL
-discordClientId=CLIENTID
-discordClientSecret=CLIENTSECRET
-
 discordAPIKey=APIKEY
 apiKey=KEY
 
@@ -30,46 +26,57 @@ databasePassword=PASSWORD
 databaseName=DATABASE
 ```
 
+| Value               | Description                                                                                                          |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| PORT                | The port which the application runs off (if you're using a deployment platform like Heroku, this won't be relevant). |
+| siteAddress         | The website/domain the application is being deployed to (ensure you don't add a "/")                                 |
+| TZ                  | The timezone of where you are based.                                                                                 |
+| discordAPIKey       | The API for your Discord bot.                                                                                        |
+| apiKey              | The API key for the other plugins to connect into (ensure this is secure, and long!)                                 |
+| sessionCookieSecret | The secret token for user sessions  (ensure this is secure, and long!)                                               |
+| databaseHost        | The IP address or server address for the MySQL Server.                                                               |
+| databasePort        | The port for the MySQL Server.                                                                                       |
+| databaseUser        | The username for the MySQL Server account.                                                                           |
+| databasePassword    | The password for the MySQL Server account.                                                                           |
+| databaseName        | The name of the Zander database.                                                                                     |
+
 ### config.yml
 
 ```
 {
     "debug": false,
     "siteConfiguration": {
-        "siteName": "Crafting For Christ",
-        "tagline": "Home of one of the biggest Christian Minecraft Servers in Australia.",
-        "email": "support@craftingforchrist.net",
+        "siteName": "My Server",
+        "tagline": "MyServer, A Gaming Community",
+        "email": "support@myserver.net",
         "policy": {
-            "termsOfService": "https://raw.githubusercontent.com/craftingforchrist/Legal/master/terms.md",
-            "rules": "https://raw.githubusercontent.com/craftingforchrist/Legal/master/rules.md",
-            "privacy": "https://raw.githubusercontent.com/craftingforchrist/Legal/master/privacy.md",
-            "refund": "https://raw.githubusercontent.com/craftingforchrist/Legal/master/refund.md"
+            "termsOfService": "https://raw.githubusercontent.com/MYSERVER/Legal/master/terms.md",
+            "rules": "https://raw.githubusercontent.com/MYSERVER/Legal/master/rules.md",
+            "privacy": "https://raw.githubusercontent.com/MYSERVER/Legal/master/privacy.md",
+            "refund": "https://raw.githubusercontent.com/MYSERVER/Legal/master/refund.md"
         },
         "platforms": {
+            "webstore": "https://tebex.io/",
             "discord": "https://discord.com/",
-            "facebook": "https://www.facebook.com/craft4christ/",
-            "twitter": "https://twitter.com/craft4christmc",
-            "instagram": "https://instagram.com/craftingforchrist",
-            "reddit": "https://www.reddit.com/r/craftingforchrist/",
-            "twitch": "https://www.twitch.tv/craftingforchrist",
-            "youtube": "https://www.youtube.com/channel/UCeijz6MNnya85LprMjPmYag",
-            "linkedin": "https://www.linkedin.com/company/68885022/",
-            "tiktok": "https://www.tiktok.com/@craftingforchrist"
+            "facebook": "https://www.facebook.com/",
+            "twitter": "https://twitter.com/",
+            "instagram": "https://instagram.com/",
+            "reddit": "https://www.reddit.com/",
+            "twitch": "https://www.twitch.tv/",
+            "youtube": "https://www.youtube.com/",
+            "linkedin": "https://www.linkedin.com/",
+            "tiktok": "https://www.tiktok.com/"
         }
     },
     "discord": {
-        "guildId": "899441191416901632",
+        "guildId": "GUILDID",
         "channels": {
-            "welcomeChannel": "926380663953821736",
-            "networkChatLog": "925702393423859724",
-            "adminLog": "926380052155867146",
-            "eventAnnouncements": "926380005854957608",
-            "reports": "936889292263936030",
-            "punishments": "936889228598587392",
-            "topVoterBroadcast": "926380005854957608"
+            "welcomeChannel": "CHANNELID",
+            "networkChatLog": "CHANNELID",
+            "adminLog": "CHANNELID"
         },
         "roles": {
-            "verified": "926259482319794246"
+            "verified": "ROLEID"
         }
     }
 }
