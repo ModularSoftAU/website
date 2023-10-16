@@ -6,7 +6,8 @@ sidebar_position: 2
 ---
 
 ## Web/API
-*Configuration from the `.env.example`*
+
+### .env (Enviroment Variables)
 
 ```
 PORT=8080
@@ -29,7 +30,7 @@ databasePassword=PASSWORD
 databaseName=DATABASE
 ```
 
-*Configuration from the `config.json.example`*
+### config.yml
 
 ```
 {
@@ -81,15 +82,29 @@ databaseName=DATABASE
 ### Language
 
 ## Proxy
-*Configuration from the `config.yml`*
+
+### config.yml
 
 ```
 BaseAPIURL: "http://localhost:8080/api"
 APIKey: "KEY"
+
+announcementMOTDTopLine: "&e&lMy &2&nMinecraft&r &6&oServer"
+announcementTipPrefix: "&7&l[&6&lTIP&7&l]&r "
+announcementTipInterval: 10
 ```
 
+| Value                   | Description                                                                  |
+| ----------------------- | ---------------------------------------------------------------------------- |
+| BaseAPIURL              | The API URL for your instance.                                               |
+| APIKey                  | The API key for your API instance to secure requests.                        |
+| announcementMOTDTopLine | The default top line of the Server MOTD.                                     |
+| announcementTipPrefix   | The prefix for the Tip announcements.                                        |
+| announcementTipInterval | The minute interval of which to send Tip announcements to across the Server. |
+
 ## Hub
-*Configuration from the `config.yml`*
+
+### config.yml
 
 ```
 velocitymultiplier: 3
@@ -101,3 +116,32 @@ hub:
   yaw: -180.0
   pitch: 0.0
 ```
+
+| Value              | Description                                                                           |
+| ------------------ | ------------------------------------------------------------------------------------- |
+| velocitymultiplier | How far to have the user flung forward in their seeing direction.                     |
+| hub.world          | The world name for the Hub map server of which to summon the player to on connection. |
+| hub.x              | The x position of which to summon the player to on connection.                        |
+| hub.y              | The y position of which to summon the player to on connection.                        |
+| hub.z              | The z position of which to summon the player to on connection.                        |
+| hub.yaw            | The yaw position of which to summon the player to on connection.                      |
+| hub.pitch          | The pitch position of which to summon the player to on connection.                    |
+
+### welcome.yml
+
+```
+welcome:
+  - "&e Welcome to My Server!"
+newplayerwelcome:
+  - "&e&l ========== My Server ========== &r"
+  - "&9&l Website:&r http://myserver.net"
+  - "&9&l Discord:&r http://myserver.net/discord"
+  -  " "
+  - "By joining My Server you agree to our Rules, TOS, and Privacy Policy."
+  - "Make sure you read the rules. &cUse /rules to read the rules.&r"
+```
+
+| Value            | Description                                                                 |
+| ---------------- | --------------------------------------------------------------------------- |
+| welcome          | Line-by-line the noted message to send the user on login as a known player. |
+| newplayerwelcome | Line-by-line the noted message to send the user on login as new player.     |
