@@ -76,8 +76,79 @@ databaseName=DATABASE
 ```
 
 ### Filter
+The filter has 2 part features, a link filter to stop advertising and the like, and a phrase filter to stop profanity and swearing along with the use of varible characters.
+
+You can add links and phrases in the `filter.json` file and on restart it will enforce them on all platforms.
 
 ### Join Messages
+The use of join messages for whne a player joins the Discord and is verified, it will choose from a selection of the messages which you can add to in `joinMessages.json`
+Ensure that when you create a join message, include the placeholder `%USERNAME%` as it will replace 
+
+Here is a set list of the out-of-the box ones:
+
+```
+[
+    "Yo! %USERNAME% just rocked up! Give them a warm welcome!",
+    "Start celebrating :tada: %USERNAME% has joined the party!",
+    "All your base belongs to %USERNAME%!!!",
+    "Welcome %USERNAME%, don't get supply blocked.",
+    "Hello there! General %USERNAME%!",
+    "%USERNAME% joined. You must construct additional pylons.",
+    "Woah! %USERNAME% just rocked up, Welcome!",
+    "%USERNAME% just rocked up with Diamonds!",
+    "%USERNAME% was blown up by a Creeper.. sad times.",
+    "%USERNAME% was slain by a Zombie.. BRUH.",
+    "%USERNAME% forgot how to use ladders.. oof.",
+    "%USERNAME% we were expecting you ( ͡° ͜ʖ ͡°)",
+    "Welcome %USERNAME% we hope you brought cake.",
+    "Welcome %USERNAME% leave the swords and armour at the door.",
+    "Swoooosh. %USERNAME% landed safely",
+    "%USERNAME% just joined. Hide your Diamonds.",
+    "%USERNAME% has joined the game.",
+    "%USERNAME% just showed up. Hold my milk."
+]
+```
+
+### Features
+The features file allows you to pick and choose what you want to use for you community.
+
+#### features.json
+
+```
+{
+    "announcements": true,
+    "applications": true,
+    "discord": {
+        "commands": {
+            "legoFlip": true
+        },
+        "events": {
+            "generalKenobi": true,
+            "guildMemberBoost": true,
+            "guildMemberVerify": true
+        }
+    },
+    "server": true,
+    "filter": {
+        "link": true,
+        "phrase": true
+    },
+    "web": {
+        "login": true,
+        "register": true
+    },
+    
+    "smDiscord": true,
+    "smFacebook": true,
+    "smTwitter": true,
+    "smInstagram": true,
+    "smReddit": false,
+    "smTwitch": true,
+    "smYouTube": true,
+    "smLinkedIn": true,
+    "smTikTok": true
+}
+```
 
 ### Language
 
