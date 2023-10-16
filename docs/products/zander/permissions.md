@@ -16,9 +16,7 @@ To provision permissions, using the tables below you can add these permisssions 
 ### Web
 | Permission               | Description                                                                                                                                                |
 | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| zander.web.dashboard     | Access to the Dashboard to operate the Administration Panel.
-
-Anyone who needs access to anything in the Administration panel, needs this permission node. |
+| zander.web.dashboard     | Access to the Dashboard to operate the Administration Panel. Anyone who needs access to anything in the Administration panel, needs this permission node. |
 | zander.web.announcements | Access to create, edit and delete announcements in the Administration Panel.                                                                               |
 | zander.web.application   | Access to create, edit and delete applications in the Administration Panel.                                                                                |
 | zander.web.server        | Access to create, edit and delete servers in the Administration Panel.                                                                                     |
