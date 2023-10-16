@@ -6,3 +6,12 @@ sidebar_position: 3
 ---
 
 ## Introduction
+
+
+## Commands
+
+### Moderation
+
+### Community
+
+### Misc

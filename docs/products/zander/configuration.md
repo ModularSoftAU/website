@@ -40,7 +40,7 @@ databaseName=DATABASE
 | databasePassword    | The password for the MySQL Server account.                                                                           |
 | databaseName        | The name of the Zander database.                                                                                     |
 
-### config.yml
+### config.json
 
 ```
 {

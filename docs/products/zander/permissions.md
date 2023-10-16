@@ -6,7 +6,7 @@ sidebar_position: 3
 ---
 
 ## Introduction
-Ensuring users have access to the right areas
+Ensuring users have access to the right areas we have implemented permissions into Zander.
 
 ## Provisioning Permissions
 To provision permissions, using the tables below you can add these permisssions just like any normal permission nodes in LuckPerms as the application will read the permissions table to ensure that the users have access to the correct features and areas.
