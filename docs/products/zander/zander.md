@@ -28,6 +28,4 @@ We're actively working on developing and improving the suite for other servers t
 If you'd like a `INDEV` license contact us at support@modularsoft.org for a quote on a `INDEV` license.
 
 # Support & Suggestions
-If you require support, would like to make an issue about a bug, or would like to make a suggestion about what to add or what to improve, join our Discord for more information
-
-- [Discord](https://discord.gg/YRpakuYhJZ)
+If you require support, would like to make an issue about a bug, or would like to make a suggestion about what to add or what to improve, join our [Discord](https://discord.gg/YRpakuYhJZ) for more information.

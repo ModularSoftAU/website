@@ -21,4 +21,9 @@ To provision permissions, using the tables below you can add these permisssions 
 | zander.web.application   | Access to create, edit and delete applications in the Administration Panel.                                                                                |
 | zander.web.server        | Access to create, edit and delete servers in the Administration Panel.                                                                                     |
 
+### Hub
+| Permission     | Description                                  |
+| -------------- | -------------------------------------------- |
+| zander.hub.fly | Allow users to fly in the Hub or to use /fly |
+
 ### Other

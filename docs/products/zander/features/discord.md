@@ -6,7 +6,7 @@ sidebar_position: 3
 ---
 
 ## Introduction
-
+The Discord feature allows for moderation, community interaction and 
 
 ## Commands
 

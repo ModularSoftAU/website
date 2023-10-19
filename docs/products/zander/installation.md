@@ -17,7 +17,7 @@ The installation information is as below, this information has been provided in 
 
 * Clone the Web repo.
 * Install all of the required packages using `npm i`
-* In the root folder, open the `.env`, `config.json`, `filter.json`, `joinMessages.json`, `features.json` and `lang.json` and fill out as per the instructions in [Configuration](./configuration.md).
+* In the root folder, open the `.env`, `config.json`, `filter.json`, `joinMessages.json`, `features.json` and `lang.json` and fill out as per the instructions in [Configuration](./configuration).
 * Run `npm dev` to start the application/website/api.
 
 ## Discord
