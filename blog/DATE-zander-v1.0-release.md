@@ -35,6 +35,16 @@ We're releasing our first of many patch notes for Zander, a multi-
 * Implemented Creature, Interaction and Hub prevention to stop Hub being damaged by players.
 
 ### Proxy
+* Implemented /discord command which redirects player to Network discord.
+* Implemented /ping command to test players connection to Proxy.
+* Implemented /rules command which redirects player to Network discord.
+* Implemented /website command which redirects player to Network website.
+* Implemented a proxy-side connection for link and word filtering.
+* Implemented Chat Event which checks chat messages for blocked content, sends a request to a filtering API, blocks messages containing restricted content and notifes the player, and sends approved messages to a Discord channel for Network Log monitoring.
+* Implemented User Disconnection Event which checks if the player is still connected, sends a request to the API to destroy the player's session and sends a request to the API to notify Discord channel for Network Log monitoring of the leave event.
+* Implemented User Login event which retrieves the player logging in, sends a request to the API to create a new user if they're new, sends a request to the API to start a session, including the player's unique ID and IP address and then sends a request to the API to notify Discord channel for Network Log monitoring of the join event.
+* Implemented a Proxy Ping event which is displayed when players ping the server. It retrieves the MOTD from an API, applies formatting, and sets it as the server's description. If an error occurs, it falls back to a default MOTD specified in the `config.yml`.
+* 
 
 ### Web
 
