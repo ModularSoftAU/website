@@ -76,6 +76,45 @@ We're releasing our first of many patch notes for Zander, a multi-
 
 #### API
 
+> Have a look at our API documentation for information on routes functionality.
+
+* Announcement
+  * Implemented /get
+  * Implemented /create
+  * Implemented /edit
+  * Implemented /delete
+* Application
+  * Implemented /get
+  * Implemented /create
+  * Implemented /edit
+  * Implemented /delete
+* Server
+  * Implemented /get
+  * Implemented /get/users
+  * Implemented /create
+  * Implemented /edit
+  * Implemented /delete
+* Session
+  * Implemented /create
+  * Implemented /destroy
+  * Implemented /switch
+* Discord
+  * Implemented /switch
+  * Implemented /chat
+  * Implemented /join
+  * Implemented /leave
+* Web
+  * Implemented /register/create
+  * Implemented /configuration
+  * Implemented /statistics
+  * Implemented /logs/get
+* User
+  * Implemented /create
+  * Implemented /get
+* Implemented /heartbeat
+* Implemented /filter
+* Added function to verify token against API.
+
 #### Discord
 * Implemented the following commands:
   * legoflip - A simple lego flip which generates 2 different avatar heads, a unique command for the community.
