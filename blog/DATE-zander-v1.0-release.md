@@ -44,7 +44,8 @@ We're releasing our first of many patch notes for Zander, a multi-
 * Implemented User Disconnection Event which checks if the player is still connected, sends a request to the API to destroy the player's session and sends a request to the API to notify Discord channel for Network Log monitoring of the leave event.
 * Implemented User Login event which retrieves the player logging in, sends a request to the API to create a new user if they're new, sends a request to the API to start a session, including the player's unique ID and IP address and then sends a request to the API to notify Discord channel for Network Log monitoring of the join event.
 * Implemented a Proxy Ping event which is displayed when players ping the server. It retrieves the MOTD from an API, applies formatting, and sets it as the server's description. If an error occurs, it falls back to a default MOTD specified in the `config.yml`.
-* 
+* Implemented User Switch event which sends a request to the API to switch the player's session to the new server and sends a request to the API to notify Discord of the server switch for the Network log monitoring.
+* Added a `config.yml` file for MOTD fallback and API connection.
 
 ### Web
 
