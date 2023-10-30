@@ -48,5 +48,44 @@ We're releasing our first of many patch notes for Zander, a multi-
 * Added a `config.yml` file for MOTD fallback and API connection.
 
 ### Web
+* Implemented framework for website, Discord and API.
+* Implemented Feature toggling to be able to enable or disable a feature via `features.json`
+* Implemented filter of words and links and the ability to control via `filter.json`
+* Implememted ability to have random join messages for Discord which can be added to via `joinMessages.json`
+* Implemented a small language file to expand on for translatability in `lang.json`
+* Added following front-facing routes:
+  * Home /
+  * Play /play
+  * Apply /apply
+  * Terms Of Service /terms
+  * Rules /rules
+  * Privacy /privacy
+  * Refund /refund
+  * Login /login
+  * Register /register (which is currently toggleable)
+  * Logout /logout
+  * Added /discord redirect.
+  * Added /webstore redirect.
+  * Added /knowledgebase redirect.
+* Implemented administration dashboard and routes:
+  * Added /dashboard.
+  * Added /dashboard/announcements with the Announcement Editor to allow creation, deletion and ability to edit.
+  * Added /dashboard/applications with the Applications Editor to allow creation, deletion and ability to edit.
+  * Added /dashboard/servers with the Servers Editor to allow creation, deletion and ability to edit.
+  * Added /dashboard/logs to view application logs an actions.
 
 #### API
+
+#### Discord
+* Implemented the following commands:
+  * legoflip - A simple lego flip which generates 2 different avatar heads, a unique command for the community.
+  * play - Display all Network servers to play on.
+  * policy - Display Network policy (Rules, Terms, Privacy, and Refund).
+  * rules - Display link to the Network Rules.
+  * website - Display link to the Network Website.
+* Implemmented a filter listener connected to the filter API which checks incoming messages for prohibited content, using filters for links or phrases if enabled. If such content is detected, it sends a warning to the message sender. If an error occurs during this process, it is logged.
+* Implemented a jokingly General Kenobi listner which checks if the message content includes the phrase "hello there" and if the condition is met, sent a message to the same channel saying 'General Kenobi'.
+* Implemented a Guild Boosting event which find the premium status of the user, and sends a message to the specified welcome channel about thanking them for the boost.
+* Implemented a welcome user event which checks for a Verfied user, and sends a welcome message specified in `joinMessages.json` with a random HEX code to the welcome channel.
+* Implemented a message deletion event which checks for when a user deletes a message it creates an embed with details about the deleted message, including the author, channel, and content and sends to the specified admin log channel.
+* Implemented a message edit event which checks for when a user edits a message it creates an embed with details about the edited message, including the author, channel, and content and sends to the specified admin log channel.
