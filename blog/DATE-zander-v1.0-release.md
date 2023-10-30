@@ -1,7 +1,7 @@
 ---
 title: Zander - version 1.0 Release
 description: Zander release notes and changes for version 1.0.
-slug: welcome
+slug: zander-1.0-patchNotes
 authors:
   - name: Ben Robson
     title: Founder & Developer at Modular Software
@@ -12,7 +12,7 @@ hide_table_of_contents: false
 
 Hello Everyone,
 
-We're releasing our first of many patch notes for Zander, a multi-
+We're releasing our first of many patch notes for Zander, a multi-platform Minecraft Server management tool. We have only implemented most of the basics but we are working towards implementing a full suite of features which will allow you to manage your Minecraft Server with ease.
 
 ## Features
 
