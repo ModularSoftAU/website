@@ -1,6 +1,6 @@
 ---
 title: Configuration
-description: TODO
+description: Configuration details for the Zander application.
 sidebar_label: Configuration
 sidebar_position: 2
 ---
@@ -117,7 +117,7 @@ Here is a set list of the out-of-the box ones:
 ```
 
 ### Features
-The features file allows you to pick and choose what you want to use for you community.
+The features file allows you to pick and choose what you want to use for your community.
 
 #### features.json
 

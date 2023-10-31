@@ -1,6 +1,6 @@
 ---
 title: Permissions
-description: TODO
+description: Permissions for all Zander platforms and to provide access for your community and staff.
 sidebar_label: Permissions
 sidebar_position: 3
 ---
@@ -25,5 +25,3 @@ To provision permissions, using the tables below you can add these permisssions 
 | Permission     | Description                                  |
 | -------------- | -------------------------------------------- |
 | zander.hub.fly | Allow users to fly in the Hub or to use /fly |
-
-### Other

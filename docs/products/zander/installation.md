@@ -1,6 +1,6 @@
 ---
 title: Installation
-description: TODO
+description: Installation details and guide on getting your own Zander instance running for your Network.
 sidebar_label: Installation
 sidebar_position: 1
 ---
