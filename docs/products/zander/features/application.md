@@ -9,11 +9,20 @@ sidebar_position: 2
 This feature allows administrative users to create, edit and delete applications. Applications are used for things like Server Position applications and other Server roles.
 
 ## Applications Overview
+Applications are viewed in the order you specify.
+![](../../../../src/img/products/zander/features/application/front-view.png)
 
+When you select apply, it will appear an external box which will display the requirements.
+![](../../../../src/img/products/zander/features/application/front-view-1.png)
+
+At the bottom of the box it will have the Apply button which will redirect to your specified external link.
+![](../../../../src/img/products/zander/features/application/front-view-2.png)
 
 
 ## Managing Applications
 Creating an application is easy, we've added some notes and options on how you can best create applications for your Network.
+
+![](../../../../src/img/products/zander/features/application/view.png)
 
 ![](../../../../src/img/products/zander/features/application/create.png)
 
