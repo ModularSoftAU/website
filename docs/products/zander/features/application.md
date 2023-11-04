@@ -45,7 +45,7 @@ Provide a short description for the application. This will be displayed before t
 ### Application URL Redirect
 The specified URL for redirecting the user to apply.
 
-### Application Postion
+### Application Position
 Specify the priority or position that the application will be placed.
 
 ### Application Status
