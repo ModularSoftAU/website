@@ -7,7 +7,32 @@ sidebar_position: 2
 
 ## Web/API
 
-### .env (Enviroment Variables)
+### Assets
+#### Global Images
+The `globalImages` folder is a folder of images you can put community creation or photos into, which then get chosen randomly and pasted across the site (on banners, backgrounds and more).
+
+Any image you put into the `globalImages` folder will be put in the cycle.
+
+#### Images
+There are static images used across the application for things like the registration, login, graphics and branding in general. Below is a small table of which file changes which display.
+
+##### Branding
+| File Name         | Location | Description                                                                 |
+| ----------------- | -------- | --------------------------------------------------------------------------- |
+| siteLogo.png      | /assets  | Used on the head navigation banner.                                         |
+| meta-siteLogo.png | /assets  | Image to use for meta tag images and embeds for Discord, Facebook, Twitter. |
+| favicon.ico       | /assets  | Small sprite icon to be used on browser.                                    |
+
+##### Images
+| File Name         | Location       | Description                      |
+| ----------------- | -------------- | -------------------------------- |
+| errorImage.png    | /assets/images | Image to use for error pages.    |
+| loginImage.png    | /assets/images | Image to use for /login page     |
+| notFoundImage.png | /assets/images | Image to use for the 404 page.   |
+| registerImage.png | /assets/images | Image to use for /register page. |
+
+
+### .env (Environment Variables)
 
 ```
 PORT=8080
@@ -88,7 +113,7 @@ The filter has 2 part features, a link filter to stop advertising and the like, 
 You can add links and phrases in the `filter.json` file and on restart it will enforce them on all platforms.
 
 ### Join Messages
-The use of join messages for whne a player joins the Discord and is verified, it will choose from a selection of the messages which you can add to in `joinMessages.json`
+The use of join messages for when a player joins the Discord and is verified, it will choose from a selection of the messages which you can add to in `joinMessages.json`
 Ensure that when you create a join message, include the placeholder `%USERNAME%` as it will replace 
 
 Here is a set list of the out-of-the box ones:
