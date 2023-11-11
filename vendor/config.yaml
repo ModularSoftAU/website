@@ -1,6 +1,6 @@
 ---
-api_docs: docs.yaml
+api_docs: ../../docs.yaml
 api_template_directory: ../api
 api_template_file: ../api/template.mdx
-api_build_to: ../docs/products/zander/api
+api_build_to: ../../docs/products/zander/api
 api_section_label: API Endpoints

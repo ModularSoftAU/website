@@ -9,8 +9,8 @@ announcement:
       short: Get Announcements
       description: Get all announcements.
       parameters:
-        announcementSlug:
-          type: string
+        announcementId:
+          type: integer
           info: Unique identifier for a specific announcement.
           optional: true
         announcementType:
@@ -19,7 +19,7 @@ announcement:
           optional: true
         enabled:
           type: boolean
-          info: Filter announcements by enabled visiable status.
+          info: Filter announcements by enabled visible status.
           optional: false
   - create.mdx:
       route: announcement/create
@@ -32,13 +32,9 @@ announcement:
           type: string
           info: User initiating the action.
           optional: false
-        announcementSlug:
-          type: string
-          info: Unique identifier for the announcement.
-          optional: false
-        enabled:
+         enabled:
           type: boolean
-          info:  1 if the announcement is enabled, 0 if disabled.
+          info: 1 if the announcement is enabled, 0 if disabled.
           optional: false
         announcementType:
           type: string
@@ -63,13 +59,9 @@ announcement:
           type: string
           info: User initiating the action.
           optional: false
-        slug:
-          type: string
-          info: Unique identifier of the announcement to be edited.
-          optional: false
-        announcementSlug:
-          type: string
-          info:  Updated unique identifier.
+        announcementId:
+          type: integer
+          info: Unique identifier for a specific announcement.
           optional: true
         enabled:
           type: boolean
@@ -98,9 +90,9 @@ announcement:
       short: Delete announcement
       description: Delete an existing announcement on Network platforms.
       parameters:
-        announcementSlug:
-          type: string
-          info: Unique identifier of the announcement to be deleted.
+        announcementId:
+          type: integer
+          info: Unique identifier for a specific announcement.
           optional: false
 application:
   sidebar: Applications
@@ -123,6 +115,10 @@ application:
       short: Create application
       description: Create an application for users to apply for.
       parameters:
+        actioningUser:
+          type: string
+          info: User initiating the action.
+          optional: false
         displayName:
           type: string
           info: The display name for the application.
@@ -139,7 +135,7 @@ application:
           type: string
           info: A link to a markdown file that renders the requirements for the role.
           optional: false
-        redirectURL:
+        redirectUrl:
           type: string
           info: The external URL to link the user to to complete commence the application process.
           optional: false
@@ -158,6 +154,14 @@ application:
       short: Edit application
       description: Edit an existing application for users to apply for.
       parameters:
+        actioningUser:
+          type: string
+          info: User initiating the action.
+          optional: false
+        applicationId:
+          type: integer
+          info: Unique identifier for a specific application.
+          optional: true
         displayName:
           type: string
           info: The display name for the application.
@@ -174,7 +178,7 @@ application:
           type: string
           info: A link to a markdown file that renders the requirements for the role.
           optional: false
-        redirectURL:
+        redirectUrl:
           type: string
           info: The external URL to link the user to to complete commence the application process.
           optional: false
@@ -265,6 +269,11 @@ server:
       privileged: false
       short: Get servers
       description: Get a list of all Servers.
+      parameters:
+        serverId:
+          type: integer
+          info: The unique id of the Server.
+          optional: true
   - create.mdx:
       route: server/create
       method: POST
@@ -272,29 +281,21 @@ server:
       short: Create server
       description: Create a server.
       parameters:
-        name:
+        actioningUser:
+          type: string
+          info: User initiating the action.
+          optional: false
+        displayName:
           type: string
           info: Display name for the server.
           optional: false
-        fqdn:
+        serverConnectionAddress:
           type: string
-          info: Fully Qualified Domain Name. Non-shortened domain name.
-          optional: false
-        ipAddress:
-          type: string
-          info: IP Address of the server.
-          optional: false
-        port:
-          type: integer
-          info: Port for the server.
-          optional: false
-        visible:
-          type: string
-          info: Whether it should be displayed on the /play page
+          info: The connection details for the server.
           optional: false
         position:
           type: integer
-          info: The display position the server should be on for the /play page
+          info: The display position the server should have.
           optional: false
   - edit.mdx:
       route: server/edit
@@ -303,29 +304,25 @@ server:
       short: Edit server
       description: Edit an existing server.
       parameters:
+        actioningUser:
+          type: string
+          info: User initiating the action.
+          optional: false
         serverId:
           type: integer
           info: The ID of the server.
           optional: false
-        name:
+        displayName:
           type: string
           info: Display name for the server.
           optional: false
-        ipAddress:
+        serverConnectionAddress:
           type: string
-          info: IP Address of the server.
-          optional: false
-        port:
-          type: integer
-          info: Port for the server.
-          optional: false
-        visible:
-          type: string
-          info: Whether it should be displayed on the /play page
+          info: The connection details for the server.
           optional: false
         position:
           type: integer
-          info: The display position the server should be on for the /play page
+          info: The display position the server should have.
           optional: false
   - delete.mdx:
       route: server/delete
@@ -334,6 +331,10 @@ server:
       short: Delete server
       description: Delete an existing server.
       parameters:
+        actioningUser:
+          type: string
+          info: User initiating the action.
+          optional: false
         serverId:
           type: integer
           info: The ID of the server to delete.
@@ -356,10 +357,6 @@ session:
           type: string
           info: The IP address of the user.
           optional: false
-        server:
-          type: string
-          info: The server the user has logged into.
-          optional: false
   - switch.mdx:
       route: session/switch
       method: POST
@@ -370,6 +367,10 @@ session:
         uuid:
           type: string
           info: The UUID for the Minecraft user.
+          optional: false
+        server:
+          type: string
+          info: The server the user has switched into.
           optional: false
   - destroy.mdx:
       route: session/destroy
@@ -426,21 +427,6 @@ web:
           type: string
           info: The same as password hopefully.
           optional: false
-   - verify.mdx:
-      route: web/register/verify
-      method: POST
-      privileged: true
-      short: Verify registration
-      description: Verify a new registration for a user.
-      parameters:
-        username:
-          type: string
-          info: User IGN.
-          optional: false
-        verificationToken:
-          type: string
-          info: Token of the registering user, to be obtained via email.
-          optional: false
    - login.mdx:
       route: web/login
       method: POST
@@ -450,7 +436,7 @@ web:
       parameters:
         username:
           type: string
-          info: "User IGN (*TODO: or email?*) of the user to login."
+          info: "User IGN of the user to login."
           optional: false
         email:
           type: string
@@ -466,3 +452,21 @@ web:
       privileged: true
       short: Logout user
       description: Logout a user and destroy their session.
+  - configuration.mdx:
+      route: web/configuration
+      method: GET
+      privileged: true
+      short: Get Configuration
+      description: Obtain site configuration for the application.
+  - statistics.mdx:
+      route: web/statistics
+      method: GET
+      privileged: true
+      short: Get Statistics
+      description: Obtain site statistics for the Network.
+  - logs.mdx:
+      route: web/logs/get
+      method: GET
+      privileged: true
+      short: Get Logs
+      description: Obtain all application logs and user-created actions.

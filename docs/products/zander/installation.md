@@ -26,7 +26,10 @@ The installation information is as below, this information has been provided in 
 * On the left menu, click Bot, and click Add Bot button.
 * Click Reset Token, and click Copy button.
 
-Referenced from https://discordgsm.com/guide/how-to-get-a-discord-bot-token
+> Referenced from https://discordgsm.com/guide/how-to-get-a-discord-bot-token
+
+* On the Bot tab, under Privileged Gateway, turn on all options.
+![](../../../src/img/products/zander/installation/discordIntent.png)
 
 ## Proxy
 
