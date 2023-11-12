@@ -32,7 +32,7 @@ announcement:
           type: string
           info: User initiating the action.
           optional: false
-         enabled:
+        enabled:
           type: boolean
           info: 1 if the announcement is enabled, 0 if disabled.
           optional: false
@@ -404,7 +404,7 @@ user:
 web:
   sidebar: Website
   files:
-   - create.mdx:
+  - create.mdx:
       route: web/register/create
       method: POST
       privileged: true
@@ -427,7 +427,7 @@ web:
           type: string
           info: The same as password hopefully.
           optional: false
-   - login.mdx:
+  - login.mdx:
       route: web/login
       method: POST
       privileged: true
@@ -446,7 +446,7 @@ web:
           type: string
           info: Password that user has inserted.
           optional: false
-   - logout.mdx:
+  - logout.mdx:
       route: web/logout
       method: GET
       privileged: true
