@@ -53,7 +53,7 @@ const config = {
             label: 'Documentation',
           },
           {
-            href: 'https://github.com/ModularSoft/website',
+            href: 'https://github.com/ModularSoftAU/website',
             label: 'GitHub',
             position: 'right',
           },
@@ -70,6 +70,10 @@ const config = {
           {
             title: 'Products',
             items: [
+              {
+                label: 'Craftify',
+                to: '/docs/products/craftify',
+              },
               {
                 label: 'Player Head Hunt',
                 to: '/docs/products/playerHeadHunt',
