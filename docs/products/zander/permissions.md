@@ -14,14 +14,16 @@ To provision permissions, using the tables below you can add these permisssions 
 ## Permissions
 
 ### Web
-| Permission               | Description                                                                                                                                                |
-| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Permission               | Description                                                                                                                                               |
+| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | zander.web.dashboard     | Access to the Dashboard to operate the Administration Panel. Anyone who needs access to anything in the Administration panel, needs this permission node. |
-| zander.web.announcements | Access to create, edit and delete announcements in the Administration Panel.                                                                               |
-| zander.web.application   | Access to create, edit and delete applications in the Administration Panel.                                                                                |
-| zander.web.server        | Access to create, edit and delete servers in the Administration Panel.                                                                                     |
+| zander.web.announcements | Access to create, edit and delete announcements in the Administration Panel.                                                                              |
+| zander.web.application   | Access to create, edit and delete applications in the Administration Panel.                                                                               |
+| zander.web.server        | Access to create, edit and delete servers in the Administration Panel.                                                                                    |
+| zander.web.logs          | Access to view application logs. |
 
 ### Hub
-| Permission     | Description                                  |
-| -------------- | -------------------------------------------- |
-| zander.hub.fly | Allow users to fly in the Hub or to use /fly |
+| Permission       | Description                                          |
+| ---------------- | ---------------------------------------------------- |
+| zander.hub.fly   | Allow users to fly in the Hub or to use /fly         |
+| zander.hub.build | Allows users like Builders to build and edit the Hub |

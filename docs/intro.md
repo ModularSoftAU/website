@@ -8,7 +8,8 @@ Welcome to the Modular Software website.
 Here you will find documentation, guides and help with all of our products that we provide.
 
 ## Our Projects
-Here are the current projects that are avaliable and that are documented for your use:
+Here are the current projects that are available and that are documented for your use:
+### [Zander](./products/zander)
 ### [Player Head Hunt](./products/playerHeadHunt)
 ### [Craftify](./products/craftify)
 ### [DevoteMe](./products/devoteMe)
