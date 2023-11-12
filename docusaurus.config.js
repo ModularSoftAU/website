@@ -26,12 +26,9 @@ const config = {
           // Please change this to your repo.
           editUrl: 'https://github.com/ModularSoftAU/website/tree/main/packages/create-docusaurus/templates/shared/',
         },
-        // blog: {
-        //   showReadingTime: true,
-        //   // Please change this to your repo.
-        //   editUrl:
-        //     'https://github.com/ModularSoft/website/tree/main/packages/create-docusaurus/templates/shared/',
-        // },
+        blog: {
+          showReadingTime: true
+        },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -60,6 +57,11 @@ const config = {
             label: 'GitHub',
             position: 'right',
           },
+          { 
+            to: 'blog',
+            label: 'Blog',
+            position: 'left'
+          }
         ],
       },
       footer: {
