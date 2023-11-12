@@ -20,7 +20,7 @@ announcement:
         enabled:
           type: boolean
           info: Filter announcements by enabled visible status.
-          optional: false
+          optional: true
   - create.mdx:
       route: announcement/create
       method: POST
