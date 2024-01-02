@@ -4,7 +4,7 @@
         <title>Modular Software Blog</title>
         <link>http://modularsoft.org/blog</link>
         <description>Modular Software Blog</description>
-        <lastBuildDate>Tue, 02 Jan 2024 05:32:54 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 02 Jan 2024 06:33:14 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -12,7 +12,7 @@
             <title><![CDATA[Welcome]]></title>
             <link>http://modularsoft.org/blog/welcome</link>
             <guid>http://modularsoft.org/blog/welcome</guid>
-            <pubDate>Tue, 02 Jan 2024 05:32:54 GMT</pubDate>
+            <pubDate>Tue, 02 Jan 2024 06:33:14 GMT</pubDate>
             <description><![CDATA[A welcome post for the Modular Software blog.]]></description>
             <content:encoded><![CDATA[<p>Greetings Everyone,</p>
 <p>We extend a warm welcome to Modular Software, a dynamic collective of dedicated developers passionately engaged in crafting an array of diverse applications. Our talented team specializes in a broad spectrum of software development, from creating Minecraft Plugins and Datapacks to building extensive web-scale applications.</p>
@@ -29,7 +29,7 @@
             <title><![CDATA[Zander v1.0 Patch Notes]]></title>
             <link>http://modularsoft.org/blog/zander-1.0-patchNotes</link>
             <guid>http://modularsoft.org/blog/zander-1.0-patchNotes</guid>
-            <pubDate>Tue, 02 Jan 2024 05:32:54 GMT</pubDate>
+            <pubDate>Tue, 02 Jan 2024 06:33:14 GMT</pubDate>
             <description><![CDATA[Zander release notes and changes for version 1.0.]]></description>
             <content:encoded><![CDATA[<p>Hello Everyone,</p>
 <p>We're releasing our first of many patch notes for Zander, a multi-platform Minecraft Server management tool. We have only implemented most of the basics but we are working towards implementing a full suite of features which will allow you to manage your Minecraft Server with ease.</p>
