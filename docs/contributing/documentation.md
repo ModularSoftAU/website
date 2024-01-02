@@ -124,7 +124,7 @@ The API template can be found at `api/template.mdx`. This file outlines how `gen
 
 ### Adding a page
 
-To add a page, simply create a new endpoint in `docs.yaml` under the section you desire. See the documentation at <https://github.com/ModularSoftAU/APIGenerator> for more information about the format of `docs.yaml` and the config.
+To add a page, simply create a new endpoint in `docs.yaml` under the section you desire. See the documentation at [API Generator](https://github.com/ModularSoftAU/APIGenerator) for more information about the format of `docs.yaml` and the config.
 
 :::caution Types
 
