@@ -72,7 +72,8 @@ databaseName=DATABASE
     "debug": false,
     "siteConfiguration": {
         "siteName": "My Server",
-        "tagline": "MyServer, A Gaming Community",
+        "tagline": "A Gaming Community",
+        "keywords": "Minecraft, Gaming, Community, Experience, Crafting, Creativity, Gameplay",
         "email": "support@myserver.net",
         "policy": {
             "termsOfService": "https://raw.githubusercontent.com/MYSERVER/Legal/master/terms.md",
@@ -83,6 +84,8 @@ databaseName=DATABASE
         "platforms": {
             "webstore": "https://tebex.io/",
             "discord": "https://discord.com/",
+            "issueTracker": "https://github.com/",
+            "knowledgebase": "https://gitbook.com/",
             "facebook": "https://www.facebook.com/",
             "twitter": "https://twitter.com/",
             "instagram": "https://instagram.com/",
@@ -95,10 +98,11 @@ databaseName=DATABASE
     },
     "discord": {
         "guildId": "GUILDID",
-        "channels": {
-            "welcomeChannel": "CHANNELID",
-            "networkChatLog": "CHANNELID",
-            "adminLog": "CHANNELID"
+        "webhooks": {
+            "welcome": "WEBHOOKURL",
+            "networkChatLog": "WEBHOOKURL",
+            "adminLog": "WEBHOOKURL",
+            "staffChannel": "WEBHOOKURL"
         },
         "roles": {
             "verified": "ROLEID"

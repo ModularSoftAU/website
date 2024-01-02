@@ -7,6 +7,10 @@ sidebar_position: 1
 
 The installation information is as below, this information has been provided in order to ensure the best experience in setting up the zander ecosystem for your Network.
 
+## Requirements
+* MySQL Database
+* NodeJS (minimum version: 18.18.2)
+
 ## Database
 
 * Open the `dbinit.sql` file
@@ -18,7 +22,7 @@ The installation information is as below, this information has been provided in 
 * Clone the Web repo.
 * Install all of the required packages using `npm i`
 * In the root folder, open the `.env`, `config.json`, `filter.json`, `joinMessages.json`, `features.json` and `lang.json` and fill out as per the instructions in [Configuration](./configuration).
-* Run `npm dev` to start the application/website/api.
+* Run `npm prod` to start the application/website/api.
 
 ## Discord
 
@@ -30,6 +34,16 @@ The installation information is as below, this information has been provided in 
 
 * On the Bot tab, under Privileged Gateway, turn on all options.
 ![](../../../src/img/products/zander/installation/discordIntent.png)
+
+* Open the Discord channel you want to receive the messages/notifications.
+* From the channel menu, select Edit channel.
+* Select Integrations.
+* If there are no existing webhooks, select Create Webhook. Otherwise, select View Webhooks then New Webhook.
+* Enter the name of the bot to post the message.
+* `Optional`: Edit the avatar.
+* Copy the URL from the WEBHOOK URL field.
+* Select Save.
+* Enter the Webhook URL into the `discord.webhook` field.
 
 ## Proxy
 
