@@ -4,7 +4,7 @@
         <title>Modular Software Blog</title>
         <link>http://modularsoft.org/blog</link>
         <description>Modular Software Blog</description>
-        <lastBuildDate>Tue, 02 Jan 2024 06:33:14 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 02 Jan 2024 21:12:51 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -12,7 +12,7 @@
             <title><![CDATA[Welcome]]></title>
             <link>http://modularsoft.org/blog/welcome</link>
             <guid>http://modularsoft.org/blog/welcome</guid>
-            <pubDate>Tue, 02 Jan 2024 06:33:14 GMT</pubDate>
+            <pubDate>Tue, 02 Jan 2024 21:12:51 GMT</pubDate>
             <description><![CDATA[A welcome post for the Modular Software blog.]]></description>
             <content:encoded><![CDATA[<p>Greetings Everyone,</p>
 <p>We extend a warm welcome to Modular Software, a dynamic collective of dedicated developers passionately engaged in crafting an array of diverse applications. Our talented team specializes in a broad spectrum of software development, from creating Minecraft Plugins and Datapacks to building extensive web-scale applications.</p>
@@ -26,22 +26,105 @@
 <p>Stay tuned for updates on our current projects and be part of our exciting journey as we continue to innovate and develop cutting-edge software solutions. Thank you for joining us at Modular Software, where the possibilities are limitless, and the future is boundless!</p>]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Zander v1.0 Patch Notes]]></title>
-            <link>http://modularsoft.org/blog/zander-1.0-patchNotes</link>
-            <guid>http://modularsoft.org/blog/zander-1.0-patchNotes</guid>
-            <pubDate>Tue, 02 Jan 2024 06:33:14 GMT</pubDate>
-            <description><![CDATA[Zander release notes and changes for version 1.0.]]></description>
+            <title><![CDATA[Zander v1.1.0 Patch Notes]]></title>
+            <link>http://modularsoft.org/blog/zander-1.1.0</link>
+            <guid>http://modularsoft.org/blog/zander-1.1.0</guid>
+            <pubDate>Tue, 02 Jan 2024 21:12:51 GMT</pubDate>
+            <description><![CDATA[Zander release notes and changes for version 1.1.0.]]></description>
+            <content:encoded><![CDATA[<p>Hello Everyone,</p>
+<p>I hope you're all having a good 2024, I am releasing a new update which introduces Ranks, some modification to configuration and some bug fixes.</p>
+<h2 class="anchor anchorWithStickyNavbar_FNw8" id="notes--configuration-changes">Notes &amp; Configuration Changes<a href="http://modularsoft.org/blog/zander-1.1.0#notes--configuration-changes" class="hash-link" aria-label="Direct link to Notes &amp; Configuration Changes" title="Direct link to Notes &amp; Configuration Changes">​</a></h2>
+<p>I would like to note that in this update we have migrated some configuration and added additional configuration options.</p>
+<h3 class="anchor anchorWithStickyNavbar_FNw8" id="configjson"><code>config.json</code><a href="http://modularsoft.org/blog/zander-1.1.0#configjson" class="hash-link" aria-label="Direct link to configjson" title="Direct link to configjson">​</a></h3>
+<ul>
+<li>A new <code>keywords</code> field has been added for SEO configuration.</li>
+<li>The <code>discord.channels</code> is now <code>discord.webhooks</code> and now requires a webhook URL for (<code>welcome</code>, <code>networkChatLog</code>, <code>adminLog</code>) to operate.</li>
+<li>Added a Discord webhook for <code>staffChannel</code> for the <code>staffhelp</code> command.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_FNw8" id="features">Features<a href="http://modularsoft.org/blog/zander-1.1.0#features" class="hash-link" aria-label="Direct link to Features" title="Direct link to Features">​</a></h2>
+<ul>
+<li><a href="http://modularsoft.org/docs/products/zander/features/ranks">Ranks</a> - Ranks is a feature that allows Administration to modify configuration file to display ranks, perks and have linked in to external URLs to support the server.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_FNw8" id="patch-notes">Patch Notes<a href="http://modularsoft.org/blog/zander-1.1.0#patch-notes" class="hash-link" aria-label="Direct link to Patch Notes" title="Direct link to Patch Notes">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_FNw8" id="hub">Hub<a href="http://modularsoft.org/blog/zander-1.1.0#hub" class="hash-link" aria-label="Direct link to Hub" title="Direct link to Hub">​</a></h3>
+<blockquote>
+<p>No changes for this update.</p>
+</blockquote>
+<h3 class="anchor anchorWithStickyNavbar_FNw8" id="proxy">Proxy<a href="http://modularsoft.org/blog/zander-1.1.0#proxy" class="hash-link" aria-label="Direct link to Proxy" title="Direct link to Proxy">​</a></h3>
+<ul>
+<li>Implemented a Command Spy Event which sends command data to API.</li>
+<li>Implemented a Social Spy Event which sends direct message (dm) data to API.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_FNw8" id="web">Web<a href="http://modularsoft.org/blog/zander-1.1.0#web" class="hash-link" aria-label="Direct link to Web" title="Direct link to Web">​</a></h3>
+<ul>
+<li><strong>Made urgent change to hasPermission, allowing non-logged in users to view administration panel.</strong></li>
+<li><strong>Change node engine to support Node 18.</strong></li>
+<li>Logs: Make usernames more presentable in logs.</li>
+<li>Add page descriptions to headers.</li>
+<li>Added keywords and SEO option to configuration.</li>
+<li>Add documentation badges for dashboard list and editors.</li>
+<li>Made changes for view and session page changes to be more mobile friendly.</li>
+<li>Resolved mobile styling issues with dashboard views.</li>
+<li>Resolve issues with cookie banner not showing on <code>/register</code>.</li>
+<li>Added a staffChannel config option with the addition of the <code>/staffhelp</code> command.</li>
+<li>Reformat all project files using Prettier.</li>
+<li>Resolve issue with logout causing the application to crash.</li>
+<li>Separate redirect route into own file, add config option for kb and added issue tracker route.</li>
+<li>Added <code>keywords</code> to <code>config.json</code> for SEO configuration.</li>
+<li>Added <code>ranks.json</code> for rank configuration.</li>
+<li>Added following front-facing routes:<!-- -->
+<ul>
+<li>Ranks /ranks</li>
+<li>Added /issues redirect.</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_FNw8" id="api">API<a href="http://modularsoft.org/blog/zander-1.1.0#api" class="hash-link" aria-label="Direct link to API" title="Direct link to API">​</a></h4>
+<blockquote>
+<p>Have a look at our API documentation for information on routes functionality.</p>
+</blockquote>
+<ul>
+<li>Implement Command &amp; Social Spy API Functionality.</li>
+<li>Discord<!-- -->
+<ul>
+<li>Implemented /spy/command</li>
+<li>Implemented /spy/directMessage</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_FNw8" id="discord">Discord<a href="http://modularsoft.org/blog/zander-1.1.0#discord" class="hash-link" aria-label="Direct link to Discord" title="Direct link to Discord">​</a></h4>
+<ul>
+<li>Filter: Patched delete message after filtering prohibited content.</li>
+<li>Filter: Fixed issue where filter errors after response is sent.</li>
+<li>Network Log: Fixed spacing messages.</li>
+<li>Network Log: Remove deleted channel field from being mentioned twice.</li>
+<li>Migrate all discord channel-based functions to webhooks.</li>
+<li>Implemented the following commands:<!-- -->
+<ul>
+<li><code>poll</code> - Ask everyone a question or something to vote on!</li>
+<li><code>staffhelp</code> - Sends a message to our Staff for help or assistance.</li>
+<li><code>ranks</code> - Display link to view rank perks and donate.</li>
+</ul>
+</li>
+</ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Zander v1.0.0 Patch Notes]]></title>
+            <link>http://modularsoft.org/blog/zander-1.0.0</link>
+            <guid>http://modularsoft.org/blog/zander-1.0.0</guid>
+            <pubDate>Tue, 02 Jan 2024 21:12:51 GMT</pubDate>
+            <description><![CDATA[Zander release notes and changes for version 1.0.0.]]></description>
             <content:encoded><![CDATA[<p>Hello Everyone,</p>
 <p>We're releasing our first of many patch notes for Zander, a multi-platform Minecraft Server management tool. We have only implemented most of the basics but we are working towards implementing a full suite of features which will allow you to manage your Minecraft Server with ease.</p>
-<h2 class="anchor anchorWithStickyNavbar_FNw8" id="features">Features<a href="http://modularsoft.org/blog/zander-1.0-patchNotes#features" class="hash-link" aria-label="Direct link to Features" title="Direct link to Features">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_FNw8" id="features">Features<a href="http://modularsoft.org/blog/zander-1.0.0#features" class="hash-link" aria-label="Direct link to Features" title="Direct link to Features">​</a></h2>
 <ul>
 <li><a href="http://modularsoft.org/docs/products/zander/features/announcement">Announcements</a> - Announcements is a feature that allows Administration to broadcast messages across your Server and Website and have linked in to external URLs if required.</li>
 <li><a href="http://modularsoft.org/docs/products/zander/features/application">Applications</a> - Allows administrative users to create, edit and delete applications. Applications are used for things like Server Position applications and other Server roles.</li>
 <li><a href="http://modularsoft.org/docs/products/zander/features/discord">Discord</a> - The Discord feature allows for moderation, community interaction and much more.</li>
 <li><a href="http://modularsoft.org/docs/products/zander/features/server">Discord</a> - Allows administrative users to add, edit and remove Servers. Adding a server will list the server on the <code>/play</code> page and also list the server on the <code>/play</code> command on Discord.</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_FNw8" id="patch-notes">Patch Notes<a href="http://modularsoft.org/blog/zander-1.0-patchNotes#patch-notes" class="hash-link" aria-label="Direct link to Patch Notes" title="Direct link to Patch Notes">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_FNw8" id="hub">Hub<a href="http://modularsoft.org/blog/zander-1.0-patchNotes#hub" class="hash-link" aria-label="Direct link to Hub" title="Direct link to Hub">​</a></h3>
+<h2 class="anchor anchorWithStickyNavbar_FNw8" id="patch-notes">Patch Notes<a href="http://modularsoft.org/blog/zander-1.0.0#patch-notes" class="hash-link" aria-label="Direct link to Patch Notes" title="Direct link to Patch Notes">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_FNw8" id="hub">Hub<a href="http://modularsoft.org/blog/zander-1.0.0#hub" class="hash-link" aria-label="Direct link to Hub" title="Direct link to Hub">​</a></h3>
 <ul>
 <li>Added <code>/fly</code> command which can be applied to users via <code>zander.hub.fly</code>.</li>
 <li>Added a Hub Booster which can be placed as a Light Weighted Pressure plate which will allow players to be launched in the direction they're looking at with the configuration options set in the <code>config.yml</code> file.</li>
@@ -61,7 +144,7 @@
 <li>Added a compass item to navigate to set Servers.</li>
 <li>Implemented Creature, Interaction and Hub prevention to stop Hub being damaged by players.</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_FNw8" id="proxy">Proxy<a href="http://modularsoft.org/blog/zander-1.0-patchNotes#proxy" class="hash-link" aria-label="Direct link to Proxy" title="Direct link to Proxy">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_FNw8" id="proxy">Proxy<a href="http://modularsoft.org/blog/zander-1.0.0#proxy" class="hash-link" aria-label="Direct link to Proxy" title="Direct link to Proxy">​</a></h3>
 <ul>
 <li>Implemented /discord command which redirects player to Network discord.</li>
 <li>Implemented /ping command to test players connection to Proxy.</li>
@@ -75,7 +158,7 @@
 <li>Implemented User Switch event which sends a request to the API to switch the player's session to the new server and sends a request to the API to notify Discord of the server switch for the Network log monitoring.</li>
 <li>Added a <code>config.yml</code> file for MOTD fallback and API connection.</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_FNw8" id="web">Web<a href="http://modularsoft.org/blog/zander-1.0-patchNotes#web" class="hash-link" aria-label="Direct link to Web" title="Direct link to Web">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_FNw8" id="web">Web<a href="http://modularsoft.org/blog/zander-1.0.0#web" class="hash-link" aria-label="Direct link to Web" title="Direct link to Web">​</a></h3>
 <ul>
 <li>Implemented framework for website, Discord and API.</li>
 <li>Implemented Feature toggling to be able to enable or disable a feature via <code>features.json</code></li>
@@ -109,7 +192,7 @@
 </ul>
 </li>
 </ul>
-<h4 class="anchor anchorWithStickyNavbar_FNw8" id="api">API<a href="http://modularsoft.org/blog/zander-1.0-patchNotes#api" class="hash-link" aria-label="Direct link to API" title="Direct link to API">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_FNw8" id="api">API<a href="http://modularsoft.org/blog/zander-1.0.0#api" class="hash-link" aria-label="Direct link to API" title="Direct link to API">​</a></h4>
 <blockquote>
 <p>Have a look at our API documentation for information on routes functionality.</p>
 </blockquote>
@@ -172,7 +255,7 @@
 <li>Implemented /filter</li>
 <li>Added function to verify token against API.</li>
 </ul>
-<h4 class="anchor anchorWithStickyNavbar_FNw8" id="discord">Discord<a href="http://modularsoft.org/blog/zander-1.0-patchNotes#discord" class="hash-link" aria-label="Direct link to Discord" title="Direct link to Discord">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_FNw8" id="discord">Discord<a href="http://modularsoft.org/blog/zander-1.0.0#discord" class="hash-link" aria-label="Direct link to Discord" title="Direct link to Discord">​</a></h4>
 <ul>
 <li>Implemented the following commands:<!-- -->
 <ul>
