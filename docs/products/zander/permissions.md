@@ -20,7 +20,9 @@ To provision permissions, using the tables below you can add these permisssions 
 | zander.web.announcements | Access to create, edit and delete announcements in the Administration Panel.                                                                              |
 | zander.web.application   | Access to create, edit and delete applications in the Administration Panel.                                                                               |
 | zander.web.server        | Access to create, edit and delete servers in the Administration Panel.                                                                                    |
-| zander.web.logs          | Access to view application logs. |
+| zander.web.logs          | Access to view application logs.                                                                                                                          |
+| zander.web.punishments   | Ability to see user and network punishments                                                                                                               |
+| zander.web.audit         | Ability to view and audit users and groups. |
 
 ### Hub
 | Permission       | Description                                          |
