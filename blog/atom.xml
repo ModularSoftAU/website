@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://modularsoft.org/blog</id>
     <title>Modular Software Blog</title>
-    <updated>2024-01-02T20:48:31.000Z</updated>
+    <updated>2024-08-23T11:53:07.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://modularsoft.org/blog"/>
     <subtitle>Modular Software Blog</subtitle>
@@ -11,7 +11,7 @@
         <title type="html"><![CDATA[Welcome]]></title>
         <id>http://modularsoft.org/blog/welcome</id>
         <link href="http://modularsoft.org/blog/welcome"/>
-        <updated>2024-01-02T20:48:31.000Z</updated>
+        <updated>2024-08-23T11:53:07.000Z</updated>
         <summary type="html"><![CDATA[A welcome post for the Modular Software blog.]]></summary>
         <content type="html"><![CDATA[<p>Greetings Everyone,</p>
 <p>We extend a warm welcome to Modular Software, a dynamic collective of dedicated developers passionately engaged in crafting an array of diverse applications. Our talented team specializes in a broad spectrum of software development, from creating Minecraft Plugins and Datapacks to building extensive web-scale applications.</p>
@@ -29,10 +29,38 @@
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Introducing Zander - Now Open Source!]]></title>
+        <id>http://modularsoft.org/blog/zander-opensource</id>
+        <link href="http://modularsoft.org/blog/zander-opensource"/>
+        <updated>2024-08-23T11:53:07.000Z</updated>
+        <summary type="html"><![CDATA[Zander our main software project is now open-source!]]></summary>
+        <content type="html"><![CDATA[<p>We're excited to announce that Zander, our flagship project at Modular Software, is now officially open source!</p>
+<p>For those unfamiliar, Zander is a powerful web-based application that operates and connects between Minecraft, Discord and it's own web-based platform and API. This project is mainly being used by our group over at <a href="https://craftingforchrist.net/" target="_blank" rel="noopener noreferrer">Crafting For Christ</a>. Zander is the backbone for and main operation system for this server.</p>
+<h1>Why Open Source?</h1>
+<p>Open-sourcing Zander is a move that reflects our commitment to transparency, collaboration, and innovation. By making the source code available to the public, we aim to:</p>
+<ul>
+<li><strong>Foster Collaboration:</strong> We believe that the best ideas come from diverse perspectives. By opening up Zander, we're inviting developers from around the world to contribute, share ideas, and help shape the future of the project.</li>
+<li><strong>Accelerate Development:</strong> With the community's involvement, we can identify and fix bugs faster, implement new features, and continuously improve the framework. Your contributions can make a real impact on the speed and direction of Zander's evolution.</li>
+<li><strong>Support Learning and Growth:</strong> Whether you're a seasoned developer or just starting out, contributing to an open-source project like Zander is a fantastic way to learn, grow, and showcase your skills. You'll have the opportunity to work alongside experienced developers and gain insights into best practices in modern web development.</li>
+</ul>
+<h1>How to Get Involved</h1>
+<p>Getting started with Zander is easy. Here’s how you can contribute:</p>
+<ul>
+<li><strong>Explore the Codebase:</strong> Head over to our GitHub repository for Zander's web/api framework at <a href="https://github.com/ModularSoftAU/zander-web" target="_blank" rel="noopener noreferrer">https://github.com/ModularSoftAU/zander-web</a> or the Minecraft framework at <a href="https://github.com/ModularSoftAU/zander" target="_blank" rel="noopener noreferrer">https://github.com/ModularSoftAU/zander</a> to familiarize yourself with the code.</li>
+<li><strong>Submit Pull Requests:</strong> If you’ve got a fix or a new feature, fork the repository, create a branch, and submit a pull request. We’re here to review and merge your contributions.</li>
+<li><strong>Join the Discussion:</strong> Participate in discussions on GitHub or join our community forums. Your feedback and ideas are invaluable to us and you can do that over at our Discord: <a href="https://discord.gg/YRpakuYhJZ" target="_blank" rel="noopener noreferrer">https://discord.gg/YRpakuYhJZ</a></li>
+</ul>
+<p>Thank you for your support, and welcome to the Zander open-source community!</p>]]></content>
+        <author>
+            <name>Ben Robson</name>
+            <uri>https://github.com/benrobson</uri>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Zander v1.1.0 Patch Notes]]></title>
         <id>http://modularsoft.org/blog/zander-1.1.0</id>
         <link href="http://modularsoft.org/blog/zander-1.1.0"/>
-        <updated>2024-01-02T20:48:31.000Z</updated>
+        <updated>2024-08-23T11:53:07.000Z</updated>
         <summary type="html"><![CDATA[Zander release notes and changes for version 1.1.0.]]></summary>
         <content type="html"><![CDATA[<p>Hello Everyone,</p>
 <p>I hope you're all having a good 2024, I am releasing a new update which introduces Ranks, some modification to configuration and some bug fixes.</p>
@@ -119,7 +147,7 @@
         <title type="html"><![CDATA[Zander v1.0.0 Patch Notes]]></title>
         <id>http://modularsoft.org/blog/zander-1.0.0</id>
         <link href="http://modularsoft.org/blog/zander-1.0.0"/>
-        <updated>2024-01-02T20:48:31.000Z</updated>
+        <updated>2024-08-23T11:53:07.000Z</updated>
         <summary type="html"><![CDATA[Zander release notes and changes for version 1.0.0.]]></summary>
         <content type="html"><![CDATA[<p>Hello Everyone,</p>
 <p>We're releasing our first of many patch notes for Zander, a multi-platform Minecraft Server management tool. We have only implemented most of the basics but we are working towards implementing a full suite of features which will allow you to manage your Minecraft Server with ease.</p>
