@@ -1,32 +1,31 @@
 ---
 title: Crafting Recipes
-description: TODO
+description: Added or Modified Crafting Recipes
 sidebar_label: Crafting Recipes
 sidebar_position: 1
 ---
 
-# Bulk Crafting
+## Bulk Crafting
 
-## Chests
+### Chests
 Crafting a chest with logs directly results in four chests, simplifying the process of creating numerous chests without the need to convert logs into planks first.
 
 ![](../../../src/img/products/craftify/crafting/bulk_chest.png)
 
-## Logs
 Stripped logs or any combination of log-types can be used interchangeably.
 
 ![](../../../src/img/products/craftify/crafting/bulk_chest_random.png)
 
 
-## Bone Blocks
-Bone blocks can be easily crafted by using bones as raw materials.
+### Bone Blocks
+Bone blocks can be directly crafted from bones.
 
 ![](../../../src/img/products/craftify/crafting/bone_block.png)
 
-## Bundles
-The ability to craft Bundles using the vanilla recipe has been enabled.
+### Dispenser
+Crafting a bow around a dropper provides a much easier way to bulk craft dispensers, while still retaining the original vanilla recipe.
 
-![](../../../src/img/products/craftify/crafting/bundle.png)
+![](../../../src/img/products/craftify/crafting/dispenser.png)
 
 ## Vanilla Crafting Rebalances
 Vanilla crafting recipes have undergone minor changes:
@@ -40,6 +39,9 @@ The 6-sided log crafting process has been modified to yield 4 wood instead of 3.
 Both red and brown mushrooms can be used to ferment spider eyes.
 
 ![](../../../src/img/products/craftify/crafting/fermented_spider_eye.png)
+
+### Smithing Templates
+All smithing template duplication costs have been reduced from 7 diamonds to 3.
 
 ## Bee Nests
 To create "natural" bee nests, one can combine "artificial" beehives with honeycomb through crafting.
@@ -57,11 +59,6 @@ To craft all types of chainmail armor, chains are required as the main material.
 
 ![](../../../src/img/products/craftify/crafting/chainmail_boots.png)
 
-## Dispenser
-The combination of a dispenser and a dropper allows for convenient bulk crafting of bows, while still retaining the original vanilla recipe.
-
-![](../../../src/img/products/craftify/crafting/dispenser.png)
-
 ## End Crystal
 Two additional end crystals can be acquired from the Dragon Egg, which is now a guaranteed drop from the Ender Dragon and can also be found in End City chests, in addition to the vanilla recipe.
 
@@ -78,7 +75,7 @@ To craft this, prior visitation to The End dimension is a requirement.
 ![](../../../src/img/products/craftify/crafting/elytra.png)
 
 ## Bottle-o-Enchanting
-To craft an Experience Bottle, you will need quartz, glowstone dust, and a water bottle.
+To craft an Experience Bottle, you will need 1 quartz, 1 glowstone dust, 3 sculk, and a water bottle.
 
 ![](../../../src/img/products/craftify/crafting/experience_bottle.png)
 
@@ -117,9 +114,12 @@ By crafting 9 rotten flesh, players can obtain 1 rabbit hide, which can then be 
 ![](../../../src/img/products/craftify/crafting/flesh_to_leather.png)
 
 ## Sponge Duplication
-When sponge (wet or dry) is combined with coral blocks and live corals (of any color), 4 sponges can be crafted.
+When sponge (wet or dry) is combined with coral blocks and corals, 4 sponges can be crafted. Coral or Coral Fans are interchangable, and any colour of Coral can be used, but all must be living.
 
 ![](../../../src/img/products/craftify/crafting/sponge.png)
+
+## Unpackable Clay
+The crafting recipe for clay from clay balls can be reversed, allowing them to be used for villager trading or smelting into bricks.
 
 ## Unpackable Ice
 The crafting recipes for Blue ice and Packed ice can be reversed, providing a convenient way to store ice or water.
