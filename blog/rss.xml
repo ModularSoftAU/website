@@ -4,7 +4,7 @@
         <title>Modular Software Blog</title>
         <link>http://modularsoft.org/blog</link>
         <description>Modular Software Blog</description>
-        <lastBuildDate>Thu, 25 Sep 2025 01:12:47 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 25 Sep 2025 01:33:59 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -12,7 +12,7 @@
             <title><![CDATA[Welcome]]></title>
             <link>http://modularsoft.org/blog/welcome</link>
             <guid>http://modularsoft.org/blog/welcome</guid>
-            <pubDate>Thu, 25 Sep 2025 01:12:47 GMT</pubDate>
+            <pubDate>Thu, 25 Sep 2025 01:33:59 GMT</pubDate>
             <description><![CDATA[A welcome post for the Modular Software blog.]]></description>
             <content:encoded><![CDATA[<p>Greetings Everyone,</p>
 <p>We extend a warm welcome to Modular Software, a dynamic collective of dedicated developers passionately engaged in crafting an array of diverse applications. Our talented team specializes in a broad spectrum of software development, from creating Minecraft Plugins and Datapacks to building extensive web-scale applications.</p>
@@ -29,7 +29,7 @@
             <title><![CDATA[Introducing Zander - Now Open Source!]]></title>
             <link>http://modularsoft.org/blog/zander-opensource</link>
             <guid>http://modularsoft.org/blog/zander-opensource</guid>
-            <pubDate>Thu, 25 Sep 2025 01:12:47 GMT</pubDate>
+            <pubDate>Thu, 25 Sep 2025 01:33:59 GMT</pubDate>
             <description><![CDATA[Zander our main software project is now open-source!]]></description>
             <content:encoded><![CDATA[<p>We're excited to announce that Zander, our flagship project at Modular Software, is now officially open source!</p>
 <p>For those unfamiliar, Zander is a powerful web-based application that operates and connects between Minecraft, Discord and it's own web-based platform and API. This project is mainly being used by our group over at <a href="https://craftingforchrist.net/" target="_blank" rel="noopener noreferrer">Crafting For Christ</a>. Zander is the backbone for and main operation system for this server.</p>
@@ -53,7 +53,7 @@
             <title><![CDATA[Zander v1.1.0 Patch Notes]]></title>
             <link>http://modularsoft.org/blog/zander-1.1.0</link>
             <guid>http://modularsoft.org/blog/zander-1.1.0</guid>
-            <pubDate>Thu, 25 Sep 2025 01:12:47 GMT</pubDate>
+            <pubDate>Thu, 25 Sep 2025 01:33:59 GMT</pubDate>
             <description><![CDATA[Zander release notes and changes for version 1.1.0.]]></description>
             <content:encoded><![CDATA[<p>Hello Everyone,</p>
 <p>I hope you're all having a good 2024, I am releasing a new update which introduces Ranks, some modification to configuration and some bug fixes.</p>
@@ -136,7 +136,7 @@
             <title><![CDATA[Zander v1.0.0 Patch Notes]]></title>
             <link>http://modularsoft.org/blog/zander-1.0.0</link>
             <guid>http://modularsoft.org/blog/zander-1.0.0</guid>
-            <pubDate>Thu, 25 Sep 2025 01:12:47 GMT</pubDate>
+            <pubDate>Thu, 25 Sep 2025 01:33:59 GMT</pubDate>
             <description><![CDATA[Zander release notes and changes for version 1.0.0.]]></description>
             <content:encoded><![CDATA[<p>Hello Everyone,</p>
 <p>We're releasing our first of many patch notes for Zander, a multi-platform Minecraft Server management tool. We have only implemented most of the basics but we are working towards implementing a full suite of features which will allow you to manage your Minecraft Server with ease.</p>
@@ -302,7 +302,7 @@
             <title><![CDATA[Zander v1.2.0 Patch Notes]]></title>
             <link>http://modularsoft.org/blog/zander-1.2.0</link>
             <guid>http://modularsoft.org/blog/zander-1.2.0</guid>
-            <pubDate>Thu, 25 Sep 2025 01:12:47 GMT</pubDate>
+            <pubDate>Thu, 25 Sep 2025 01:33:59 GMT</pubDate>
             <description><![CDATA[Zander release notes and changes for version 1.2.0.]]></description>
             <content:encoded><![CDATA[<p>Hello Everyone,</p>
 <p>Hope you are all well, we're releasing a new update which introduces account linking between Discord, Minecraft and the Website, some modification to configuration and some bug fixes.</p>
