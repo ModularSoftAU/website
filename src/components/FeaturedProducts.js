@@ -3,56 +3,66 @@ import clsx from 'clsx';
 import styles from './Features.module.css';
 import Link from '@docusaurus/Link';
 
-const FeatureList = [
+const ProductList = [
   {
-    Title: 'DevoteMe',
+    title: 'DevoteMe',
     Img: require('../img/products/devoteMe/logo-color.png').default,
-    LinkRef: '/docs/products/devoteMe/',
+    linkRef: '/docs/products/devoteMe/',
+    badge: 'Beta',
     description: (
       <>
-        A platform that aims to help people connect with the Gospel in a more accessible way. While the Bible is a crucial resource for Christians, the platform acknowledges that there are several other ways to strengthen one's faith and deepen their relationship with God.
+        A spiritual platform connecting people to the Gospel through daily
+        devotions, Bible reading, and community. Integrates with Discord to
+        bring faith into the spaces you already use.
       </>
     ),
   },
   {
-    Title: 'Player Head Hunt',
+    title: 'Player Head Hunt',
     Img: require('../img/products/playerHeadHunt/logo-color.png').default,
-    LinkRef: '/docs/products/playerHeadHunt/',
+    linkRef: '/docs/products/playerHeadHunt/',
+    badge: 'Stable',
     description: (
       <>
-        Lets you collect heads or blocks in a variety of exciting games you can create and configure, such as hide and seek or Easter egg hunts. With this the possibilities for fun and creativity are endless.
+        A flexible Minecraft plugin for hide-and-seek, Easter egg hunts, and
+        scavenger challenges. Configurable, creative, and endlessly replayable.
       </>
     ),
   },
   {
-    Title: 'Craftify',
+    title: 'Craftify',
     Img: require('../img/products/craftify/logo-color.png').default,
-    LinkRef: '/docs/products/craftify/',
+    linkRef: '/docs/products/craftify/',
+    badge: 'Stable',
     description: (
       <>
-        Tailored specifically to the way Minecraft is played, our meticulously crafted pack enhances your gameplay with revamped mechanics and recipes.
+        A Minecraft datapack that revamps crafting mechanics with 30+ new
+        recipes, wood rebalancing, and bee-based content — built for players
+        who want more depth from the game.
       </>
     ),
   },
 ];
 
-function ProductFeature({Img, LinkRef, Title, description}) {
+function ProductCard({Img, linkRef, title, badge, description}) {
   return (
     <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <img src={Img} height="250px" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <h3>{Title}</h3>
-
-        <Link
-          className="button button--secondary button--lg"
-          to={LinkRef}>
-          Product Documenation
-        </Link>
-        <br /><br />
-
-        <p>{description}</p>
+      <div className={styles.productCard}>
+        <div className={styles.productImgWrap}>
+          <img src={Img} alt={title} className={styles.productImg} />
+        </div>
+        <div className={styles.productBody}>
+          <div className={styles.productTitleRow}>
+            <h3 className={styles.productTitle}>{title}</h3>
+            <span className={clsx(styles.badge, styles[`badge${badge}`])}>{badge}</span>
+          </div>
+          <p className={styles.productDesc}>{description}</p>
+          <Link
+            className={clsx('button button--sm', styles.productBtn)}
+            to={linkRef}>
+            View Documentation
+          </Link>
+        </div>
       </div>
     </div>
   );
@@ -60,12 +70,17 @@ function ProductFeature({Img, LinkRef, Title, description}) {
 
 export default function ProductsHomepageFeatures() {
   return (
-    <section className={styles.features}>
+    <section className={clsx(styles.features, styles.productsSection)}>
       <div className="container">
-        <h1 className="text--center">Featured Products</h1>
+        <div className={styles.sectionHeader}>
+          <h2 className={styles.sectionTitle}>Featured Products</h2>
+          <p className={styles.sectionSubtitle}>
+            Explore what we've built — each product comes with full documentation and community support.
+          </p>
+        </div>
         <div className="row">
-          {FeatureList.map((props, idx) => (
-            <ProductFeature key={idx} {...props} />
+          {ProductList.map((props, idx) => (
+            <ProductCard key={idx} {...props} />
           ))}
         </div>
       </div>

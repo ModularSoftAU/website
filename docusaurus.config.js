@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Modular Software',
-  tagline: 'Building software, one module at a time.',
+  title: 'Anchorlight Development',
+  tagline: 'Grounding ideas. Illuminating solutions.',
   url: 'http://modularsoft.org/',
   baseUrl: '/',
   onBrokenLinks: 'warn',
@@ -40,9 +40,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'ModularSoft',
+        title: 'Anchorlight',
         logo: {
-          alt: 'ModularSoft Logo',
+          alt: 'Anchorlight Development Logo',
           src: 'img/favicon.ico',
         },
         items: [
@@ -53,7 +53,7 @@ const config = {
             label: 'Documentation',
           },
           {
-            href: 'https://github.com/ModularSoftAU/website',
+            href: 'https://github.com/ModularSoftAU',
             label: 'GitHub',
             position: 'right',
           },
@@ -85,33 +85,33 @@ const config = {
             ],
           },
           {
-            title: 'Crafting For Christ',
+            title: 'Community',
             items: [
-              {
-                label: 'Discord',
-                href: 'https://craftingforchrist.net/discord',
-              },
-              {
-                label: 'Network Website',
-                href: 'https://craftingforchrist.net/',
-              }
-            ],
-          },
-          {
-            title: 'Our Platforms',
-            items: [
-              {
-                label: 'GitHub',
-                href: 'https://github.com/ModularSoftAU',
-              },
               {
                 label: 'Discord',
                 href: 'https://discord.gg/YRpakuYhJZ',
               },
+              {
+                label: 'GitHub',
+                href: 'https://github.com/ModularSoftAU',
+              },
+            ],
+          },
+          {
+            title: 'Resources',
+            items: [
+              {
+                label: 'Documentation',
+                to: '/docs/intro',
+              },
+              {
+                label: 'Blog',
+                to: '/blog',
+              },
             ],
           },
         ],
-        copyright: `Copyright © 2021 - ${new Date().getFullYear()} Modular Software. Built with Docusaurus.`,
+        copyright: `Copyright © 2021 - ${new Date().getFullYear()} Anchorlight Development. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,

@@ -1,28 +1,226 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
+/* ══════════════════════════════════════════
+   Hero Banner
+══════════════════════════════════════════ */
 .heroBanner {
-  padding: 4rem 0;
-  text-align: center;
   position: relative;
+  padding: 6rem 0 5rem;
+  text-align: center;
   overflow: hidden;
-  background-image: url(../img/homeBanner.png);
-  background-repeat: space;
-  background-position: center;
-  background-size: cover;
-  background-color: white;
+  /* Deep navy gradient — "anchor" depth */
+  background: linear-gradient(160deg, #060e1c 0%, #0a1628 40%, #112240 70%, #1e3a5c 100%);
+  min-height: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-@media screen and (max-width: 966px) {
-  .heroBanner {
-    padding: 2rem;
-  }
+/* Subtle radial glow — the "light" in Anchorlight */
+.heroBanner::before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 300px;
+  background: radial-gradient(ellipse, rgba(240, 165, 0, 0.12) 0%, transparent 70%);
+  pointer-events: none;
 }
 
-.buttons {
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  /* Subtle dot grid texture */
+  background-image: radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  padding: 0 1.5rem;
+}
+
+/* ── Anchor icon ── */
+.anchorIcon {
+  width: 72px;
+  height: 72px;
+  color: #f0a500;
+  margin-bottom: 1.25rem;
+  filter: drop-shadow(0 0 16px rgba(240, 165, 0, 0.45));
+}
+
+/* ── Title ── */
+.heroTitle {
+  font-size: 3.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+  margin-bottom: 0;
+  line-height: 1.1;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* ── Gold divider ── */
+.heroDivider {
+  width: 64px;
+  height: 4px;
+  background: linear-gradient(90deg, #f0a500, #f5c842);
+  border-radius: 2px;
+  margin: 1rem auto;
+}
+
+/* ── Subtitle (tagline) ── */
+.heroSubtitle {
+  font-size: 1.3rem;
+  color: #f0a500;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.5rem;
+}
+
+/* ── Description ── */
+.heroDescription {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.65);
+  max-width: 520px;
+  margin: 0 auto 2rem;
+  line-height: 1.65;
+}
+
+/* ── CTA buttons ── */
+.heroButtons {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btnPrimary {
+  background: linear-gradient(135deg, #f0a500, #d98b00) !important;
+  border: none !important;
+  color: #0a1628 !important;
+  font-weight: 700 !important;
+  border-radius: 8px !important;
+  padding: 0.75rem 2rem !important;
+  box-shadow: 0 4px 20px rgba(240, 165, 0, 0.35);
+  transition: transform 0.15s ease, box-shadow 0.15s ease !important;
+}
+
+.btnPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 28px rgba(240, 165, 0, 0.5) !important;
+  color: #0a1628 !important;
+}
+
+.btnOutline {
+  background: transparent !important;
+  border: 2px solid rgba(255, 255, 255, 0.35) !important;
+  color: rgba(255, 255, 255, 0.88) !important;
+  font-weight: 600 !important;
+  border-radius: 8px !important;
+  padding: 0.75rem 2rem !important;
+  transition: border-color 0.15s ease, color 0.15s ease, transform 0.15s ease !important;
+}
+
+.btnOutline:hover {
+  border-color: #f0a500 !important;
+  color: #f0a500 !important;
+  transform: translateY(-2px);
+}
+
+/* ── Wave transition ── */
+.heroWave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  line-height: 0;
+}
+
+.heroWave svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ══════════════════════════════════════════
+   Stats Bar
+══════════════════════════════════════════ */
+.statsBar {
+  background: var(--al-surface, #f4f6f9);
+  border-bottom: 1px solid var(--al-card-border, #d8e2f0);
+  padding: 1.5rem 0;
+}
+
+html[data-theme='dark'] .statsBar {
+  background: #0f1e35;
+  border-bottom-color: #1e3a5c;
+}
+
+.statsGrid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem 2.5rem;
+  text-align: center;
+}
+
+.statNumber {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--ifm-color-primary);
+  line-height: 1;
+  margin-bottom: 0.2rem;
+}
+
+.statLabel {
+  font-size: 0.78rem;
+  color: var(--al-text-muted, #6b7a99);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 500;
+}
+
+.statDivider {
+  width: 1px;
+  height: 36px;
+  background: var(--al-card-border, #d8e2f0);
+}
+
+/* ══════════════════════════════════════════
+   Responsive
+══════════════════════════════════════════ */
+@media screen and (max-width: 966px) {
+  .heroBanner {
+    padding: 4rem 1rem 4rem;
+    min-height: auto;
+  }
+
+  .heroTitle {
+    font-size: 2.2rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.1rem;
+  }
+
+  .statDivider {
+    display: none;
+  }
+
+  .statItem {
+    padding: 0.5rem 1.25rem;
+  }
 }

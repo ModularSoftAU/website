@@ -1,32 +1,46 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * Anchorlight Development — Global Styles
+ * Color scheme: Deep Navy (anchor/stability) + Warm Amber/Gold (light/beacon)
  */
 
-/* You can override the default Infima variables here. */
+/* ── Light mode palette ── */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #1e4d8c;
+  --ifm-color-primary-dark: #1a4278;
+  --ifm-color-primary-darker: #183d6e;
+  --ifm-color-primary-darkest: #13305a;
+  --ifm-color-primary-light: #2358a0;
+  --ifm-color-primary-lighter: #255caa;
+  --ifm-color-primary-lightest: #2b67bf;
   --ifm-code-font-size: 95%;
+
+  /* Anchorlight brand tokens */
+  --al-navy: #0a1628;
+  --al-navy-mid: #1e4d8c;
+  --al-gold: #f0a500;
+  --al-gold-light: #f5c842;
+  --al-teal: #0d7377;
+  --al-surface: #f4f6f9;
+  --al-card-border: #d8e2f0;
+  --al-text-muted: #6b7a99;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* ── Dark mode palette ── */
 html[data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #f0a500;
+  --ifm-color-primary-dark: #d69400;
+  --ifm-color-primary-darker: #c98b00;
+  --ifm-color-primary-darkest: #a87300;
+  --ifm-color-primary-light: #f5b429;
+  --ifm-color-primary-lighter: #f6ba36;
+  --ifm-color-primary-lightest: #f8c54f;
+
+  --al-surface: #0f1e35;
+  --al-card-border: #1e3a5c;
+  --al-text-muted: #8da3c0;
 }
 
+/* ── Code highlight ── */
 .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.1);
   display: block;
@@ -36,4 +50,74 @@ html[data-theme='dark'] {
 
 html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* ── Navbar ── */
+.navbar {
+  border-bottom: 2px solid var(--al-gold);
+  background: var(--al-navy) !important;
+}
+
+.navbar__title {
+  color: #ffffff !important;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.navbar__logo {
+  filter: brightness(0) invert(1);
+}
+
+.navbar__link {
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-weight: 500;
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+  color: var(--al-gold) !important;
+}
+
+/* ── Footer ── */
+.footer {
+  background: var(--al-navy) !important;
+  border-top: 2px solid var(--al-gold);
+}
+
+.footer__title {
+  color: var(--al-gold) !important;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.footer__link-item {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.footer__link-item:hover {
+  color: var(--al-gold) !important;
+}
+
+.footer__copyright {
+  color: rgba(255, 255, 255, 0.45) !important;
+}
+
+/* ── Sidebar accent ── */
+.menu__link--active {
+  border-left: 3px solid var(--al-gold);
+}
+
+/* ── Anchor decoration helper ── */
+.al-gold-text {
+  color: var(--al-gold);
+}
+
+.al-divider {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--al-gold), var(--al-gold-light));
+  border-radius: 2px;
+  margin: 0.75rem auto 1.5rem auto;
 }

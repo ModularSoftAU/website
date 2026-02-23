@@ -4,43 +4,48 @@ import styles from './Features.module.css';
 
 const FeatureList = [
   {
-    title: 'Innovative Products',
-    Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Purpose-Driven Products',
+    icon: '🔨',
     description: (
       <>
-        At our company, we are dedicated to crafting products and applications that are tailored to meet your specific needs. We take pride in creating designs and functionalities that set our products apart from the rest.
+        Every tool we build starts with a real need. We craft applications with
+        clear intent — designed to fit naturally into the lives of the people
+        who use them, from gamers to communities of faith.
       </>
     ),
   },
   {
     title: 'Active Development',
-    Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
+    icon: '⚙️',
     description: (
       <>
-        Our team is committed to continuously improving all of our products and applications. We take a proactive approach to development, regularly updating and enhancing functionality, while diligently addressing any bugs or issues that arise.
+        Our projects are never abandoned. We commit to continuous improvement —
+        shipping updates, resolving issues, and expanding features so our
+        software keeps pace with the communities that rely on it.
       </>
     ),
   },
   {
-    title: 'Supportive Community',
-    Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
+    title: 'Open & Transparent',
+    icon: '🌐',
     description: (
       <>
-        Our products are backed by a robust community of both developers and users, all dedicated to providing exceptional support. Whether you need help troubleshooting an issue or simply have a question, you can rely on our community to provide timely and knowledgeable assistance.
+        We believe in building in the open. Our code is accessible, our
+        roadmaps are shared, and our community is always welcome to contribute,
+        report issues, or suggest improvements.
       </>
     ),
   },
 ];
 
-function CompanyFeature({Svg, title, description}) {
+function CompanyFeature({icon, title, description}) {
   return (
     <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} alt={title} />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <h3>{title}</h3>
-        <p>{description}</p>
+      <div className={styles.featureCard}>
+        <div className={styles.featureIcon}>{icon}</div>
+        <h3 className={styles.featureTitle}>{title}</h3>
+        <div className={styles.featureDivider} />
+        <p className={styles.featureDesc}>{description}</p>
       </div>
     </div>
   );
@@ -50,6 +55,12 @@ export default function CompanyHomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">
+        <div className={styles.sectionHeader}>
+          <h2 className={styles.sectionTitle}>Why Anchorlight?</h2>
+          <p className={styles.sectionSubtitle}>
+            Built by developers who care about craft, community, and impact.
+          </p>
+        </div>
         <div className="row">
           {FeatureList.map((props, idx) => (
             <CompanyFeature key={idx} {...props} />

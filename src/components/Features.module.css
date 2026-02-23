@@ -1,11 +1,230 @@
+/* ══════════════════════════════════════════
+   Section layout
+══════════════════════════════════════════ */
 .features {
   display: flex;
-  align-items: center;
-  padding: 2rem 0;
+  align-items: flex-start;
+  padding: 4rem 0;
   width: 100%;
 }
 
+.productsSection {
+  background: var(--al-surface, #f4f6f9);
+  border-top: 1px solid var(--al-card-border, #d8e2f0);
+}
+
+html[data-theme='dark'] .productsSection {
+  background: #0a1628;
+  border-top-color: #1e3a5c;
+}
+
+/* ══════════════════════════════════════════
+   Section headers
+══════════════════════════════════════════ */
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--ifm-color-primary);
+  margin-bottom: 0.4rem;
+  letter-spacing: -0.01em;
+}
+
+.sectionSubtitle {
+  color: var(--al-text-muted, #6b7a99);
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+/* ══════════════════════════════════════════
+   Company feature cards
+══════════════════════════════════════════ */
+.featureCard {
+  background: var(--ifm-card-background-color, #ffffff);
+  border: 1px solid var(--al-card-border, #d8e2f0);
+  border-radius: 12px;
+  padding: 2rem 1.75rem;
+  margin: 0.5rem;
+  height: calc(100% - 1rem);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.featureCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(30, 77, 140, 0.12);
+  border-color: var(--ifm-color-primary-lighter);
+}
+
+html[data-theme='dark'] .featureCard {
+  background: #0f1e35;
+  border-color: #1e3a5c;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+html[data-theme='dark'] .featureCard:hover {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+  border-color: #f0a500;
+}
+
+.featureIcon {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.featureTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--ifm-color-primary);
+  margin-bottom: 0;
+}
+
+.featureDivider {
+  width: 36px;
+  height: 3px;
+  background: linear-gradient(90deg, #f0a500, #f5c842);
+  border-radius: 2px;
+  margin: 0.6rem auto 0.9rem;
+}
+
+.featureDesc {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--ifm-font-color-secondary);
+  margin: 0;
+}
+
+/* Kept for backwards compatibility if any SVG is still used */
 .featureSvg {
-  height: 200px;
-  width: 200px;
+  height: 160px;
+  width: 160px;
+}
+
+/* ══════════════════════════════════════════
+   Product cards
+══════════════════════════════════════════ */
+.productCard {
+  background: var(--ifm-card-background-color, #ffffff);
+  border: 1px solid var(--al-card-border, #d8e2f0);
+  border-radius: 14px;
+  overflow: hidden;
+  margin: 0.5rem;
+  height: calc(100% - 1rem);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.productCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(30, 77, 140, 0.14);
+}
+
+html[data-theme='dark'] .productCard {
+  background: #0f1e35;
+  border-color: #1e3a5c;
+}
+
+html[data-theme='dark'] .productCard:hover {
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+  border-color: #f0a500;
+}
+
+.productImgWrap {
+  background: linear-gradient(135deg, #0a1628 0%, #1e3a5c 100%);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+}
+
+.productImg {
+  max-height: 140px;
+  max-width: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+}
+
+.productBody {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.productTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.productTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--ifm-color-primary);
+}
+
+.productDesc {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--ifm-font-color-secondary);
+  flex: 1;
+  margin-bottom: 1.25rem;
+}
+
+.productBtn {
+  background: var(--ifm-color-primary) !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 6px !important;
+  font-weight: 600 !important;
+  align-self: flex-start;
+  transition: background 0.15s ease, transform 0.15s ease !important;
+}
+
+.productBtn:hover {
+  background: var(--ifm-color-primary-dark) !important;
+  color: #ffffff !important;
+  transform: translateX(2px);
+}
+
+/* ── Badge styles ── */
+.badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badgeStable {
+  background: rgba(30, 77, 140, 0.12);
+  color: #1e4d8c;
+}
+
+html[data-theme='dark'] .badgeStable {
+  background: rgba(240, 165, 0, 0.15);
+  color: #f0a500;
+}
+
+.badgeBeta {
+  background: rgba(240, 165, 0, 0.15);
+  color: #b87900;
+}
+
+html[data-theme='dark'] .badgeBeta {
+  background: rgba(240, 165, 0, 0.12);
+  color: #f0a500;
 }
