@@ -10,17 +10,25 @@ import FeaturedProducts from '../components/FeaturedProducts';
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
+    <header className={styles.heroBanner}>
       <div className="container">
-        <img src="../img/modularsoftLogo.png" height="80"/>
-        {/* <h1 className="hero__title">{siteConfig.title}</h1> */}
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <span className={styles.heroAnchorIcon}>⚓</span>
+        <h1 className={styles.heroTitle}>
+          Anchor<span className={styles.heroAccent}>light</span>
+          <br />Development
+        </h1>
+        <p className={styles.heroTagline}>{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <Link
-            className="button button--secondary button--lg"
+            className={clsx('button button--lg', styles.buttonGold)}
             to="/docs/intro">
-            Documenation
+            Explore Docs
           </Link>
+          <a
+            className={clsx('button button--outline button--lg', styles.buttonOutline)}
+            href="https://github.com/ModularSoftAU">
+            View on GitHub
+          </a>
         </div>
       </div>
     </header>
@@ -31,8 +39,8 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Home`}
-      description="Documentation Modular Software products and applications.">
+      title="Home"
+      description="Anchorlight Development — purpose-built software anchored in quality.">
       <HomepageHeader />
       <main>
         <CompanyFeatures />

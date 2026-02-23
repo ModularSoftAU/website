@@ -1,32 +1,62 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * Anchorlight Development — Global Styles
+ * Deep navy + gold brand palette
  */
 
-/* You can override the default Infima variables here. */
+/* ── Light Mode ──────────────────────────────────── */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  /* Primary: Royal Navy Blue */
+  --ifm-color-primary: #1a4a8a;
+  --ifm-color-primary-dark: #163f77;
+  --ifm-color-primary-darker: #123464;
+  --ifm-color-primary-darkest: #0d2748;
+  --ifm-color-primary-light: #1f569d;
+  --ifm-color-primary-lighter: #2461af;
+  --ifm-color-primary-lightest: #2e6fc0;
+
   --ifm-code-font-size: 95%;
+
+  /* Anchorlight Brand Tokens */
+  --al-gold:           #f5a623;
+  --al-gold-dark:      #d98f10;
+  --al-gold-light:     #f9be5e;
+  --al-navy:           #0f2d56;
+  --al-navy-mid:       #1a4a8a;
+
+  --al-hero-bg:        linear-gradient(140deg, #0f2d56 0%, #1a4a8a 55%, #0d3070 100%);
+
+  --al-card-bg:        #ffffff;
+  --al-card-border:    rgba(26, 74, 138, 0.12);
+  --al-card-shadow:    0 2px 12px rgba(26, 74, 138, 0.10);
+  --al-card-shadow-hover: 0 8px 28px rgba(26, 74, 138, 0.22);
+
+  --al-section-alt-bg: #f4f7fb;
+
+  --al-divider-gold-height: 4px;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* ── Dark Mode ───────────────────────────────────── */
 html[data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  /* Primary: Lighter blue readable on dark bg */
+  --ifm-color-primary: #5b9bd5;
+  --ifm-color-primary-dark: #4d8dc7;
+  --ifm-color-primary-darker: #4080b8;
+  --ifm-color-primary-darkest: #3272a8;
+  --ifm-color-primary-light: #6aa8dc;
+  --ifm-color-primary-lighter: #79b5e3;
+  --ifm-color-primary-lightest: #8ec4eb;
+
+  --al-hero-bg:        linear-gradient(140deg, #080e1a 0%, #0f2035 55%, #091528 100%);
+
+  --al-card-bg:        #1c2a3a;
+  --al-card-border:    rgba(91, 155, 213, 0.15);
+  --al-card-shadow:    0 2px 12px rgba(0, 0, 0, 0.35);
+  --al-card-shadow-hover: 0 8px 28px rgba(0, 0, 0, 0.55);
+
+  --al-section-alt-bg: #111a26;
 }
 
+/* ── Code highlighting ───────────────────────────── */
 .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.1);
   display: block;
@@ -36,4 +66,24 @@ html[data-theme='dark'] {
 
 html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* ── Navbar brand accent ─────────────────────────── */
+.navbar__title {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* ── Gold accent utility ─────────────────────────── */
+.al-gold {
+  color: var(--al-gold);
+}
+
+/* ── Section divider gold bar ────────────────────── */
+.al-section-divider {
+  width: 56px;
+  height: var(--al-divider-gold-height);
+  background: var(--al-gold);
+  border-radius: 2px;
+  margin: 0.6rem auto 1.6rem;
 }

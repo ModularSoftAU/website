@@ -2,16 +2,18 @@
 sidebar_position: 1
 ---
 
-# Welcome
-Welcome to the Modular Software website.
+# Welcome to Anchorlight Development
 
-Here you will find documentation, guides and help with all of our products that we provide.
+Here you'll find documentation, guides, and support resources for everything
+we build and maintain.
 
 ## Our Projects
-Here are the current projects that are available and that are documented for your use:
+
+Browse the docs for our current products:
+
 ### [Zander](./products/zander)
 ### [Player Head Hunt](./products/playerHeadHunt)
 ### [Craftify](./products/craftify)
 ### [DevoteMe](./products/devoteMe)
 
-And more currently in progress with the team working and developing products and applications.
+More projects are actively in development — check back soon.

@@ -1,28 +1,124 @@
 /**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
+ * Anchorlight Development — Homepage styles
  */
 
+/* ── Hero Banner ─────────────────────────────────── */
 .heroBanner {
-  padding: 4rem 0;
+  padding: 7rem 0 5.5rem;
   text-align: center;
   position: relative;
   overflow: hidden;
-  background-image: url(../img/homeBanner.png);
-  background-repeat: space;
-  background-position: center;
-  background-size: cover;
-  background-color: white;
+  background: var(--al-hero-bg);
 }
 
-@media screen and (max-width: 966px) {
-  .heroBanner {
-    padding: 2rem;
-  }
+/* Subtle radial gold glow behind content */
+.heroBanner::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  width: 800px;
+  height: 500px;
+  background: radial-gradient(ellipse, rgba(245, 166, 35, 0.08) 0%, transparent 65%);
+  pointer-events: none;
 }
 
+/* Curved bottom edge fading into page background */
+.heroBanner::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background: var(--ifm-background-color);
+  clip-path: ellipse(54% 100% at 50% 100%);
+  pointer-events: none;
+}
+
+.heroAnchorIcon {
+  display: block;
+  font-size: 3.6rem;
+  line-height: 1;
+  margin-bottom: 1.1rem;
+  opacity: 0.92;
+}
+
+.heroTitle {
+  color: #ffffff;
+  font-size: 3.8rem;
+  font-weight: 800;
+  line-height: 1.08;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.025em;
+}
+
+.heroAccent {
+  color: var(--al-gold);
+}
+
+.heroTagline {
+  color: rgba(255, 255, 255, 0.80);
+  font-size: 1.22rem;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  margin-bottom: 2.6rem;
+}
+
+/* ── Hero Buttons ────────────────────────────────── */
 .buttons {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.buttonGold {
+  background-color: var(--al-gold) !important;
+  border-color: var(--al-gold) !important;
+  color: var(--al-navy) !important;
+  font-weight: 700 !important;
+  transition: background-color 0.18s ease, transform 0.18s ease !important;
+}
+
+.buttonGold:hover {
+  background-color: var(--al-gold-dark) !important;
+  border-color: var(--al-gold-dark) !important;
+  color: var(--al-navy) !important;
+  transform: translateY(-2px);
+}
+
+.buttonOutline {
+  border-color: rgba(255, 255, 255, 0.55) !important;
+  color: #ffffff !important;
+  background: transparent !important;
+  transition: background-color 0.18s ease, border-color 0.18s ease, transform 0.18s ease !important;
+}
+
+.buttonOutline:hover {
+  background-color: rgba(255, 255, 255, 0.10) !important;
+  border-color: rgba(255, 255, 255, 0.85) !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+}
+
+/* ── Responsive ──────────────────────────────────── */
+@media screen and (max-width: 966px) {
+  .heroBanner {
+    padding: 4.5rem 1.5rem 3.5rem;
+  }
+
+  .heroTitle {
+    font-size: 2.4rem;
+  }
+
+  .heroTagline {
+    font-size: 1.05rem;
+  }
+
+  .heroAnchorIcon {
+    font-size: 2.8rem;
+  }
 }

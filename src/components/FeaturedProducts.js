@@ -10,7 +10,9 @@ const FeatureList = [
     LinkRef: '/docs/products/devoteMe/',
     description: (
       <>
-        A platform that aims to help people connect with the Gospel in a more accessible way. While the Bible is a crucial resource for Christians, the platform acknowledges that there are several other ways to strengthen one's faith and deepen their relationship with God.
+        A platform that helps people connect with the Gospel in an accessible
+        way. Beyond the Bible, DevoteMe opens up additional paths to strengthen
+        faith and deepen your relationship with God.
       </>
     ),
   },
@@ -20,7 +22,9 @@ const FeatureList = [
     LinkRef: '/docs/products/playerHeadHunt/',
     description: (
       <>
-        Lets you collect heads or blocks in a variety of exciting games you can create and configure, such as hide and seek or Easter egg hunts. With this the possibilities for fun and creativity are endless.
+        Collect heads or blocks across a variety of exciting, configurable
+        games — hide &amp; seek, Easter egg hunts, and more. Creativity is the
+        only limit.
       </>
     ),
   },
@@ -30,7 +34,9 @@ const FeatureList = [
     LinkRef: '/docs/products/craftify/',
     description: (
       <>
-        Tailored specifically to the way Minecraft is played, our meticulously crafted pack enhances your gameplay with revamped mechanics and recipes.
+        A meticulously crafted datapack tailored to the way Minecraft is actually
+        played. Revamped mechanics, fresh recipes, and a richer vanilla
+        experience.
       </>
     ),
   },
@@ -39,20 +45,18 @@ const FeatureList = [
 function ProductFeature({Img, LinkRef, Title, description}) {
   return (
     <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <img src={Img} height="250px" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <h3>{Title}</h3>
-
-        <Link
-          className="button button--secondary button--lg"
-          to={LinkRef}>
-          Product Documenation
-        </Link>
-        <br /><br />
-
-        <p>{description}</p>
+      <div className={styles.productCard}>
+        <div className={styles.productCardBanner} />
+        <div className={styles.productCardBody}>
+          <img src={Img} className={styles.productImg} alt={Title} />
+          <h3 className={styles.productTitle}>{Title}</h3>
+          <p className={styles.productDescription}>{description}</p>
+          <Link
+            className={clsx('button button--md', styles.productButton)}
+            to={LinkRef}>
+            View Documentation
+          </Link>
+        </div>
       </div>
     </div>
   );
@@ -60,9 +64,16 @@ function ProductFeature({Img, LinkRef, Title, description}) {
 
 export default function ProductsHomepageFeatures() {
   return (
-    <section className={styles.features}>
+    <section className={clsx(styles.features, styles.featuresAlt)}>
       <div className="container">
-        <h1 className="text--center">Featured Products</h1>
+        <div className={styles.sectionHeader}>
+          <h2 className={styles.sectionTitle}>Our Products</h2>
+          <div className={styles.sectionDivider} />
+          <p className={styles.sectionSubtitle}>
+            Software built with care — documented, supported, and always
+            improving.
+          </p>
+        </div>
         <div className="row">
           {FeatureList.map((props, idx) => (
             <ProductFeature key={idx} {...props} />

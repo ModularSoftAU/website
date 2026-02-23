@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Modular Software',
-  tagline: 'Building software, one module at a time.',
+  title: 'Anchorlight Development',
+  tagline: 'Anchoring your vision, lighting the path forward.',
   url: 'http://modularsoft.org/',
   baseUrl: '/',
   onBrokenLinks: 'warn',
@@ -40,9 +40,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'ModularSoft',
+        title: 'Anchorlight',
         logo: {
-          alt: 'ModularSoft Logo',
+          alt: 'Anchorlight Logo',
           src: 'img/favicon.ico',
         },
         items: [
@@ -111,7 +111,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © 2021 - ${new Date().getFullYear()} Modular Software. Built with Docusaurus.`,
+        copyright: `Copyright © 2021 - ${new Date().getFullYear()} Anchorlight Development. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,

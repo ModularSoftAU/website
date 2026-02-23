@@ -1,11 +1,170 @@
+/* ── Shared section wrapper ──────────────────────── */
 .features {
   display: flex;
-  align-items: center;
-  padding: 2rem 0;
+  align-items: stretch;
+  padding: 4rem 0;
   width: 100%;
 }
 
+.featuresAlt {
+  background: var(--al-section-alt-bg);
+}
+
+/* ── Section heading ─────────────────────────────── */
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 2.8rem;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0;
+  color: var(--ifm-heading-color);
+}
+
+.sectionDivider {
+  width: 56px;
+  height: 4px;
+  background: var(--al-gold, #f5a623);
+  border-radius: 2px;
+  margin: 0.65rem auto 1rem;
+}
+
+.sectionSubtitle {
+  color: var(--ifm-color-emphasis-700);
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+/* ── Feature card (company pillar) ───────────────── */
+.featureCard {
+  background: var(--al-card-bg, #fff);
+  border: 1px solid var(--al-card-border, rgba(26, 74, 138, 0.12));
+  border-radius: 14px;
+  padding: 2.2rem 1.6rem 2rem;
+  margin: 0 0.4rem;
+  box-shadow: var(--al-card-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.featureCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--al-card-shadow-hover);
+}
+
+/* Illustration wrapper — coloured circle behind SVG */
+.featureIconRing {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  background: linear-gradient(
+    140deg,
+    var(--ifm-color-primary-lightest),
+    var(--ifm-color-primary)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.4rem;
+  flex-shrink: 0;
+}
+
 .featureSvg {
+  height: 80px;
+  width: 80px;
+  /* Tint the SVG white so it pops against the gradient ring */
+  filter: brightness(0) invert(1) opacity(0.92);
+}
+
+/* ── Product card ────────────────────────────────── */
+.productCard {
+  background: var(--al-card-bg, #fff);
+  border: 1px solid var(--al-card-border, rgba(26, 74, 138, 0.12));
+  border-radius: 14px;
+  overflow: hidden;
+  margin: 0 0.4rem;
+  box-shadow: var(--al-card-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.productCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--al-card-shadow-hover);
+}
+
+/* Top banner stripe for product cards */
+.productCardBanner {
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(
+    90deg,
+    var(--al-navy, #0f2d56),
+    var(--al-gold, #f5a623)
+  );
+}
+
+.productCardBody {
+  padding: 1.6rem 1.4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  text-align: center;
+}
+
+.productImg {
   height: 200px;
-  width: 200px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  margin-bottom: 1.2rem;
+}
+
+.productTitle {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 0.9rem;
+  color: var(--ifm-heading-color);
+}
+
+.productDescription {
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.4rem;
+  flex: 1;
+}
+
+/* Gold CTA button inside product card */
+.productButton {
+  background-color: var(--al-gold, #f5a623) !important;
+  border-color: var(--al-gold, #f5a623) !important;
+  color: var(--al-navy, #0f2d56) !important;
+  font-weight: 700 !important;
+  transition: background-color 0.18s ease, transform 0.18s ease !important;
+}
+
+.productButton:hover {
+  background-color: var(--al-gold-dark, #d98f10) !important;
+  border-color: var(--al-gold-dark, #d98f10) !important;
+  color: var(--al-navy, #0f2d56) !important;
+  transform: translateY(-1px);
+}
+
+/* ── Row spacing ─────────────────────────────────── */
+@media screen and (max-width: 966px) {
+  .featureCard,
+  .productCard {
+    margin: 0.5rem 0;
+  }
 }

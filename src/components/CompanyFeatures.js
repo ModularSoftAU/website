@@ -4,11 +4,13 @@ import styles from './Features.module.css';
 
 const FeatureList = [
   {
-    title: 'Innovative Products',
+    title: 'Purpose-Built Solutions',
     Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        At our company, we are dedicated to crafting products and applications that are tailored to meet your specific needs. We take pride in creating designs and functionalities that set our products apart from the rest.
+        Every product we ship is designed from the ground up to solve a real
+        problem. We anchor our work in your specific needs — no generic
+        templates, no unnecessary complexity.
       </>
     ),
   },
@@ -17,16 +19,20 @@ const FeatureList = [
     Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Our team is committed to continuously improving all of our products and applications. We take a proactive approach to development, regularly updating and enhancing functionality, while diligently addressing any bugs or issues that arise.
+        Our team continuously improves every product. We ship regular updates,
+        act quickly on feedback, and keep a strong engineering cadence so our
+        tools stay reliable and modern.
       </>
     ),
   },
   {
-    title: 'Supportive Community',
+    title: 'Community-Driven Support',
     Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Our products are backed by a robust community of both developers and users, all dedicated to providing exceptional support. Whether you need help troubleshooting an issue or simply have a question, you can rely on our community to provide timely and knowledgeable assistance.
+        A thriving community of developers and users stands behind every
+        Anchorlight product. Ask a question, report an issue, or join the
+        conversation — you&apos;ll always find someone ready to help.
       </>
     ),
   },
@@ -35,10 +41,10 @@ const FeatureList = [
 function CompanyFeature({Svg, title, description}) {
   return (
     <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} alt={title} />
-      </div>
-      <div className="text--center padding-horiz--md">
+      <div className={styles.featureCard}>
+        <div className={styles.featureIconRing}>
+          <Svg className={styles.featureSvg} alt={title} />
+        </div>
         <h3>{title}</h3>
         <p>{description}</p>
       </div>
@@ -50,6 +56,13 @@ export default function CompanyHomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">
+        <div className={styles.sectionHeader}>
+          <h2 className={styles.sectionTitle}>Why Anchorlight?</h2>
+          <div className={styles.sectionDivider} />
+          <p className={styles.sectionSubtitle}>
+            Stable foundations. Bright outcomes. Software you can rely on.
+          </p>
+        </div>
         <div className="row">
           {FeatureList.map((props, idx) => (
             <CompanyFeature key={idx} {...props} />
